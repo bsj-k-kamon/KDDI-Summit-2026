@@ -1,0 +1,1293 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+/**** 全体フォント（Meiryo → Noto Sans JP） ****/
+html,
+body,
+.v-application {
+  font-family: "Noto Sans JP", sans-serif !important;
+}
+
+/* 個別class指定なしで、配下のテキストをまとめて上書き */
+.v-application *:not(i):not(.v-icon):not(.material-icons):not(.mdi) {
+  font-family: "Noto Sans JP", sans-serif !important;
+}
+
+/**** パスコード画面（公開前の文言差し替え） ****/
+p.verify-layout__title {
+  font-size: 0 !important;
+}
+p.verify-layout__title::before {
+  content: "サイトは9/1に公開されます";
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+p.verify-layout__description {
+  font-size: 0 !important;
+}
+p.verify-layout__description::before {
+  content: "公開まで今しばらくお待ちください";
+  display: block;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* --- パスコード 送信ボタン（#0077FF / #1976D2 → #1B2C55） --- */
+button.passcode-verification__button__content.v-btn.v-btn--contained.theme--light.v-size--large {
+  background-color: #1B2C55 !important;
+  border-color: #1B2C55 !important;
+  caret-color: #1B2C55 !important;
+}
+
+/* --- パスコード キャンセル（文字色） --- */
+.passcode-verification__cancel__link {
+  color: #1B2C55 !important;
+}
+/**** ログイン画面 ****/
+/* --- ログインボタン（#0077FF / #1976D2 → #1B2C55） --- */
+button.login-button__content.v-btn.v-btn--depressed.theme--light.v-size--large,
+#login_button {
+  background-color: #1B2C55 !important;
+  border-color: #1B2C55 !important;
+  caret-color: #1B2C55 !important;
+}
+/* --- 新規登録ボタン --- */
+button.register-button.v-btn.v-btn--depressed.theme--light.v-size--large,
+#register_button {
+  background-color: #fff !important;
+  border: thin solid #1B2C55 !important;
+  color: #1B2C55 !important;
+  caret-color: #1B2C55 !important;
+}
+/* --- パスワードを忘れた場合 --- */
+.smart__forget__link {
+  color: #1B2C55 !important;
+}
+
+/**** 新規登録画面 ****/
+/* --- 新規登録ボタン（#0077FF / #1976D2 → #1B2C55） --- */
+button.register__button__content.v-btn.v-btn--contained.theme--light.v-size--large {
+  background-color: #1B2C55 !important;
+  border-color: #1B2C55 !important;
+  caret-color: #1B2C55 !important;
+}
+
+/* --- ログイン画面へ（文字色） --- */
+.register__account__text {
+  color: #1B2C55 !important;
+}
+
+/**** TOP PAGE ****/
+/* --- 項目名のカラー --- */
+.widget-title__border {
+  display: none;
+}
+.widget-header__border {
+  border: 2px solid #0e0d6a !important;
+}
+/* --- もっとみるボタン --- */
+button.widget__header.v-btn.v-btn--flat.v-btn--text.v-btn--tile.theme--light.v-size--default.widget__header__event {
+  color: #0e0d6a !important;
+}
+/* --- 追従ボタン --- */
+i.v-icon.notranslate.material-icons.theme--dark {
+  color: #ffffff !important;
+}
+button.mx-2.top-button__content.base-background-color.v-btn.v-btn--contained.v-btn--fab.v-btn--round.theme--dark.v-size--default {
+  background: #0e0d6a !important;
+}
+/* --- チケットの受付中 --- */
+span.card-status__selling {
+  color: #0e0d6a !important;
+}
+.mdi-chevron-left::before {
+  content: "\F0141";
+  color: #FFF;
+}
+/* --- TOPマイページログインボタン --- */
+button.mypage-content__login-button.v-btn.v-btn--contained.theme--light.v-size--default {
+  background: #0e0d6a !important;
+}
+button.mypage-content__register-button.v-btn.v-btn--contained.theme--light.v-size--default {
+  border: thin solid #0e0d6a !important;
+  color: #0e0d6a !important;
+}
+/* --- ログイン後マイページ --- */
+span.mypage-content__event-color {
+  color: #0e0d6a !important;
+}
+.mypage-content__shortcut-list-item.mypage-content__blue-area.mypage-content__blue-area--event-color {
+  background:  #0e0d6a5c;
+}
+.mypage-content__shortcut-list-item-icon .v-image__image--cover {
+  filter: brightness(0) saturate(100%) invert(68%) sepia(93%) saturate(1140%) hue-rotate(338deg) brightness(102%) contrast(98%) !important;
+}
+.qr-area__blue-area {
+  border-radius: 8px;
+  background:  #0e0d6a5c !important;
+}
+/* --- SPもっと見るボタン --- */
+@media screen and (max-width: 850px) {
+button.widget__bottom.v-btn.v-btn--contained.theme--dark.v-size--default.widget__bottom__event {
+  background: #0e0d6a !important;
+}
+button.widget__bottom.v-btn.v-btn--contained.theme--dark.v-size--default {
+   background: #0e0d6a !important;
+}
+}
+/* QR読みとり */
+.qr-area__event-icon-color {
+  fill: #0e0d6a !important;
+  stroke: #0e0d6a !important;
+}
+svg.qr-area__event-icon-color > path {
+  fill: #0e0d6a !important;
+}
+.qr-area__event-color {
+  color: #0e0d6a !important;
+}
+
+
+
+/**** header ****/
+/** ヘッダーを常に上部へ固定 **/
+.header__wrap.event__header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(14, 13, 106, 0.08);
+  box-sizing: border-box;
+}
+/** ヘッダーカラー変更 **/
+
+/* ヘッダー文字色変更
+p.header-tab__name {
+    color: #0e0d6a !important;
+}
+メニューの文字色変更
+p.menu__name__area {
+    color: #0e0d6a !important;
+}
+/* ヘッダーのカーソル合わせた時の背景の変更*/
+.v-tab:before {
+  background-color: #0e0d6a5c;
+}
+/* アクティブな時の文字と架線の色変更 */
+.header-tab__active__event {
+  border-bottom: 2px solid #0e0d6a !important;
+  color: #0e0d6a !important
+}
+/* クリックしたときに一瞬でる青背景を変えるコード*/
+.v-item-group.theme--light.v-slide-group.v-tabs-bar {
+  color: #0e0d6a !important;
+  caret-color: #0e0d6a !important;
+}
+
+/** メニュー横のアイコン変更 **/
+/* ヘッダー矢印を消す
+img.menu__icon__detail {
+  display: none;
+}
+ヘッダー矢印の画像を変更*/
+/* p.menu__name__area:after {
+  background-image: url(https://ps-demo.eventos.tokyo/file/wysiwyg/585/file-ea94b43a-c0ba-45be-8846-a71b6855e7d5.png);
+  content: "　";
+  background-size: cover;
+} */
+/** メニュー横の矢印の画像はそのまま、色を変更する **/
+/* img.menu__icon__detail {
+  filter: invert(75%) sepia(81%) saturate(1534%) hue-rotate(335deg) brightness(98%) contrast(101%);
+} */
+
+/* 右下のアンカーボタンの色を変更*/
+.theme--dark.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+ background: #0e0d6a!important;
+}
+/* 右下のアンカーボタンのやじるしの色を変更*/
+.v-btn--round .v-btn__content .v-icon {
+      color: #0e0d6a5c;
+}
+
+/** 言語切り替え内のカラー変更 **/
+/* ボタン色の変更*/
+i.v-icon.notranslate.mdi.mdi-radiobox-marked.theme--light.primary--text {
+  color: #0e0d6a !important;
+}
+/* カーソル合わせた時のボタン背景の変更*/
+.v-input--selection-controls__ripple.primary--text {
+  color: #0e0d6a !important;
+  caret-color: #0e0d6a5c !important;
+}
+/* 戻る／決定の文字色変更*/
+button.v-btn.v-btn--flat.v-btn--text.theme--light.v-size--default.blue--text.text--darken-1 {
+  color: #0e0d6a !important;
+}
+/* 戻る／決定のホバー時の背景色変更*/
+button.v-btn.v-btn--flat.v-btn--text.theme--light.v-size--default.blue--text.text--darken-1:hover {
+  background: #0e0d6a5c;
+}
+
+
+
+/*  */
+/******** マイページトップ *********/
+/*  */
+
+/* "マイページ"横の縦ライン色変更 */
+p.mypage-title__text {
+  border-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* カードメニュー hover */
+.event-card:hover {
+  border: 2px solid #0e0d6a !important; /* THEME_COLOR */
+}
+/* カードメニュー 余白調整 */
+.mypage-top-layout__menu {
+  padding: 18px !important;
+  line-height: 2;
+}
+/* カードメニュー 青アイコン 非表示 */
+.menu-item__image {
+  display: none;
+}
+/* 会員QRアイコン非表示 */
+.mypage-title__button__image {
+  display: none;
+}
+/* “会員QR”テキスト・枠線 色変更 */
+button.mypage-title__button.v-btn.v-btn--depressed.v-btn--flat.v-btn--outlined.theme--light.v-size--default {
+  color: #0e0d6a !important; /* THEME_COLOR */
+  caret-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 「会員QR」を「マイQR」に変更／文字を中央揃え */
+.mypage-title__button__image {
+  display: none !important;
+}
+button.mypage-title__button .v-btn__content {
+  position: relative !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.mypage-title__button__text {
+  font-size: 0 !important;
+}
+.mypage-title__button__text::after {
+  content: "マイQR";
+  font-size: 14px; /* 元の文字サイズに合わせて調整 */
+  line-height: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+/* 名刺交換履歴を使用している場合の会員QR  色変更*/
+svg.event-color.mypage-title__icon__image * {
+  fill: #0e0d6a; /* THEME_COLOR */
+}
+.event-color {
+  color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* QR読取 色変更 */
+.qrscanner-button__event-color path {
+  fill: #0e0d6a !important; /* THEME_COLOR */
+}
+.qrscanner-button__text.qrscanner-button__event-color {
+  color: #0e0d6a; /* THEME_COLOR */
+}
+.qrscanner-button.pointer {
+  border-color: #0e0d6a; /* THEME_COLOR */
+}
+
+
+
+/*  */
+/******** 左側メニュー列 *********/
+/*  */
+
+/* ログイン情報/会員情報/ログアウト アイコン非表示*/
+.mypage-contents__menu-item__image {
+  display: none;
+}
+/* ログイン情報/会員情報/マイチケット一覧 padding変更*/
+.mypage-contents__menu-item {
+  padding: 20px 10px !important;
+}
+/* アクティブ時の文字色 */
+.active-event span.mypage-contents__menu-item__label {
+  color: #0e0d6a !important;
+}
+/* マイチケット hover時の背景色 */
+.layout.mypage-contents__menu-item.align-center.active-event:hover {
+  background-color: rgb(0 0 0 / 5%) !important;
+}
+/* ログアウト・退会する hover時の背景色 */
+.mypage-contents__menu__logout:hover {
+  background-color: rgb(0 0 0 / 5%) !important;
+}
+
+/* ログイン情報 */
+.info-top__wrap {
+  background-color: transparent !important;
+}
+/* ログイン情報＞変更するボタン 色変更 */
+button.ml-2.v-btn.v-btn--contained.theme--dark.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+
+/*  */
+/******** 会員情報 *********/
+/*  */
+
+/* 会員情報＞変更するボタン 色変更 */
+button.profile-contents__controller__button.v-btn.v-btn--contained.theme--dark.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 会員情報＞ボタンエリア 背景透過 */
+.layout.save-cancel__wrap.align-center {
+  background-color: transparent !important;
+}
+/* メール配信 */
+button.item__button.v-btn.v-btn--depressed.v-btn--flat.v-btn--outlined.v-btn--text.theme--light.v-size--default.item__active {
+  color: #0e0d6a !important; /* THEME_COLOR */
+  border-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 性別 */
+button.item__male__button.v-btn.v-btn--depressed.v-btn--flat.v-btn--outlined.v-btn--text.theme--light.v-size--default.item__active {
+  color: #0e0d6a !important; /* THEME_COLOR */
+  border-color: #0e0d6a !important; /* THEME_COLOR */
+}
+button.item__female__button.v-btn.v-btn--depressed.v-btn--flat.v-btn--outlined.v-btn--text.theme--light.v-size--default.item__active {
+  color: #0e0d6a !important; /* THEME_COLOR */
+  border-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 生年月日 */
+.v-picker__title.primary {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+  border-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 会員情報＞住所＞検索ボタン 色変更 */
+button.item__postal-code__button.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 複数選択 チェック */
+.checkbox-parts:hover:after {
+  border-color: #0e0d6a !important; /* THEME_COLOR */
+}
+input[type=checkbox]:checked+.checkbox-parts:before {
+  opacity: 1;
+  border-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* テキスト検索 検索ボタン */
+button.item__button.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+
+html.is-member-profile .item__check-layout .checkbox-input {
+  pointer-events: none !important;
+}
+
+/*  */
+/******** ログイン情報 *********/
+/*  */
+
+/* ログイン情報＞メールアドレスの変更 */
+.mail-address__wrap {
+  background-color: #ffffff !important;
+  border-radius: 7px;
+  padding-top: 1vw;
+}
+.v-application .primary--text{
+  color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* ログイン情報＞メールアドレスの変更 ボタンエリア*/
+.save-cancel__wrap {
+  background-color: #ffffff !important;
+}
+/* ログイン情報＞メールアドレスの変更 戻るボタン */
+button.save-cancel__button.background-white.v-btn.v-btn--depressed.v-btn--flat.v-btn--outlined.theme--light.v-size--default {
+  border-color: #0e0d6a; /* THEME_COLOR */
+  color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* ログイン情報＞メールアドレスの変更 変更するボタン */
+button.save-cancel__button.color-white.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* ログイン情報＞パスワードの変更 */
+.password__wrap {
+  background-color: #ffffff !important;
+  border-radius: 7px;
+  padding-top: 1vw;
+}
+
+
+
+/*  */
+/******** マイチケット一覧 *********/
+/*  */
+
+/* マイチケット一覧＞リストの区切り線 色変更 */
+th.text-start.ticket-th {
+  border-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* マイチケット一覧＞抽選＞QRアイコン グレーに変更 */
+#app > div > section > section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > div:nth-child(2) > section > div > section > div.my-ticket-layout__card.v-card.v-sheet.theme--light > div > div > table > tbody > tr > td:nth-child(5) > div > div.v-image__image.v-image__image--cover {
+  filter: grayscale(1);
+}
+/* マイチケット一覧＞先着＞QRアイコン グレーに変更 */
+#app > div > section > section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > div:nth-child(3) > section > div > section > div.my-ticket-layout__card.v-card.v-sheet.theme--light > div > div > table > tbody > tr > td:nth-child(4) > div > div.v-image__image.v-image__image--cover {
+  filter: grayscale(1);
+}
+/* マイチケット一覧＞QRアイコン 画像変更 */
+/* 画像パスを変更してください */
+section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > div:nth-child(2) > section > div > section > div.my-ticket-layout__card.v-card.v-sheet.theme--light > div > div > table > tbody > tr > td:nth-child(4) > div > div.v-image__image.v-image__image--cover {
+  background-image: url(https://yume-demo.eventos.tokyo/file/wysiwyg/567/file-98070ab0-acd6-4ca7-94bb-4be183235bf5.png) !important;
+}
+/* マイチケット一覧＞表示切り替えアイコン 非表示 */
+.my-ticket-contents__buttons {
+  display: none;
+}
+/* 「申込チケットがありません」を「予約済みの講演・ワークショップがありません」に変更 */
+.my-ticket-layout__empty {
+  font-size: 0 !important;
+}
+.my-ticket-layout__empty::after {
+  content: "予約済みの講演・ワークショップがありません";
+  font-size: 14px; /* 元の文字サイズに合わせて調整 */
+}
+/* マイチケット一覧＞キャンセルしますか？＞いいえ/はい の色変更 */
+button.detail-card__dialog__content__no.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+button.detail-card__dialog__content__yes.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 抽選チケット＞第○希望テキスト */
+span.bright-blue {
+  color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* チケット譲渡ボタン 背景色 */
+button.my-ticket-card-detail-transfer__button-transfer.px-8.mb-4.v-btn.v-btn--contained.theme--dark.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 譲渡しますか？＞いいえ/はい 背景色変更 */
+button.my-ticket-card-detail-transfer-message-dialog__content--no.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+button.my-ticket-card-detail-transfer-message-dialog__content--yes.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 受付スタッフ専用ボタン */
+button.staff-button.px-8.v-btn.v-btn--contained.theme--dark.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* チェックインしますか？＞いいえ/はい 背景色変更 */
+button.ticket-card-detail__dialog__content__no.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+button.ticket-card-detail__dialog__content__yes.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* チケット詳細 「無料」行・コード行 非表示 */
+.ticket-card-detail__contents__row:has(.ticket-card-detail__contents__value .ticket-card-detail__contents__value),
+.ticket-card-detail__contents__row:has(.ticket-card-detail__contents__icon__col) {
+  display: none !important;
+}
+/* 受付スタッフ専用ボタン 有効期間前*/
+#app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-card-detail.v-card.v-sheet.theme--light > div.v-card__actions > button {
+  background-color: #0e0d6a !important;
+}
+#app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-card-detail.v-card.v-sheet.theme--light > div.v-card__actions > button > span.v-btn__content {
+  color: #fff;
+}
+/* このチケットをキャンセルする */
+#app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-card-detail.v-card.v-sheet.theme--light > div.v-card__actions > button.payment-button-cancel.px-8.mb-4.v-btn.v-btn--flat.v-btn--text.theme--dark.v-size--default.red--text {
+  background-color: #fff !important;
+}
+#app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-card-detail.v-card.v-sheet.theme--light > div.v-card__actions > button.payment-button-cancel.px-8.mb-4.v-btn.v-btn--flat.v-btn--text.theme--dark.v-size--default.red--text > span {
+  color: #ff0a00;
+}
+/* 閉じるボタン */
+#app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-card-detail.v-card.v-sheet.theme--light > div.v-card__actions.ticket-card-detail__actions > button.ticket-card-detail__action-button--close.v-btn.v-btn--contained.theme--dark.v-size--default {
+  border-color: #0e0d6a !important;
+  background-color: #fff !important;
+}
+#app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-card-detail.v-card.v-sheet.theme--light > div.v-card__actions.ticket-card-detail__actions > button.ticket-card-detail__action-button--close.v-btn.v-btn--contained.theme--dark.v-size--default::before {
+  background-color: #0e0d6a !important;
+}
+#app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-card-detail.v-card.v-sheet.theme--light > div.v-card__actions.ticket-card-detail__actions > button.ticket-card-detail__action-button--close.v-btn.v-btn--contained.theme--dark.v-size--default > span.v-btn__content {
+  color: #0e0d6a !important;
+}
+
+
+/*  */
+/******** お気に入り *********/
+/*  */
+
+/* お気に入り 表示切り替え 非表示*/
+.favorite-contents__buttons {
+  display: none;
+}
+/* お気に入り ブース名下の下線 色変更*/
+th.text-start.favorite-contents-table-th {
+  border-bottom: 2px solid #0e0d6a !important; /* THEME_COLOR */
+}
+/* SP ブース 商談予約ボタン 色変更 */
+button.business-appointment-button.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a5c !important; /* THEME_COLOR_BG */
+  color: #0e0d6a !important; /* THEME_COLOR */
+}
+
+
+/*  */
+/******** 申込履歴 *********/
+/*  */
+
+/* 申込履歴 テーブルタイトル下線 色変更*/
+#app > div.v-application--wrap > section > section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > section.ticket-charge-table.ticket-charge-layout__ticket-charge-table > div.ticket-charge-table__card.v-card.v-card--flat.v-sheet.theme--light > div.v-data-table.theme--light > div > table > thead > tr > th {
+  border-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 書類発行ボタン 背景色 */
+button.ticket-charge-table__card__button.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a5c !important; /* THEME_COLOR_BG */
+}
+/* 領収書発行ボタン */
+button.ticket-charge-table__card__document-menu__list__item__btn.ticket-charge-table__card__document-menu__list__item__btn-receipt.v-btn.v-btn--contained.theme--light.v-size--default {
+  border-color: #0e0d6a !important; /* THEME_COLOR */
+  color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 申込履歴 モーダル テーブルタイトル下線 色変更*/
+#app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-charge-detail-table-wrapper > div.v-data-table.theme--light > div > table > thead > tr > th {
+  border-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* モーダル＞領収書発行ボタン */
+button.ticket-charge-detail-table-wrapper__dl-btn-area__btn.ticket-charge-detail-table-wrapper__dl-btn-area__btn-receipt.v-btn.v-btn--contained.theme--light.v-size--default {
+  border-color: #0e0d6a !important;
+  color: #0e0d6a !important;
+}
+/* 申込履歴 ページネーション 色変更*/
+button.v-pagination__item.v-pagination__item--active.primary {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+
+
+
+/*  */
+/******** クレジットカード情報 *********/
+/*  */
+
+/* 新しいカードを追加ボタン 背景色変更 */
+button.add-credit-card-button.v-btn.v-btn--contained.theme--light.v-size--large {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 入力欄 正常入力後 枠線 色変更 */
+.stripe-element.complete {
+  border-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 新しいカードを登録ボタン 背景色変更 */
+button.add-card-button.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+
+
+
+/*  */
+/******** 名刺交換履歴 *********/
+/*  */
+
+/* マイレポートボタン上 アニメーション 背景色変更 */
+.my-scan-product-list-layout__bubble {
+  background-color: #0e0d6a5c !important; /* THEME_COLOR_BG */
+}
+.my-scan-product-list-layout__bubble:before {
+  border-top: 8px solid #0e0d6a5c !important; /* THEME_COLOR_BG */
+}
+/* マイレポートボタン 色変更 */
+button.my-scan-product-list-layout__button.v-btn.v-btn--contained.theme--dark.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+  border-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 検索下ライン 色変更 */
+button.v-expansion-panel-header.my-scan-search__panel-header {
+  border-color: #0e0d6a !important;
+}
+/* 検索横アイコン 色変更 */
+button.my-scan-search__filter-button.v-btn.v-btn--depressed.theme--light.v-size--default {
+  background-color: #0e0d6a5c !important; /* THEME_COLOR_BG */
+  border-color: #0e0d6a5c !important; /* THEME_COLOR_BG */
+}
+i.v-icon.notranslate.mdi.mdi-tune.theme--light {
+  color: #0e0d6a !important; /* THEME_COLOR */
+  caret-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 検索項目 アクティブ時の色 */
+.my-scan-search-selector__chip.my-scan-search-selector__chip__selected {
+  border-color: #0e0d6a !important; /* THEME_COLOR */
+  background-color: #0e0d6a5c !important; /* THEME_COLOR_BG */
+}
+/* 読みとり状態のアイコン色 グレーに変更 */
+#app > div > section > section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > section > div.v-item-group.theme--light.v-expansion-panels.v-expansion-panels--flat > div > div > div > div > div:nth-child(1) > section > div > div > div > div > div.my-scan-search-selector__image > div > div.v-image__image.v-image__image--cover {
+  filter: grayscale(1);
+}
+/* 読みとり状態のテキスト色 グレーに変更 */
+.my-scan-search-selector__text.my-scan-search-selector__text__selected {
+  color: #1e1e1e;
+}
+/* 条件をクリアボタン 色変更 */
+button.my-scan-search__clear-button.v-btn.v-btn--depressed.v-btn--flat.v-btn--outlined.theme--light.v-size--default {
+  color: #0e0d6a !important; /* THEME_COLOR */
+  caret-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* ブースを開く矢印アイコン 色変更 */
+i.v-icon.notranslate.mdi.mdi-chevron-right-circle.theme--light {
+  color: #0e0d6a !important; /* THEME_COLOR */
+  caret-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* チャットの話しかけるボタン 色変更 */
+button.my-scan-exhibitor-administrator-card__button.v-btn.v-btn--contained.theme--dark.v-size--large {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+  border-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 製品情報＞資料ダウンロードボタン 色変更 */
+/* 枠と文字色 */
+button.my-scan-product-detail-info-document-card__button.v-btn.v-btn--depressed.v-btn--flat.v-btn--outlined.theme--light.v-size--default {
+  color: #0e0d6a !important; /* THEME_COLOR */
+  caret-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* PC表示ではアイコンを非表示 */
+@media screen and (min-width: 901px) {
+  img.my-scan-product-detail-info-document-card__button__icon {
+    display: none;
+  }
+}
+/* 代わりのアイコンを挿入 画像アドレスを変更してください サイズ32x32推奨 */
+span.my-scan-product-detail-info-document-card__button__text:before {
+  content: url(https://ps-demo.eventos.tokyo/file/wysiwyg/585/file-74a69354-9241-469b-b152-8c78165ef484.png);
+  padding-right: 4px;
+  margin-top: 4px;
+}
+/* 代わりに挿入したアイコンの位置調整 */
+span.my-scan-product-detail-info-document-card__button__text {
+  display: flex;
+  align-items: center;
+}
+/* SP表示のアイコン画像を差し替え 画像アドレスを変更してください サイズ32x32推奨 */
+img.my-scan-product-detail-info-document-card__button__icon {
+  content: url(https://ps-demo.eventos.tokyo/file/wysiwyg/585/file-74a69354-9241-469b-b152-8c78165ef484.png);
+}
+
+
+/*  */
+/******** バッジ印刷 *********/
+/*  */
+
+/* 印刷ボタン 色変更 */
+button.badge-contents__card__button.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a5c !important; /* THEME_COLOR_BG */
+}
+/* 印刷ボタン テキスト色変更 */
+p.badge-contents__card__button__text {
+  color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* デフォルト印刷アイコン非表示 */
+#app > div > section > section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > section > div > div > div > div.flex.xs1 > button > span > div > div > div.v-image__image.v-image__image--cover {
+  display: none;
+}
+/* アイコン差し替え サイズ16x16推奨 */
+.v-responsive.v-image.badge-contents__card__button__image:after {
+  content: url(https://ps-demo.eventos.tokyo/file/wysiwyg/585/file-87675d1c-5090-4ae2-9091-b499f48ae5fe.png);
+}
+
+
+/*  */
+/******** 商談予約確認 *********/
+/*  */
+
+/* 承認待ち/確定タブ アクティブ時の背景色 */
+button.business-appointment__tab-button.v-btn.v-btn--contained.theme--light.v-size--default.business-appointment__tab-button--selected {
+  background-color: #0e0d6a !important;
+}
+/* ヘッダー下ライン */
+#app > div.v-application--wrap > section > section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > section.appointment-table.business-appointment__table > div > div > div > table > thead > tr > th {
+  border-color: #0e0d6a !important;
+}
+/* 詳細ボタン */
+button.appointment-table__detail-button.v-btn.v-btn--contained.theme--light.v-size--default {
+  color: #0e0d6a !important;
+  border-color: #0e0d6a !important;
+}
+button.appointment-list__detail-button.v-btn.v-btn--contained.theme--light.v-size--small {
+  color: #0e0d6a !important;
+  border-color: #0e0d6a !important;
+}
+/* ステータスの色変更は以下を調整してください */
+/* ステータス＞申請中 */
+/* .business-appointment-status-label.business-appointment-status-label_status--Pending {
+  background-color: #fff !important;
+  border: 1px solid #0e0d6a;
+  color: #0e0d6a;
+} */
+/* ステータス＞要承認 */
+/* .business-appointment-status-label.business-appointment-status-label_status--RequiresApproval {
+  background-color: #0e0d6a !important;
+  color: #fff !important;
+} */
+/* ステータス＞終了 */
+/* .business-appointment-status-label.business-appointment-status-label_status--End {
+  color: #0e0d6a;
+  border: 1px solid #0e0d6a;
+} */
+/* ステータス＞承認済み */
+/* .business-appointment-status-label.business-appointment-status-label_status--Approved {
+  border: 1px solid #0e0d6a;
+  color: #0e0d6a;
+} */
+/* ステータス以上 */
+
+/* 商談予約の詳細＞閉じるボタン */
+button.appointment-detail__button.appointment-detail__button--back.v-btn.v-btn--contained.theme--light.v-size--default {
+  color: #0e0d6a !important;
+  border-color: #0e0d6a !important;
+}
+/* 商談予約の詳細＞日時変更の提案 */
+#app > div.v-dialog__content.v-dialog__content--active > div > div > div.appointment-detail__content-container > div:nth-child(5) > div > button > span {
+  color: #0e0d6a;
+}
+/* 商談予約の詳細＞場所を選択する */
+button.appointment-detail__button.appointment-detail__button--approve.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important;
+}
+/* 商談予約場所の選択＞ラジオボタン */
+i.v-icon.notranslate.mdi.mdi-radiobox-marked.theme--light {
+  color: #0e0d6a !important;
+  caret-color: #0e0d6a !important;
+}
+.v-input--selection-controls__ripple {
+  color: #0e0d6a !important;
+  caret-color: #0e0d6a !important;
+}
+/* 次へボタン */
+button.business-appointment-select-location__button.business-appointment-select-location__button--next.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important;
+}
+/* 戻るボタン */
+button.business-appointment-select-location__button.business-appointment-select-location__button--cancel.v-btn.v-btn--contained.theme--light.v-size--default {
+  border-color: #0e0d6a !important;
+  color: #0e0d6a !important;
+}
+/* 商談予約の申込のキャンセル＞閉じるボタン */
+button.appointment-cancel__button.appointment-cancel__button--close.v-btn.v-btn--contained.theme--light.v-size--default {
+  color: #0e0d6a !important;
+  border-color: #0e0d6a !important;
+}
+/* 承認するボタン */
+button.appointment-approve__button.appointment-approve__button--approve.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important;
+}
+/* 戻るボタン */
+button.appointment-approve__button.appointment-approve__button--back.v-btn.v-btn--contained.theme--light.v-size--default {
+    border-color: #0e0d6a !important;
+  color: #0e0d6a !important;
+}
+/* 申込をキャンセルボタン 色変更 */
+button.appointment-detail__button__content.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 送信しないでキャンセル テキスト色変更*/
+button.appointment-cancel__cancel-button.v-btn.v-btn--contained.theme--light.v-size--default {
+  color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 送信してキャンセル 背景色変更*/
+button.appointment-cancel__send-button.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important;
+}
+/* 送信が完了しました 背景色変更*/
+button.dialog__content__button.v-btn.v-btn--contained.theme--dark.v-size--large {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+
+/* ログアウトしますか？のいいえ/はいボタン */
+button.selector-dialog__content__no.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+button.selector-dialog__content__yes.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important; /* THEME_COLOR */
+}
+/* 退会する アクティブ時の文字色変更*/
+.mypage-contents__menu__logout:last-child {
+  color: #444 !important;
+}
+/* 退会するボタン */
+button.unsubscribe-selector-dialog__content--yes.v-btn.v-btn--depressed.v-btn--flat.v-btn--outlined.theme--light.v-size--default {
+  color: #0e0d6a !important;
+  border-color: #0e0d6a !important;
+}
+/* キャンセルボタン */
+button.unsubscribe-selector-dialog__content--no.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important;
+}
+
+
+/* メインメニュー アイコンを変える場合は以下の画像パスを変更 */
+/* 画像サイズは余白なしの192x192推奨 */
+/* マイページメインメニュー（ログイン情報）青アイコン 変更 */
+section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > div > div:nth-child(1) > div > div > div.v-responsive.v-image.menu-item__image > div.v-image__image.v-image__image--cover {
+  background-image: url(https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-9596640e-607c-4f50-9c9e-24951c5ff36d.png) !important;
+  background-size: 70px;
+}
+/* マイページメインメニュー（会員情報）青アイコン 変更 */
+section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > div > div:nth-child(2) > div > div > div.v-responsive.v-image.menu-item__image > div.v-image__image.v-image__image--cover {
+  background-image: url(https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-d2ca0652-d9f4-4904-a8a7-cd81c7906d14.png) !important;
+  background-size: 70px;
+}
+/* マイページメインメニュー（３つ目のメニュー）青アイコン 変更 */
+section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > div > div:nth-child(3) > div > div > div.v-responsive.v-image.menu-item__image > div.v-image__image.v-image__image--cover {
+  background-image: url(https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-69f08059-6071-4ead-84f9-1bea9e2d803c.png) !important;
+  background-size: 70px;
+}
+/* マイページメインメニュー（４つ目のメニュー）青アイコン 変更 */
+section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > div > div:nth-child(4) > div > div > div.v-responsive.v-image.menu-item__image > div.v-image__image.v-image__image--cover {
+  background-image: url(https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-dbc81de1-f95c-426e-8f79-4e9b6d59d194.png) !important;
+  background-size: 70px;
+}
+/* マイページメインメニュー（５つ目のメニュー）青アイコン 変更 */
+section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > div > div:nth-child(5) > div > div > div.v-responsive.v-image.menu-item__image > div.v-image__image.v-image__image--cover {
+  background-image: url(https://yume-demo.eventos.tokyo/file/wysiwyg/567/file-f17cf64d-b485-4e44-a45c-a79c4a444b01.jpg) !important;
+  background-size: 70px;
+}
+/* マイページメインメニュー（６つ目のメニュー）青アイコン 変更 */
+section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > div > div:nth-child(6) > div > div > div.v-responsive.v-image.menu-item__image > div.v-image__image.v-image__image--cover {
+  background-image: url(https://yume-demo.eventos.tokyo/file/wysiwyg/567/file-f17cf64d-b485-4e44-a45c-a79c4a444b01.jpg) !important;
+  background-size: 70px;
+}
+/* マイページメインメニュー（７つ目のメニュー）青アイコン 変更 */
+section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > div > div:nth-child(7) > div > div > div.v-responsive.v-image.menu-item__image > div.v-image__image.v-image__image--cover {
+  background-image: url(https://yume-demo.eventos.tokyo/file/wysiwyg/567/file-f17cf64d-b485-4e44-a45c-a79c4a444b01.jpg) !important;
+  background-size: 70px;
+}
+/* マイページメインメニュー（８つ目のメニュー）青アイコン 変更 */
+section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > div > div:nth-child(8) > div > div > div.v-responsive.v-image.menu-item__image > div.v-image__image.v-image__image--cover {
+  background-image: url(https://yume-demo.eventos.tokyo/file/wysiwyg/567/file-f17cf64d-b485-4e44-a45c-a79c4a444b01.jpg) !important;
+  background-size: 70px;
+}
+/* マイページメインメニュー（９つ目のメニュー）青アイコン 変更 */
+section.mypage-layout__wrap.mypage__layout > div.mypage-contents__wrap > div.flex.mypage-contents__contents > section > div > div:nth-child(9) > div > div > div.v-responsive.v-image.menu-item__image > div.v-image__image.v-image__image--cover {
+  background-image: url(https://yume-demo.eventos.tokyo/file/wysiwyg/567/file-f17cf64d-b485-4e44-a45c-a79c4a444b01.jpg) !important;
+  background-size: 70px;
+}
+/* 画像差し替えの場合はカードメニューアイコンを表示したいので、以下のコメントアウトを外してください */
+.menu-item__image {
+  display: block;
+}
+
+
+
+/*  */
+/*** チケット 一覧〜購入〜完了 ***/
+/*  */
+
+
+/* モジュールタイトル横ライン 色変更 */
+.ticket-list-title__text {
+  border-color: #0e0d6a !important;
+}
+
+/* 見出し下ライン （SPは背景色） 色変更 */
+.page-selector__border {
+  border-color: #0e0d6a !important;
+}
+@media screen and (max-width: 600px) {
+  /* .page-selector__ticket__text.active {
+      background-color: #0e0d6a !important;
+  } */
+  .page-selector__my-ticket__text.active {
+    background-color: #0e0d6a;
+}
+}
+/* 枚数カウントボタン 色変更*/
+.card-amount__number__button {
+  background-color: #0e0d6a !important;
+}
+/* カートに入れるボタン 色変更 */
+button.cart-next-button__content.v-btn.v-btn--contained.theme--light.v-size--large {
+  background-color: #0e0d6a !important;
+}
+/* 「カートに入れる」を「リストに追加」に変更 */
+button.cart-next-button__content .v-btn__content {
+  font-size: 0 !important;
+}
+button.cart-next-button__content .v-btn__content::after {
+  content: "リストに追加";
+  font-size: 16px;
+}
+/* カートに入れるボタン 削除 */
+img.category-status__few__icon {
+  display: none;
+}
+/* カートに入れるボタン 画像変更 */
+#app > div > section > div > div.ticket-page-content-wrapper__content-wrapper > div > section.ticket-controller.event__layout > div:nth-child(1) > div > section > div > div:nth-child(1) > section > div.web-layout > section > div:nth-child(1) > div > div:nth-child(1) > button.v-btn.v-btn--contained.theme--light.v-size--small {
+  background-image: url(https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-26e7e07a-ec76-4ddb-ad81-01e3d0c065eb.png);
+  background-size: 32px;
+  background-position: center;
+}
+#app > div > section > div > div.ticket-page-content-wrapper__content-wrapper > div > section.ticket-controller.event__layout > div:nth-child(1) > div > section > div > div:nth-child(1) > section > div.smart-phone-layout > section > div:nth-child(1) > div > div:nth-child(1) > button {
+  background-image: url(https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-26e7e07a-ec76-4ddb-ad81-01e3d0c065eb.png);
+  background-size: 32px;
+  background-position: center;
+}
+/* カートアイコン 色変更 */
+img.category-status__few__icon {
+  filter: brightness(0.5);
+}
+/* 申し込みボタン（SP） 色変更 */
+#app > div > section > div > div.ticket-page-content-wrapper__content-wrapper > div > section.ticket-controller.event__layout > div:nth-child(1) > div > section > div > div:nth-child(1) > section > div.smart-phone-layout > section > div.next-button > button > span.v-btn__content {
+  color: #0e0d6a;
+}
+/* 詳細を見る（SP）の矢印 色変更 */
+i.v-icon.notranslate.arrow-icon.material-icons.theme--light {
+  color: #0e0d6a !important;
+}
+/* 戻るボタン（SP） 色変更 */
+button.ticket-back-button__content.v-btn.v-btn--contained.theme--light.v-size--large {
+  color: #0e0d6a !important;
+  border-color: #0e0d6a !important;
+}
+/* カートに入れた後の不要なライン 透過 */
+section.ticket-cart {
+  background-color: #fff !important;
+}
+/* 購入画面テキスト 色変更 */
+.ticket-detail-description__detail-text {
+  color: #0e0d6a !important;
+}
+.v-card__text.detail-dialog__detail > div > p.ticket-detail-description__detail-text > i {
+  color: #0e0d6a !important;
+}
+.card-status__selling {
+  color: #0e0d6a !important;
+}
+.ticket-price__value {
+  color: #0e0d6a !important;
+}
+/* カートに入れた後の画面下の申し込みボタン 色変更 */
+.ticket-total {
+  background-color: #0e0d6a !important;
+}
+div.web-layout > section > div.next-button > button > span {
+  color: #0e0d6a !important;
+}
+/* 「申し込み」を「予約する」に変更 */
+.web-layout .next-button .v-btn__content,
+.smart-phone-layout .next-button .v-btn__content {
+  font-size: 0 !important;
+}
+.web-layout .next-button .v-btn__content::after,
+.smart-phone-layout .next-button .v-btn__content::after {
+  content: "予約する";
+  font-size: 16px;
+}
+/* カード右下の「申込済み」を「予約済み」に変更
+   文言の出し分け（表示タイミング）は変えず、申込済みが表示されているときだけ差し替える */
+.card__content .card-date-message .card-date-message__text {
+  position: relative;
+  display: inline-block;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  overflow: hidden;
+  vertical-align: baseline;
+}
+.card__content .card-date-message .card-date-message__text::after {
+  content: "予約済み";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(0, 0, 0, 0.6) !important;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.6) !important;
+  font-size: 1em;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+.card__content .card-date-message .card-date-message__text:empty::after {
+  content: none !important;
+}
+/* カートに入れた後＞画面下のカートボタン押下＞削除ボタン 色変更 */
+button.item-delete-button__content.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important;
+}
+/* カートに入れた後＞画面下のカートボタン押下＞￥マーク 色変更 */
+span.ticket-price__value__mark {
+  color: #0e0d6a !important;
+}
+/* カートに入れた後＞画面下のカートボタン押下＞金額テキスト 色変更 */
+span.ticket-price__value__price {
+  color: #0e0d6a !important;
+}
+/* カートに入れた後＞画面下のカートボタン押下＞戻るボタン 色変更 */
+button.cart-back-button__content.v-btn.v-btn--contained.theme--light.v-size--large {
+  color: #0e0d6a !important;
+  border-color: #0e0d6a !important;
+}
+/* 情報入力画面 アイコン背景 色変更*/
+.status__icon.status__checked {
+  background-color: #0e0d6a;
+}
+/* 情報入力画面 アイコンを繋ぐ線 色変更*/
+.status__line.passed {
+  background-color: #0e0d6a !important;
+}
+/* 情報入力画面 次へ進むボタン 色変更*/
+button.next-button__content.v-btn.v-btn--contained.theme--light.v-size--large {
+  background-color: #0e0d6a !important;
+}
+/* 情報入力画面 戻るボタン 色変更*/
+button.back-button__content.v-btn.v-btn--contained.theme--light.v-size--large {
+  color: #0e0d6a;
+  border-color: #0e0d6a;
+}
+/* 支払い方法選択画面 戻るボタン 色変更*/
+.payment-methods__active {
+  border: 2px solid #0e0d6a !important;
+  color: #0e0d6a !important;
+}
+/* 支払い方法選択画面 カード追加ボタン 色変更*/
+.card-empty__button {
+  background-color: #0e0d6a !important;
+}
+/* 支払い方法選択画面 カード情報入力枠 色変更*/
+.stripe-element.complete {
+  border-color: #0e0d6a !important;
+}
+/* 支払い方法選択画面 新しいカードを登録ボタン 色変更*/
+button.add-card-button.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important;
+}
+/* 支払い方法選択画面 新しいカードを追加ボタン 色変更*/
+button.stripe-add-button.v-btn.v-btn--depressed.theme--light.v-size--default {
+  background-color: #0e0d6a !important;
+}
+/* 情報入力画面 編集ボタン 非表示 */
+button.ma-2.detail__title__edit.v-btn.v-btn--depressed.v-btn--flat.v-btn--outlined.v-btn--text.theme--light.v-size--default {
+  display: none !important;
+}
+button.ma-2.profile__title__edit.v-btn.v-btn--depressed.v-btn--flat.v-btn--outlined.v-btn--text.theme--light.v-size--default {
+  color: #0e0d6a !important;
+  border-color: #0e0d6a !important;
+}
+button.ma-2.payment__title__edit.v-btn.v-btn--depressed.v-btn--flat.v-btn--outlined.v-btn--text.theme--light.v-size--default {
+  color: #0e0d6a !important;
+  border-color: #0e0d6a !important;
+}
+/* 情報入力画面 この内容で申し込むボタン 色変更*/
+button.confirm__button.v-btn.v-btn--contained.theme--light.v-size--default {
+  background-color: #0e0d6a !important;
+}
+/* 情報入力画面 ボタン文言を「この内容で予約する」に変更 */
+button.confirm__button .v-btn__content {
+  font-size: 0 !important;
+}
+button.confirm__button .v-btn__content::after {
+  content: "この内容で予約する";
+  font-size: 14px;
+}
+/* 情報入力画面 金額（無料）表示 非表示 */
+.layout.ticket-price__single {
+  display: none !important;
+}
+/* カート一覧 「チケット」を「選択中の講演」に変更 */
+.ticket-cart-list-item-layout__label {
+  font-size: 0 !important;
+}
+.ticket-cart-list-item-layout__label::after {
+  content: "選択中の　講演";
+  font-size: 14px;
+}
+/* 「チケット」を「予約済講演」に変更 */
+.detail__ticket__label {
+  font-size: 0 !important;
+}
+.detail__ticket__label::after {
+  content: "予約済講演";
+  font-size: 14px; /* 元の文字サイズに合わせて調整 */
+}
+/* 申し込み完了画面 OKボタン 色変更*/
+button.complete-button__content.v-btn.v-btn--contained.theme--light.v-size--large {
+  background-color: #0e0d6a !important;
+}
+/* 申し込み完了画面 カラフルな画像を他の画像に上書き */
+.complete__image {
+  background-image: url(https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-16ac10d7-bbf4-4ea5-9905-26cbb05549e8.png) !important;
+}
+/* 申し込み完了画面  */
+.ticket-page-content-wrapper__content .complete-layout__wrap {
+    padding: 0px;
+}
+.ticket-page-content-wrapper__content .complete-layout__wrap .complete__wrap:nth-child(1) {
+    padding: 0px;
+    background-image: url("https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-d4b447e2-ed84-4b36-ba33-ee41b3d637a6.jpeg");
+}
+.ticket-page-content-wrapper__content .complete-layout__wrap .complete__wrap .complete__image {
+    position: relative;
+    background-image: none;
+}
+.ticket-page-content-wrapper__content .complete-layout__wrap .complete__wrap .complete__image::before {
+    content: "";
+    height: 150px;
+    width: 150px;
+    display: block;
+    position: absolute;
+    bottom: calc(-50% + 30px);
+    background-image: url("https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-dc4eb7be-d503-41e5-894c-f6fac5aee5f0.png");
+    left: calc(50% - 75px);
+    background-size: contain;
+}
+.ticket-page-content-wrapper__content .complete-layout__wrap .complete__wrap .complete__image .complete__image__check {
+    display: none;
+}
+.ticket-page-content-wrapper__content .complete-layout__wrap .complete__title {
+    visibility: hidden;
+}
+.complete-button_wrap .complete-button__content {
+    background-color: #0e0d6a!important
+}
+
+/* チケットエラー画面 */
+.ticket-page-content-wrapper .ticket-page-content-wrapper__content .ticket-controller p.error-layout__content {
+    visibility: hidden;
+    position: relative;
+}
+.ticket-page-content-wrapper .ticket-page-content-wrapper__content .ticket-controller p.error-layout__content::before {
+    content: "お手数ですが一覧ページから改めてご予約を行なってください。";
+    visibility: visible;
+}
+.ticket-page-content-wrapper .error-layout__button-wrap button.error-layout__button {
+    color: #0e0d6a !important;
+    caret-color: #0e0d6a !important;
+}
+.ticket-page-content-wrapper .error-layout__button-wrap button.error-layout__button span.v-btn__content {
+    visibility: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ticket-page-content-wrapper .error-layout__button-wrap button.error-layout__button span.v-btn__content::before {
+    content: "一覧ページに戻る";
+    visibility: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+.ticket-page-content-wrapper .error-layout__button-wrap button.error-layout__button-event {
+    background-color: #0e0d6a !important;
+    border-color: #0e0d6a !important;
+}
+
+/* 余白調整 */
+section.complete__wrap {
+  padding: 0 !important;
+}
+section.complete-layout__wrap {
+  padding: 0 !important;
+}
+.complete__title {
+  padding-top: 32px;
+  font-size: 22px !important;
+}
+section.complete-button_wrap {
+  padding-bottom: 16px;
+}
+@media screen and (max-width: 600px) {
+  section.complete-layout__wrap {
+    padding-top: 16px !important;
+  }
+  .complete__title {
+    padding-top: 16px;
+  }
+  section.complete-button_wrap {
+    padding-bottom: 8px;
+  }
+}
+
+
+/* プロフィール登録 */
+/* 言語切替非表示 */
+.register-lang {
+  display: none !important;
+}
+
+/***** パスワード再設定 *****/
+/* 背景画像（外側のみ。reset-layout__wrap には付けない） */
+section:has(> .reset-layout__wrap) {
+  background-image: url("https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-28c9f5b8-9045-4d3f-bbff-533d2d945f32.jpg") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+/***** ブース一覧 *****/
+/* モジュールタイトル横ライン 色変更 */
+.booth-list-title__text {
+  border-color: #0e0d6a !important;
+}
+/* 表示切り替え日表示 */
+.layout.booth-list-title__layout-selector {
+  display: none;
+}
+/* 検索バー 色変更 */
+.layout.booth-search__button.align-center {
+  background-color: #0e0d6a;
+}
+/* 検索バー ＋−アイコン */
+.booth-search__button__icon:before {
+  background-color: #0e0d6a !important;
+}
+.booth-search__button__icon:after {
+  background-color: #0e0d6a !important;
+}
+/* 検索表示 テキスト 色変更 */
+p.filter__button__title.base-color {
+  color: #0e0d6a !important;
+}
+/* 検索表示 アイコン 色変更 */
+section.list__wrap.event__layout > section.contents__wrap.list__contents > section > form > div > div > div.v-expansion-panel-content > div > div.booth-search__item.v-list-item.theme--light > div > div > div > div > div > div.v-image__image.v-image__image--cover {
+  filter: brightness(0.5);
+}
+#app > div > section > section.list__wrap.event__layout > section.contents__wrap.list__contents > section > form > div > div > div.v-expansion-panel-content > div > div.booth-search__item.v-list-item.theme--light > div > div > div > div > i {
+  color: #0e0d6a !important;
+  caret-color: #0e0d6a !important;
+}
+/* 絞り込むボタン */
+button.booth-search__action-button.v-btn.v-btn--depressed.v-btn--flat.v-btn--outlined.theme--light.v-size--default {
+  color: #0e0d6a !important;
+  caret-color: #0e0d6a !important;
+}
+/* ページネーション */
+button.v-pagination__item.v-pagination__item--active {
+  background-color: #0e0d6a !important;
+  border-color: #0e0d6a !important;
+}
+
+
+/***** ブース詳細 *****/
+/* モジュールタイトル 非表示 */
+section.detail-title__wrap.detail__title {
+  display: none;
+}
+/* ブースタイトル */
+span.title__content__text {
+  font-family: Noto Sans JP;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+h1.title__content {
+  padding: 16px 0 0 !important;
+}
