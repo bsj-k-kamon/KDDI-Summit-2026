@@ -347,6 +347,15 @@ section.event__layout.widget__wrap {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
   min-width: 0;
+  /* 横スクロールバー（スライダー）を非表示にする ※スクロール自体は可能 */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.timetable__stages-scroll::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .timetable__body {
