@@ -1,0 +1,164 @@
+<style>
+  /* ページ内アンカーをJSなしで滑らかにスクロール（eventosの実スクロール要素は html.nuxt-html-class） */
+  html,
+  html.nuxt-html-class,
+  body {
+    scroll-behavior: smooth;
+  }
+
+  #timetable-title,
+  #widget-title-booth4,
+  #widget-title-booth6,
+  #overview,
+  #venue-map {
+    scroll-margin-top: 80px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html,
+    html.nuxt-html-class,
+    body {
+      scroll-behavior: auto;
+    }
+  }
+</style>
+<nav aria-label="メインナビゲーション" class="global-nav">
+  <ul class="global-nav__list">
+    <li class="global-nav__item">
+      <a class="global-nav__link" href="https://kddi-summit.eventos.tokyo/web/portal/1273/event/17058#timetable-title">
+        &nbsp;
+        <span class="global-nav__label">タイムテーブル</span>
+        <svg class="global-nav__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          &nbsp;
+          <path d="M12 15.4L6 9.4L7.4 8L12 12.6L16.6 8L18 9.4L12 15.4Z" fill="currentColor"></path>
+          &nbsp;
+        </svg>
+        &nbsp;
+      </a>
+    </li>
+    <li class="global-nav__item">
+      <a
+        class="global-nav__link"
+        href="https://kddi-summit.eventos.tokyo/web/portal/1273/event/17058#widget-title-booth4"
+      >
+        &nbsp;
+        <span class="global-nav__label">ワークショップ</span>
+        <svg class="global-nav__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          &nbsp;
+          <path d="M12 15.4L6 9.4L7.4 8L12 12.6L16.6 8L18 9.4L12 15.4Z" fill="currentColor"></path>
+          &nbsp;
+        </svg>
+        &nbsp;
+      </a>
+    </li>
+    <li class="global-nav__item">
+      <a
+        class="global-nav__link"
+        href="https://kddi-summit.eventos.tokyo/web/portal/1273/event/17058#widget-title-booth6"
+      >
+        &nbsp;
+        <span class="global-nav__label">展示</span>
+        <svg class="global-nav__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          &nbsp;
+          <path d="M12 15.4L6 9.4L7.4 8L12 12.6L16.6 8L18 9.4L12 15.4Z" fill="currentColor"></path>
+          &nbsp;
+        </svg>
+        &nbsp;
+      </a>
+    </li>
+    <li class="global-nav__item">
+      <a class="global-nav__link" href="https://kddi-summit.eventos.tokyo/web/portal/1273/event/17058#overview">
+        &nbsp;
+        <span class="global-nav__label">開催概要</span>
+        <svg class="global-nav__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          &nbsp;
+          <path d="M12 15.4L6 9.4L7.4 8L12 12.6L16.6 8L18 9.4L12 15.4Z" fill="currentColor"></path>
+          &nbsp;
+        </svg>
+        &nbsp;
+      </a>
+    </li>
+  </ul>
+</nav>
+<section aria-label="クイックアクション" class="action-cards">
+  <div class="action-cards__list">
+    <a class="action-card" href="https://kddi-summit.eventos.tokyo/web/portal/1273/event/17058/module/ticket/465568">
+      &nbsp;
+      <span aria-hidden="true" class="action-card__icon-wrap">
+        <img
+          class="action-card__icon fr-fic fr-dii"
+          src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-7398f9e5-fadf-4925-bf05-8235c3691f29.png"
+          alt=""
+          width="31"
+          height="31"
+        />
+      </span>
+      <span class="action-card__label">講演を予約する</span>
+      <span aria-hidden="true" class="action-card__arrow">
+        &nbsp;
+        <svg class="action-card__arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          &nbsp;
+          <path d="M12 15.4L6 9.4L7.4 8L12 12.6L16.6 8L18 9.4L12 15.4Z" fill="currentColor"></path>
+          &nbsp;
+        </svg>
+        &nbsp;
+      </span>
+      &nbsp;
+    </a>
+    <a class="action-card" href="https://kddi-summit.eventos.tokyo/web/portal/1273/event/17058/module/ticket/465569">
+      &nbsp;
+      <span aria-hidden="true" class="action-card__icon-wrap">
+        <img
+          class="action-card__icon fr-fic fr-dii"
+          src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-956f047f-2415-42e3-b6b6-a76b949f62b4.png"
+          alt=""
+          width="32"
+          height="32"
+        />
+      </span>
+      <span class="action-card__label">ワークショップを予約する</span>
+      <span aria-hidden="true" class="action-card__arrow">
+        &nbsp;
+        <svg class="action-card__arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          &nbsp;
+          <path d="M12 15.4L6 9.4L7.4 8L12 12.6L16.6 8L18 9.4L12 15.4Z" fill="currentColor"></path>
+          &nbsp;
+        </svg>
+        &nbsp;
+      </span>
+      &nbsp;
+    </a>
+    <a class="action-card" href="https://kddi-summit.eventos.tokyo/web/portal/1273/event/17058/users/mypage">
+      &nbsp;
+      <span aria-hidden="true" class="action-card__icon-wrap">
+        <img
+          class="action-card__icon fr-fic fr-dii"
+          src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-0a2fea05-9d40-434c-a560-b6d062a0e265.png"
+          alt=""
+          width="32"
+          height="32"
+        />
+      </span>
+      <span class="action-card__label">マイページはこちら</span>
+      <span aria-hidden="true" class="action-card__arrow">
+        &nbsp;
+        <svg class="action-card__arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          &nbsp;
+          <path d="M12 15.4L6 9.4L7.4 8L12 12.6L16.6 8L18 9.4L12 15.4Z" fill="currentColor"></path>
+          &nbsp;
+        </svg>
+        &nbsp;
+      </span>
+      &nbsp;
+    </a>
+  </div>
+  <p class="action-cards__stream">
+    <span>オンライン配信は</span>
+    <a
+      class="action-cards__stream-link"
+      href="https://kddi-summit.eventos.tokyo/web/portal/1273/event/17058/module/booth/461750"
+    >
+      こちら
+    </a>
+  </p>
+</section>
