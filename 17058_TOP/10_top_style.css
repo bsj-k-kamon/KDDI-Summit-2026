@@ -25,7 +25,7 @@
   --font-ja: "Noto Sans JP", sans-serif;
   --font-en: "Outfit", sans-serif;
   --hour-height: 680px;
-  --stage-header-height: 200px;
+  --stage-header-height: 160px;
   --grid-start: 9;
   --grid-end: 18.5;
   --grid-rows: 120;
@@ -401,11 +401,11 @@ section.event__layout.widget__wrap {
   color: #FFF;
   text-align: right;
   font-family: Outfit;
-  font-size: 23px;
+  font-size: 19px;
   font-style: normal;
   font-weight: 600;
   line-height: 140%;
-  letter-spacing: 1.15px;
+  letter-spacing: 0.95px;
 }
 
 /* 先頭ラベルは 9:00→9:30 に変更。9:30-10:00 分（6ボックス=hour-height/2）だけ
@@ -460,18 +460,22 @@ section.event__layout.widget__wrap {
   color: #FFF;
   text-align: center;
   font-family: Outfit;
-  font-size: 40px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 600;
   line-height: 140%;
-  letter-spacing: 2px;
+  letter-spacing: 1.6px;
+  /* letter-spacing は最後の文字の後にも入るため、そのままだと見た目が左に寄る。
+     半分だけ右にずらして視覚的な中央に合わせる */
+  margin-right: -1.6px;
+  margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
 .stage-header__line {
-  width: 80px;
+  width: 64px;
   height: 2px;
-  margin: 8px 0;
+  margin: 6px 0;
   position: relative;
   z-index: 1;
 }
@@ -486,11 +490,13 @@ section.event__layout.widget__wrap {
   color: #FFF;
   text-align: center;
   font-family: "Noto Sans JP";
-  font-size: 21px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 160%;
-  letter-spacing: 1.05px;
+  letter-spacing: 0.9px;
+  margin-right: -0.9px;
+  margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
@@ -1596,6 +1602,7 @@ body:has(.session-modal:target) {
   .stage-header__en {
     font-size: 17px;
     letter-spacing: 0.85px;
+    margin-right: -0.85px;
   }
 
   .stage-header__line {
@@ -1606,6 +1613,7 @@ body:has(.session-modal:target) {
   .stage-header__ja {
     font-size: 14px;
     letter-spacing: 0.7px;
+    margin-right: -0.7px;
   }
 
   .timetable__marker-time {
