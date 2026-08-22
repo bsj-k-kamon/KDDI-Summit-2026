@@ -852,6 +852,19 @@ section.event__layout.widget__wrap {
   /* 9:30-10:00 ブロック（高さ hour-height/4）の中央に配置 */
   top: calc(var(--hour-height) / 8);
   transform: translateY(-50%);
+  /* 横スクロール追従用のstickyな子要素を中央揃えするため flex は使わない */
+  display: block;
+}
+
+/* 横スクロールしても表示中の範囲内で画面中央に留まる（会場オープン文言のみ） */
+.timetable__marker--open .timetable__marker-sticky {
+  position: sticky;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #day1-panel .timetable__marker--close {
