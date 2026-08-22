@@ -1,0 +1,124 @@
+<div class="login-left">
+  <div class="login-left__brand">
+    <!-- ロゴ画像の src を差し替えてください -->
+    <img class="login-left__logo" src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-e8273fe3-fe61-433a-9062-7a04333f6a52.png" alt="KDDI SUMMIT 2026">
+  </div>
+  <p class="login-left__text">
+    すでに会員登録がお済みの方は<br class="login-left__br-sp">「ログイン」、<br>
+    初めてご利用の方は<br class="login-left__br-sp">「新規会員登録」へお進みください。
+  </p>
+</div>
+
+<style>
+  /* PC背景 */
+html,
+body,
+#__nuxt,
+#__layout,
+.wrap.layout-wrap,
+#app,
+.v-application--wrap,
+.register__fast-layout,
+.fast-register-layout__wrap {
+  background-image: url("https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-729a4588-270d-424b-b350-deb2a9534c31.jpg") !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-color: transparent !important;
+}
+
+/* スマホ背景 */
+@media (max-width: 767px) {
+  html,
+  body,
+  #__nuxt,
+  #__layout,
+  .wrap.layout-wrap,
+  #app,
+  .v-application--wrap,
+  .register__fast-layout,
+  .fast-register-layout__wrap {
+    background-image: url("https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-729a4588-270d-424b-b350-deb2a9534c31.jpg") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+}
+
+  /* 左カラム：既存の空タイトルを隠す */
+  .login__section .title__wrap {
+    display: none !important;
+  }
+  .login__section .title-layout {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #f0f3f7 !important;
+  }
+  .login__section .login-layout__message {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  /* 左カラムのデザイン */
+  .login-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 92%;
+    margin: 0;
+    text-align: center;
+  }
+  .login-left__brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .login-left__logo {
+    display: block;
+    width: 480px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .login-left__text {
+    margin: 0;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.3;
+    letter-spacing: 0;
+    color: #000;
+    word-break: keep-all;
+    line-break: strict;
+    overflow-wrap: normal;
+  }
+  .login-left__br-sp {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    .login-left {
+      max-width: 88%;
+    }
+    .login-left__logo {
+      width: 280px;
+    }
+    .login-left__text {
+      font-size: 13px;
+      line-height: 1.35;
+    }
+    .login-left__br-sp {
+      display: inline;
+    }
+  }
+</style>
