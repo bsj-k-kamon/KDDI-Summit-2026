@@ -1842,23 +1842,28 @@ body:has(.session-modal:target) {
     padding: 6px 8px;
   }
 
-  /* Hero speaker（オープニング基調講演）: SPでは列幅に収まるよう写真を縮小 */
+  /* Hero speaker（オープニング基調講演）: SPでは写真を非表示にしテキストのみ表示 */
   .session__speaker--hero {
-    grid-template-columns: 100px 1fr;
-    gap: 4px 12px;
+    display: block;
   }
 
   .session__speaker--hero .session__speaker-photo {
-    width: 100px;
-    height: 69px;
-  }
-
-  .session__speaker--hero .session__speaker-name {
-    font-size: 15px;
+    display: none;
   }
 
   .session__speaker--hero .session__speaker-info {
-    font-size: 11px;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .session__speaker--hero .session__speaker-name {
+    display: block;
+    font-size: 18px;
+  }
+
+  .session__speaker--hero + .session__speaker--hero {
+    margin-top: 24px;
   }
 
   .session-modal__panel .session-actions {
