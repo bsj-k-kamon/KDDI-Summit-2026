@@ -28,8 +28,8 @@
   --stage-header-height: 200px;
   --grid-start: 9;
   --grid-end: 18.5;
-  --grid-rows: 60;
-  --row-unit: calc(var(--hour-height) / 6);
+  --grid-rows: 120;
+  --row-unit: calc(var(--hour-height) / 12);
   --max-width: 1980px;
   --col-width: 660px;
   --time-col-width: 66px;
@@ -274,14 +274,14 @@ section.event__layout.widget__wrap {
 
 /* ---- Day 2 grid (ends at 18:00) ---- */
 .timetable__grid--day2 {
-  --grid-rows: 54;
+  --grid-rows: 108;
 }
 
 .timetable__grid--day2 .stage-col {
+  /* 9:00-9:30（6ボックス分）を非表示。9:30以降は1時間=12ボックスの等間隔グリッド */
   grid-template-rows:
-    0px 0px 0px
-    calc(var(--row-unit) / 2) calc(var(--row-unit) / 2) calc(var(--row-unit) / 2)
-    repeat(48, var(--row-unit));
+    0px 0px 0px 0px 0px 0px
+    repeat(102, var(--row-unit));
 }
 
 .timetable__grid--day2 .timetable__bottom-band {
@@ -391,7 +391,7 @@ section.event__layout.widget__wrap {
   z-index: 1;
   background: #010E25;
   padding-top: var(--stage-header-height);
-  min-height: calc(var(--stage-header-height) + var(--row-unit) * (var(--grid-rows) - 4.5));
+  min-height: calc(var(--stage-header-height) + var(--row-unit) * (var(--grid-rows) - 6));
 }
 
 .timetable__time-label {
@@ -408,19 +408,19 @@ section.event__layout.widget__wrap {
   letter-spacing: 1.15px;
 }
 
-/* 先頭ラベルは 9:00→9:30 に変更。9:30-10:00 分は下記グリッド圧縮に合わせて
-   hour-height の 1/4 分だけオフセットする（他の時間は通常通り1時間刻み） */
+/* 先頭ラベルは 9:00→9:30 に変更。9:30-10:00 分（6ボックス=hour-height/2）だけ
+   オフセットする（他の時間は通常通り1時間=12ボックス刻み） */
 .timetable__time-label:nth-child(1)  { top: var(--stage-header-height); }
-.timetable__time-label:nth-child(2)  { top: calc(var(--stage-header-height) + var(--hour-height) * 0.25); }
-.timetable__time-label:nth-child(3)  { top: calc(var(--stage-header-height) + var(--hour-height) * 1.25); }
-.timetable__time-label:nth-child(4)  { top: calc(var(--stage-header-height) + var(--hour-height) * 2.25); }
-.timetable__time-label:nth-child(5)  { top: calc(var(--stage-header-height) + var(--hour-height) * 3.25); }
-.timetable__time-label:nth-child(6)  { top: calc(var(--stage-header-height) + var(--hour-height) * 4.25); }
-.timetable__time-label:nth-child(7)  { top: calc(var(--stage-header-height) + var(--hour-height) * 5.25); }
-.timetable__time-label:nth-child(8)  { top: calc(var(--stage-header-height) + var(--hour-height) * 6.25); }
-.timetable__time-label:nth-child(9)  { top: calc(var(--stage-header-height) + var(--hour-height) * 7.25); }
-.timetable__time-label:nth-child(10) { top: calc(var(--stage-header-height) + var(--hour-height) * 8.25); }
-.timetable__time-label:nth-child(11) { top: calc(var(--stage-header-height) + var(--hour-height) * 9.25); }
+.timetable__time-label:nth-child(2)  { top: calc(var(--stage-header-height) + var(--hour-height) * 0.5); }
+.timetable__time-label:nth-child(3)  { top: calc(var(--stage-header-height) + var(--hour-height) * 1.5); }
+.timetable__time-label:nth-child(4)  { top: calc(var(--stage-header-height) + var(--hour-height) * 2.5); }
+.timetable__time-label:nth-child(5)  { top: calc(var(--stage-header-height) + var(--hour-height) * 3.5); }
+.timetable__time-label:nth-child(6)  { top: calc(var(--stage-header-height) + var(--hour-height) * 4.5); }
+.timetable__time-label:nth-child(7)  { top: calc(var(--stage-header-height) + var(--hour-height) * 5.5); }
+.timetable__time-label:nth-child(8)  { top: calc(var(--stage-header-height) + var(--hour-height) * 6.5); }
+.timetable__time-label:nth-child(9)  { top: calc(var(--stage-header-height) + var(--hour-height) * 7.5); }
+.timetable__time-label:nth-child(10) { top: calc(var(--stage-header-height) + var(--hour-height) * 8.5); }
+.timetable__time-label:nth-child(11) { top: calc(var(--stage-header-height) + var(--hour-height) * 9.5); }
 
 /* Stage Header */
 .stage-header {
@@ -499,12 +499,12 @@ section.event__layout.widget__wrap {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-auto-flow: row;
-  /* 9:00-9:30（コンテンツなし）を非表示、9:30-10:00 を半分の高さに圧縮
-     ※ repeat() の回数には calc(var()) が使えないため実数を指定（day1: 60-6=54） */
+  /* 9:00-9:30（コンテンツなし、6ボックス分）を非表示。
+     以降は1時間=12ボックスの等間隔グリッド
+     ※ repeat() の回数には calc(var()) が使えないため実数を指定（day1: 120-6=114） */
   grid-template-rows:
-    0px 0px 0px
-    calc(var(--row-unit) / 2) calc(var(--row-unit) / 2) calc(var(--row-unit) / 2)
-    repeat(54, var(--row-unit));
+    0px 0px 0px 0px 0px 0px
+    repeat(114, var(--row-unit));
   position: relative;
 }
 
@@ -536,24 +536,24 @@ section.event__layout.widget__wrap {
   background-image: linear-gradient(
     to bottom,
     var(--color-row-band-top) 0,
-    var(--color-row-band-top) calc(var(--hour-height) * 0.25),
-    transparent calc(var(--hour-height) * 0.25),
-    transparent calc(var(--hour-height) * 1.25),
-    var(--color-row-band) calc(var(--hour-height) * 1.25),
-    var(--color-row-band) calc(var(--hour-height) * 2.25),
-    transparent calc(var(--hour-height) * 2.25),
-    transparent calc(var(--hour-height) * 3.25),
-    var(--color-row-band) calc(var(--hour-height) * 3.25),
-    var(--color-row-band) calc(var(--hour-height) * 4.25),
-    transparent calc(var(--hour-height) * 4.25),
-    transparent calc(var(--hour-height) * 5.25),
-    var(--color-row-band) calc(var(--hour-height) * 5.25),
-    var(--color-row-band) calc(var(--hour-height) * 6.25),
-    transparent calc(var(--hour-height) * 6.25),
-    transparent calc(var(--hour-height) * 7.25),
-    var(--color-row-band) calc(var(--hour-height) * 7.25),
-    var(--color-row-band) calc(var(--hour-height) * 8.25),
-    transparent calc(var(--hour-height) * 8.25)
+    var(--color-row-band-top) calc(var(--hour-height) * 0.5),
+    transparent calc(var(--hour-height) * 0.5),
+    transparent calc(var(--hour-height) * 1.5),
+    var(--color-row-band) calc(var(--hour-height) * 1.5),
+    var(--color-row-band) calc(var(--hour-height) * 2.5),
+    transparent calc(var(--hour-height) * 2.5),
+    transparent calc(var(--hour-height) * 3.5),
+    var(--color-row-band) calc(var(--hour-height) * 3.5),
+    var(--color-row-band) calc(var(--hour-height) * 4.5),
+    transparent calc(var(--hour-height) * 4.5),
+    transparent calc(var(--hour-height) * 5.5),
+    var(--color-row-band) calc(var(--hour-height) * 5.5),
+    var(--color-row-band) calc(var(--hour-height) * 6.5),
+    transparent calc(var(--hour-height) * 6.5),
+    transparent calc(var(--hour-height) * 7.5),
+    var(--color-row-band) calc(var(--hour-height) * 7.5),
+    var(--color-row-band) calc(var(--hour-height) * 8.5),
+    transparent calc(var(--hour-height) * 8.5)
   );
 }
 
@@ -561,7 +561,7 @@ section.event__layout.widget__wrap {
 .session {
   --start: 0;
   --duration: 30;
-  grid-row: calc(var(--start) / 10 + 1) / span calc(var(--duration) / 10);
+  grid-row: calc(var(--start) / 5 + 1) / span calc(var(--duration) / 5);
   grid-column: 1;
   align-self: stretch;
   width: auto;
@@ -849,8 +849,8 @@ section.event__layout.widget__wrap {
 }
 
 .timetable__marker--open {
-  /* 9:30-10:00 ブロック（高さ hour-height/4）の中央に配置 */
-  top: calc(var(--hour-height) / 8);
+  /* 9:30-10:00 ブロック（高さ hour-height/2）の中央に配置 */
+  top: calc(var(--hour-height) / 4);
   transform: translateY(-50%);
   /* 横スクロール追従用のstickyな子要素を中央揃えするため flex は使わない */
   display: block;
@@ -868,12 +868,12 @@ section.event__layout.widget__wrap {
 }
 
 #day1-panel .timetable__marker--close {
-  top: calc(var(--hour-height) * 8.75);
+  top: calc(var(--hour-height) * 9);
   transform: translateY(-50%);
 }
 
 .timetable__grid--day2 .timetable__marker--close {
-  top: calc(var(--hour-height) * 7.75);
+  top: calc(var(--hour-height) * 8);
   transform: translateY(-50%);
 }
 
@@ -935,7 +935,7 @@ section.event__layout.widget__wrap {
   position: absolute;
   left: 0;
   right: 0;
-  top: calc(var(--hour-height) * 8.25);
+  top: calc(var(--hour-height) * 8.5);
   height: var(--color-row-band-bottom-height);
   background: transparent;
   border-radius: 0 0 20px 20px;
@@ -1490,7 +1490,7 @@ body:has(.session-modal:target) {
   .timetable {
     --hour-height: 510px;
     --stage-header-height: 108px;
-    --row-unit: calc(var(--hour-height) / 6);
+    --row-unit: calc(var(--hour-height) / 12);
     --col-width: 270px;
     --time-col-width: 52px;
     --timetable-grid-gap: 15px;
