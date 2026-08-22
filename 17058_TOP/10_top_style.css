@@ -277,6 +277,13 @@ section.event__layout.widget__wrap {
   --grid-rows: 54;
 }
 
+.timetable__grid--day2 .stage-col {
+  grid-template-rows:
+    0px 0px 0px
+    calc(var(--row-unit) / 2) calc(var(--row-unit) / 2) calc(var(--row-unit) / 2)
+    repeat(48, var(--row-unit));
+}
+
 .timetable__grid--day2 .timetable__bottom-band {
   display: none;
 }
@@ -384,7 +391,7 @@ section.event__layout.widget__wrap {
   z-index: 1;
   background: #010E25;
   padding-top: var(--stage-header-height);
-  min-height: calc(var(--stage-header-height) + var(--row-unit) * var(--grid-rows));
+  min-height: calc(var(--stage-header-height) + var(--row-unit) * (var(--grid-rows) - 4.5));
 }
 
 .timetable__time-label {
@@ -401,17 +408,19 @@ section.event__layout.widget__wrap {
   letter-spacing: 1.15px;
 }
 
-.timetable__time-label:nth-child(1)  { top: calc(var(--stage-header-height) + var(--hour-height) * 0); }
-.timetable__time-label:nth-child(2)  { top: calc(var(--stage-header-height) + var(--hour-height) * 1); }
-.timetable__time-label:nth-child(3)  { top: calc(var(--stage-header-height) + var(--hour-height) * 2); }
-.timetable__time-label:nth-child(4)  { top: calc(var(--stage-header-height) + var(--hour-height) * 3); }
-.timetable__time-label:nth-child(5)  { top: calc(var(--stage-header-height) + var(--hour-height) * 4); }
-.timetable__time-label:nth-child(6)  { top: calc(var(--stage-header-height) + var(--hour-height) * 5); }
-.timetable__time-label:nth-child(7)  { top: calc(var(--stage-header-height) + var(--hour-height) * 6); }
-.timetable__time-label:nth-child(8)  { top: calc(var(--stage-header-height) + var(--hour-height) * 7); }
-.timetable__time-label:nth-child(9)  { top: calc(var(--stage-header-height) + var(--hour-height) * 8); }
-.timetable__time-label:nth-child(10) { top: calc(var(--stage-header-height) + var(--hour-height) * 9); }
-.timetable__time-label:nth-child(11) { top: calc(var(--stage-header-height) + var(--hour-height) * 10); }
+/* 先頭ラベルは 9:00→9:30 に変更。9:30-10:00 分は下記グリッド圧縮に合わせて
+   hour-height の 1/4 分だけオフセットする（他の時間は通常通り1時間刻み） */
+.timetable__time-label:nth-child(1)  { top: var(--stage-header-height); }
+.timetable__time-label:nth-child(2)  { top: calc(var(--stage-header-height) + var(--hour-height) * 0.25); }
+.timetable__time-label:nth-child(3)  { top: calc(var(--stage-header-height) + var(--hour-height) * 1.25); }
+.timetable__time-label:nth-child(4)  { top: calc(var(--stage-header-height) + var(--hour-height) * 2.25); }
+.timetable__time-label:nth-child(5)  { top: calc(var(--stage-header-height) + var(--hour-height) * 3.25); }
+.timetable__time-label:nth-child(6)  { top: calc(var(--stage-header-height) + var(--hour-height) * 4.25); }
+.timetable__time-label:nth-child(7)  { top: calc(var(--stage-header-height) + var(--hour-height) * 5.25); }
+.timetable__time-label:nth-child(8)  { top: calc(var(--stage-header-height) + var(--hour-height) * 6.25); }
+.timetable__time-label:nth-child(9)  { top: calc(var(--stage-header-height) + var(--hour-height) * 7.25); }
+.timetable__time-label:nth-child(10) { top: calc(var(--stage-header-height) + var(--hour-height) * 8.25); }
+.timetable__time-label:nth-child(11) { top: calc(var(--stage-header-height) + var(--hour-height) * 9.25); }
 
 /* Stage Header */
 .stage-header {
@@ -490,7 +499,12 @@ section.event__layout.widget__wrap {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-auto-flow: row;
-  grid-template-rows: repeat(var(--grid-rows), var(--row-unit));
+  /* 9:00-9:30（コンテンツなし）を非表示、9:30-10:00 を半分の高さに圧縮
+     ※ repeat() の回数には calc(var()) が使えないため実数を指定（day1: 60-6=54） */
+  grid-template-rows:
+    0px 0px 0px
+    calc(var(--row-unit) / 2) calc(var(--row-unit) / 2) calc(var(--row-unit) / 2)
+    repeat(54, var(--row-unit));
   position: relative;
 }
 
@@ -522,24 +536,24 @@ section.event__layout.widget__wrap {
   background-image: linear-gradient(
     to bottom,
     var(--color-row-band-top) 0,
-    var(--color-row-band-top) var(--hour-height),
-    transparent var(--hour-height),
-    transparent calc(var(--hour-height) * 2),
-    var(--color-row-band) calc(var(--hour-height) * 2),
-    var(--color-row-band) calc(var(--hour-height) * 3),
-    transparent calc(var(--hour-height) * 3),
-    transparent calc(var(--hour-height) * 4),
-    var(--color-row-band) calc(var(--hour-height) * 4),
-    var(--color-row-band) calc(var(--hour-height) * 5),
-    transparent calc(var(--hour-height) * 5),
-    transparent calc(var(--hour-height) * 6),
-    var(--color-row-band) calc(var(--hour-height) * 6),
-    var(--color-row-band) calc(var(--hour-height) * 7),
-    transparent calc(var(--hour-height) * 7),
-    transparent calc(var(--hour-height) * 8),
-    var(--color-row-band) calc(var(--hour-height) * 8),
-    var(--color-row-band) calc(var(--hour-height) * 9),
-    transparent calc(var(--hour-height) * 9)
+    var(--color-row-band-top) calc(var(--hour-height) * 0.25),
+    transparent calc(var(--hour-height) * 0.25),
+    transparent calc(var(--hour-height) * 1.25),
+    var(--color-row-band) calc(var(--hour-height) * 1.25),
+    var(--color-row-band) calc(var(--hour-height) * 2.25),
+    transparent calc(var(--hour-height) * 2.25),
+    transparent calc(var(--hour-height) * 3.25),
+    var(--color-row-band) calc(var(--hour-height) * 3.25),
+    var(--color-row-band) calc(var(--hour-height) * 4.25),
+    transparent calc(var(--hour-height) * 4.25),
+    transparent calc(var(--hour-height) * 5.25),
+    var(--color-row-band) calc(var(--hour-height) * 5.25),
+    var(--color-row-band) calc(var(--hour-height) * 6.25),
+    transparent calc(var(--hour-height) * 6.25),
+    transparent calc(var(--hour-height) * 7.25),
+    var(--color-row-band) calc(var(--hour-height) * 7.25),
+    var(--color-row-band) calc(var(--hour-height) * 8.25),
+    transparent calc(var(--hour-height) * 8.25)
   );
 }
 
@@ -835,17 +849,18 @@ section.event__layout.widget__wrap {
 }
 
 .timetable__marker--open {
-  top: calc(var(--row-unit) * 3);
+  /* 9:30-10:00 ブロック（高さ hour-height/4）の中央に配置 */
+  top: calc(var(--hour-height) / 8);
   transform: translateY(-50%);
 }
 
 #day1-panel .timetable__marker--close {
-  top: calc(var(--hour-height) * 9.5);
+  top: calc(var(--hour-height) * 8.75);
   transform: translateY(-50%);
 }
 
 .timetable__grid--day2 .timetable__marker--close {
-  top: calc(var(--hour-height) * 8.5);
+  top: calc(var(--hour-height) * 7.75);
   transform: translateY(-50%);
 }
 
@@ -907,7 +922,7 @@ section.event__layout.widget__wrap {
   position: absolute;
   left: 0;
   right: 0;
-  top: calc(var(--hour-height) * 9);
+  top: calc(var(--hour-height) * 8.25);
   height: var(--color-row-band-bottom-height);
   background: transparent;
   border-radius: 0 0 20px 20px;
