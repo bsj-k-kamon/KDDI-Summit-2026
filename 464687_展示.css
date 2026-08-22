@@ -1,0 +1,15 @@
+<style>
+.title {
+    padding-bottom: 0 !important;
+}
+.description {
+    margin: 4px !important;
+}
+.html__wrap.fr-view {
+    font-family: Noto Sans JP;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 170%;
+    letter-spacing: 0%;
+}
+</style>
