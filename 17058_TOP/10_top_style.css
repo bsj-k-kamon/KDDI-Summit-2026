@@ -748,6 +748,31 @@ section.event__layout.widget__wrap {
   margin-top: 8px;
 }
 
+/* ---- Hero speaker (オープニング基調講演専用の大きめ横長写真) ---- */
+.session__speaker--hero {
+  grid-template-columns: 200px 1fr;
+  gap: 6px 20px;
+}
+
+.session__speaker--hero .session__speaker-photo {
+  width: 200px;
+  height: 137px;
+}
+
+.session__speaker--hero .session__speaker-name {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.session__speaker--hero .session__speaker-info {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.session__speaker--hero + .session__speaker--hero {
+  margin-top: 16px;
+}
+
 .session__image-area {
   width: 100%;
   height: 220px;
@@ -1815,6 +1840,25 @@ body:has(.session-modal:target) {
     font-size: 11px;
     letter-spacing: 0.55px;
     padding: 6px 8px;
+  }
+
+  /* Hero speaker（オープニング基調講演）: SPでは列幅に収まるよう写真を縮小 */
+  .session__speaker--hero {
+    grid-template-columns: 100px 1fr;
+    gap: 4px 12px;
+  }
+
+  .session__speaker--hero .session__speaker-photo {
+    width: 100px;
+    height: 69px;
+  }
+
+  .session__speaker--hero .session__speaker-name {
+    font-size: 15px;
+  }
+
+  .session__speaker--hero .session__speaker-info {
+    font-size: 11px;
   }
 
   .session-modal__panel .session-actions {
