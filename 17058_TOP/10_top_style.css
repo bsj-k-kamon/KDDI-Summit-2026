@@ -1053,7 +1053,9 @@ body:has(.session-modal:target) {
 .session-modal__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 10, 28, 0.8);
+  /* サイト側の共通スタイル（aタグへのbackground resetなど）に打ち消されないよう
+     !important で確実に暗くする */
+  background: rgba(0, 10, 28, 0.8) !important;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
   cursor: pointer;
