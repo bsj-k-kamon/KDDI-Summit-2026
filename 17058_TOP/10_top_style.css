@@ -872,10 +872,6 @@ section.event__layout.widget__wrap {
   background: #11519a;
 }
 
-.session-modal__panel .session-actions {
-  margin-top: 24px;
-}
-
 /* ---- Event Markers (Open / Close) ---- */
 .timetable__marker {
   position: absolute;
@@ -1142,6 +1138,32 @@ body:has(.session-modal:target) {
   overflow-y: auto;
   padding: 58px 80px 68px;
   box-sizing: border-box;
+  /* スクロールが必要なことを視認できるよう、常に薄いスクロールバーを表示する */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(14, 13, 106, 0.35) transparent;
+}
+
+.session-modal__panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.session-modal__panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.session-modal__panel::-webkit-scrollbar-thumb {
+  background-color: rgba(14, 13, 106, 0.35);
+  border-radius: 4px;
+}
+
+/* 予約/視聴ボタンはモーダル内でスクロールしても常に下部に固定表示する */
+.session-modal__panel .session-actions {
+  position: sticky;
+  bottom: 0;
+  margin: 24px -80px -68px;
+  padding: 16px 80px 24px;
+  background: var(--color-white);
+  z-index: 2;
 }
 
 .session-modal__meta {
@@ -1873,7 +1895,9 @@ body:has(.session-modal:target) {
   }
 
   .session-modal__panel .session-actions {
-    margin-top: 20px;
+    /* SPでは session-modal__panel の padding（15px/40px）に合わせて再計算 */
+    margin: 20px -15px -40px;
+    padding: 12px 15px 20px;
   }
 
   .timetable__cta {
