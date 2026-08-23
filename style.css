@@ -163,6 +163,18 @@ svg.qr-area__event-icon-color > path {
   box-shadow: 0 2px 8px rgba(14, 13, 106, 0.08);
   box-sizing: border-box;
 }
+/** PC表示：ロゴがヘッダーの上寄りになってしまう不具合を修正
+    （header__content の高さがヘッダー全体の高さ(64px)より低く、
+    上詰めになっていたため縦中央に来ていなかった） **/
+@media screen and (min-width: 851px) {
+  .header__wrap.event__header .header__content {
+    height: 100%;
+  }
+  .header-logo__wrap {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+}
 /** ヘッダーカラー変更 **/
 
 /* ヘッダー文字色変更
