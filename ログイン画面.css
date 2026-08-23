@@ -4,8 +4,9 @@
     <img class="login-left__logo" src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-e8273fe3-fe61-433a-9062-7a04333f6a52.png" alt="KDDI SUMMIT 2026">
   </div>
   <p class="login-left__text">
-    すでに会員登録がお済みの方は<br class="login-left__br-sp">「ログイン」、<br>
-    初めてご利用の方は<br class="login-left__br-sp">「新規会員登録」へお進みください。
+    すでに会員登録がお済みの方は「ログイン」、<br>
+    初めてご利用の方は「新規会員登録」へ<br>
+    お進みください。
   </p>
 </div>
 
@@ -104,16 +105,9 @@ body,
     line-break: strict;
     overflow-wrap: normal;
   }
-  .login-left__br-sp {
-    display: none;
-  }
-
   @media (max-width: 767px) {
     .login-left__text {
       font-size: 14px;
-    }
-    .login-left__br-sp {
-      display: inline;
     }
   }
 </style>
