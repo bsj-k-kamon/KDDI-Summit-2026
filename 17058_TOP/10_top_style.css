@@ -773,6 +773,32 @@ section.event__layout.widget__wrap {
   margin-top: 16px;
 }
 
+/* ---- 「KDDIが描く"AI生活力"」カード専用：登壇者写真を拡大 ---- */
+.session--photo-lg {
+  padding: 4px 16px 2px;
+}
+
+.session--photo-lg .session__header {
+  margin-bottom: 2px;
+}
+
+.session--photo-lg .session__title {
+  margin-bottom: 0;
+}
+
+.session--photo-lg .session__speakers {
+  margin-top: 6px;
+}
+
+.session--photo-lg .session__speaker-photo {
+  width: 52px;
+  height: 52px;
+}
+
+.session--photo-lg .session__speaker--with-photo {
+  grid-template-columns: 52px 1fr;
+}
+
 .session__image-area {
   width: 100%;
   height: 220px;
