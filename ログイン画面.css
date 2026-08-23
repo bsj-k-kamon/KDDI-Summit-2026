@@ -3,9 +3,7 @@
     <!-- ロゴ画像の src を差し替えてください -->
     <img class="login-left__logo" src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-e8273fe3-fe61-433a-9062-7a04333f6a52.png" alt="KDDI SUMMIT 2026">
   </div>
-  <p class="login-left__text">すでに会員登録がお済みの方は「ログイン」、<br>
-初めてご利用の方は「新規会員登録」へ<br>
-お進みください。</p>
+  <p class="login-left__text">すでに会員登録がお済みの方は「ログイン」、<br>初めてご利用の方は「新規会員登録」へ<br>お進みください。</p>
 </div>
 
 <style>
@@ -92,7 +90,8 @@ body,
     object-fit: contain;
   }
   .login-left__text {
-    margin: 0;
+    width: 100% !important;
+    margin: 0 !important;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 700;
     font-size: 16px !important;
