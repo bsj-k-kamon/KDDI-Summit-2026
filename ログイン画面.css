@@ -52,13 +52,13 @@ body,
   .login__section .title-layout {
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     background-color: #f0f3f7 !important;
   }
   .login__section .login-layout__message {
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     width: 100% !important;
     height: 100% !important;
     margin: 0 !important;
@@ -66,23 +66,23 @@ body,
     background: transparent !important;
   }
 
-  /* 左カラムのデザイン（新規会員登録画面と統一）
+  /* 左カラムのデザイン（新規会員登録画面と統一：左揃え）
      既存の .login-left 等のスタイルと詳細度が同じため、
      !important を付けないと後勝ちにならない場合がある */
   .login-left {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start !important;
     justify-content: center;
     width: 100% !important;
     max-width: 100% !important;
     margin: 0;
-    text-align: center;
+    text-align: left !important;
   }
   .login-left__brand {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
   }
   .login-left__logo {
