@@ -845,14 +845,14 @@ section.event__layout.widget__wrap {
   align-items: center;
   justify-content: center;
   min-width: 0;
-  min-height: 40px;
-  padding: 5px 9px;
+  min-height: 30px;
+  padding: 4px 7px;
   border-radius: 30px;
   font-family: var(--font-ja);
-  font-size: 22px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: 1.1px;
+  letter-spacing: 0.75px;
   color: #fff !important;
   text-decoration: none;
   text-align: center;
