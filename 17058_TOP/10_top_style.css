@@ -2166,17 +2166,23 @@ body:has(.session-modal:target) {
   ========================================= */
   .ev-row {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     padding: 24px 0;
     border-bottom: 1px dashed #dcdfe5; /* 点線にして圧迫感を軽減 */
   }
   .ev-row-last {
     border-bottom: none;
   }
+  /* 会場など、データが複数行にわたる行はラベルを上揃えにする */
+  .ev-row--top {
+    align-items: flex-start;
+  }
 
   /* 左側のラベルエリア */
   .ev-label {
     flex: 0 0 160px; /* ラベルの幅を固定 */
+  }
+  .ev-row--top .ev-label {
     padding-top: 2px;
   }
   /* ラベルをバッジ風に装飾 */
@@ -2259,6 +2265,7 @@ body:has(.session-modal:target) {
     }
     .ev-row {
       flex-direction: column; /* 縦並びに変更 */
+      align-items: flex-start; /* 縦並び時は左揃えに戻す */
       padding: 20px 0;
     }
     .ev-label {
