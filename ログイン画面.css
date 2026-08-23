@@ -66,14 +66,16 @@ body,
     background: transparent !important;
   }
 
-  /* 左カラムのデザイン */
+  /* 左カラムのデザイン（新規会員登録画面と統一）
+     既存の .login-left 等のスタイルと詳細度が同じため、
+     !important を付けないと後勝ちにならない場合がある */
   .login-left {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: fit-content;
-    max-width: 92%;
+    width: 100% !important;
+    max-width: 100% !important;
     margin: 0;
     text-align: center;
   }
@@ -85,8 +87,8 @@ body,
   }
   .login-left__logo {
     display: block;
-    width: 480px;
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 625px !important;
     height: auto;
     object-fit: contain;
   }
@@ -94,10 +96,10 @@ body,
     margin: 0;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 700;
-    font-size: 15px;
-    line-height: 1.3;
+    font-size: 16px !important;
+    line-height: 1.8 !important;
     letter-spacing: 0;
-    color: #000;
+    color: #333333 !important;
     word-break: keep-all;
     line-break: strict;
     overflow-wrap: normal;
@@ -106,16 +108,9 @@ body,
     display: none;
   }
 
-  @media (max-width: 600px) {
-    .login-left {
-      max-width: 88%;
-    }
-    .login-left__logo {
-      width: 280px;
-    }
+  @media (max-width: 767px) {
     .login-left__text {
-      font-size: 13px;
-      line-height: 1.35;
+      font-size: 14px;
     }
     .login-left__br-sp {
       display: inline;
