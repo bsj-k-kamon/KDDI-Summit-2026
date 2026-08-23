@@ -1176,8 +1176,25 @@ body:has(.session-modal:target) {
 .session-modal__meta {
   display: flex;
   align-items: baseline;
-  gap: 24px;
+  gap: 16px;
   margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.session-modal__day {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border: 1px solid #3d4568;
+  border-radius: 4px;
+  background: #1a2340;
+  font-family: var(--font-en);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.75px;
+  color: var(--color-white);
 }
 
 .session-modal__date {
@@ -1960,8 +1977,14 @@ body:has(.session-modal:target) {
   }
 
   .session-modal__meta {
-    gap: 12px;
+    gap: 10px;
     margin-bottom: 12px;
+  }
+
+  .session-modal__day {
+    padding: 3px 8px;
+    font-size: 11px;
+    letter-spacing: 0.55px;
   }
 
   .session-modal__date {
