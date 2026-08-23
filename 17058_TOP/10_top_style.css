@@ -781,13 +781,18 @@ section.event__layout.widget__wrap {
   margin-top: 12px;
 }
 
-.session__plus {
-  position: static;
-  align-self: flex-end;
-  flex-shrink: 0;
+/* アイコンのサイズだけを定義するクラス（位置指定とは分離） */
+.session__plus-size {
   width: 28px;
   height: 28px;
-  margin: 0 0 2px auto;
+}
+
+/* session-actions の高さから独立させるため、session__footer の通常フローから
+   外し、フッターの直上（今までと同じ見た目の位置）に絶対配置する */
+.session__plus {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 2px);
   border: none;
   background: none;
   cursor: pointer;
@@ -812,6 +817,7 @@ section.event__layout.widget__wrap {
 
 /* ---- Session Action Links (card + modal) ---- */
 .session__footer {
+  position: relative;
   margin-top: auto;
   padding-top: 0;
   flex-shrink: 0;
@@ -839,14 +845,14 @@ section.event__layout.widget__wrap {
   align-items: center;
   justify-content: center;
   min-width: 0;
-  min-height: 22px;
-  padding: 3px 5px;
+  min-height: 40px;
+  padding: 5px 9px;
   border-radius: 30px;
   font-family: var(--font-ja);
-  font-size: 12px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: 0.6px;
+  letter-spacing: 1.1px;
   color: #fff !important;
   text-decoration: none;
   text-align: center;
