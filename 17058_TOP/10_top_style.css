@@ -791,12 +791,12 @@ section.event__layout.widget__wrap {
 }
 
 .session--photo-lg .session__speaker-photo {
-  width: 52px;
-  height: 52px;
+  width: 74px;
+  height: 74px;
 }
 
 .session--photo-lg .session__speaker--with-photo {
-  grid-template-columns: 52px 1fr;
+  grid-template-columns: 74px 1fr;
 }
 
 .session__image-area {
