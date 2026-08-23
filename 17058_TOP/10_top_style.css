@@ -1127,6 +1127,8 @@ body:has(.session-modal:target) {
   height: 64px;
 }
 
+/* パネル自体はスクロールせず、内側の session-modal__scroll だけがスクロールする。
+   session-actions（予約/視聴ボタン）はスクロール領域の外に置き、常に最下部に固定表示する */
 .session-modal__panel {
   background: var(--color-white);
   border-radius: 20px;
@@ -1134,36 +1136,39 @@ body:has(.session-modal:target) {
   min-height: 669px;
   max-height: calc(100vh - 140px);
   max-width: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   padding: 58px 80px 68px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.session-modal__scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
   /* スクロールが必要なことを視認できるよう、常に薄いスクロールバーを表示する */
   scrollbar-width: thin;
   scrollbar-color: rgba(14, 13, 106, 0.35) transparent;
 }
 
-.session-modal__panel::-webkit-scrollbar {
+.session-modal__scroll::-webkit-scrollbar {
   width: 8px;
 }
 
-.session-modal__panel::-webkit-scrollbar-track {
+.session-modal__scroll::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.session-modal__panel::-webkit-scrollbar-thumb {
+.session-modal__scroll::-webkit-scrollbar-thumb {
   background-color: rgba(14, 13, 106, 0.35);
   border-radius: 4px;
 }
 
-/* 予約/視聴ボタンはモーダル内でスクロールしても常に下部に固定表示する */
 .session-modal__panel .session-actions {
-  position: sticky;
-  bottom: 0;
-  margin: 24px -80px -68px;
-  padding: 16px 80px 24px;
-  background: var(--color-white);
-  z-index: 2;
+  flex-shrink: 0;
+  margin-top: 24px;
 }
 
 .session-modal__meta {
@@ -1895,9 +1900,7 @@ body:has(.session-modal:target) {
   }
 
   .session-modal__panel .session-actions {
-    /* SPでは session-modal__panel の padding（15px/40px）に合わせて再計算 */
-    margin: 20px -15px -40px;
-    padding: 12px 15px 20px;
+    margin-top: 20px;
   }
 
   .timetable__cta {
