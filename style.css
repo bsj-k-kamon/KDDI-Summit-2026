@@ -1106,13 +1106,20 @@ button.confirm__button .v-btn__content::after {
   content: "選択中の　講演";
   font-size: 14px;
 }
-/* 「チケット」を「予約済講演」に変更 */
+/* 予約確認画面：1行目（講演タイトル）のラベルを「予約済講演」に、
+   2行目（枚数）のラベルは「枚数」のまま表示する。
+   どちらも同じ .detail__ticket__label クラスを使っているため、
+   .detail__ticket 内での行の順番（1番目 / 2番目）で区別する */
 .detail__ticket__label {
   font-size: 0 !important;
 }
-.detail__ticket__label::after {
+.detail__ticket > .layout.align-center:first-child .detail__ticket__label::after {
   content: "予約済講演";
   font-size: 14px; /* 元の文字サイズに合わせて調整 */
+}
+.detail__ticket > .layout.align-center:not(:first-child) .detail__ticket__label::after {
+  content: "枚数";
+  font-size: 14px;
 }
 /* 申し込み完了画面 OKボタン 色変更*/
 button.complete-button__content.v-btn.v-btn--contained.theme--light.v-size--large {
