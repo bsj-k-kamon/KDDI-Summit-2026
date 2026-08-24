@@ -28,7 +28,7 @@
   --stage-header-height: 160px;
   --grid-start: 9;
   --grid-end: 18.5;
-  --grid-rows: 120;
+  --grid-rows: 114;
   --row-unit: calc(var(--hour-height) / 12);
   --max-width: 1980px;
   --col-width: 660px;
@@ -506,11 +506,11 @@ section.event__layout.widget__wrap {
   grid-template-columns: minmax(0, 1fr);
   grid-auto-flow: row;
   /* 9:00-9:30（コンテンツなし、6ボックス分）を非表示。
-     以降は1時間=12ボックスの等間隔グリッド
-     ※ repeat() の回数には calc(var()) が使えないため実数を指定（day1: 120-6=114） */
+     以降は1時間=12ボックスの等間隔グリッド（9:30〜18:30）
+     ※ repeat() の回数には calc(var()) が使えないため実数を指定（day1: 114-6=108） */
   grid-template-rows:
     0px 0px 0px 0px 0px 0px
-    repeat(114, var(--row-unit));
+    repeat(108, var(--row-unit));
   position: relative;
 }
 
@@ -929,11 +929,6 @@ section.event__layout.widget__wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-#day1-panel .timetable__marker--close {
-  top: calc(var(--hour-height) * 9);
-  transform: translateY(-50%);
 }
 
 .timetable__grid--day2 .timetable__marker--close {
