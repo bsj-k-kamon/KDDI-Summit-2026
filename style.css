@@ -1405,3 +1405,11 @@ h1.title__content {
     text-align: left;
   }
 }
+
+/* 新規会員登録画面の見出し・案内文、携帯版のみ左寄せに変更 */
+@media screen and (max-width: 650px) {
+  .register-layout__title .custom-title,
+  .register-layout__title p {
+    text-align: left;
+  }
+}
