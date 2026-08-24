@@ -1412,4 +1412,11 @@ h1.title__content {
   .register-layout__title p {
     text-align: left;
   }
+.flex.header__logo.justify-center {
+    height: 100%;
+}
+section.header-logo__wrap {
+    height: 100% !important;
+    padding-top: 8px !important;
+}
 }
