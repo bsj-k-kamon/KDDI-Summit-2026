@@ -51,31 +51,28 @@
   setTimeout(apply, 1000);
 
   // MutationObserverのコールバックを直接applyにせず、
-  // rAFで1フレームに1回だけまとめて実行する（重複実行によるページの
-  // 重さ・カクつきを防ぐため）
-  var scheduled = false;
+  // 「前回の実行から最低200ms空ける」形にまとめて実行する。
+  // 監視自体は止めない（止めると、後からVueが該当箇所を再描画した際に
+  // 直しに行けず「同意する」が出たり消えたりする不具合が起きるため）。
+  // 代わりに実行頻度を絞ることで、スクロール中にDOM変更が連続発生しても
+  // 毎フレーム処理が走ってカクつく、ということが起きないようにする。
+  var MIN_INTERVAL_MS = 200;
+  var lastRun = 0;
+  var pending = false;
   function scheduleApply() {
-    if (scheduled) return;
-    scheduled = true;
-    requestAnimationFrame(function () {
-      scheduled = false;
+    if (pending) return;
+    pending = true;
+    var wait = Math.max(0, MIN_INTERVAL_MS - (Date.now() - lastRun));
+    setTimeout(function () {
+      pending = false;
+      lastRun = Date.now();
       apply();
-    });
+    }, wait);
   }
 
-  var observer = new MutationObserver(scheduleApply);
-  observer.observe(document.documentElement, {
+  new MutationObserver(scheduleApply).observe(document.documentElement, {
     childList: true,
     subtree: true,
     characterData: true,
   });
-
-  // このページはVueの初回描画が終われば内容が変わらない読み取り専用の
-  // 一覧画面のため、初回描画が落ち着いたタイミングで監視を止める。
-  // 監視を止めないと、スクロール中などにVue側で発生する無関係な
-  // DOM変更のたびに毎回スキャンが走り、スクロールがカクつく原因になる。
-  setTimeout(function () {
-    observer.disconnect();
-    apply();
-  }, 3000);
 })();
