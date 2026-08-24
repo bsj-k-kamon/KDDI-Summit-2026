@@ -17,7 +17,7 @@ p.verify-layout__title {
   font-size: 0 !important;
 }
 p.verify-layout__title::before {
-  content: "サイトは9/1に公開されます";
+  content: "KDDI SUMMIT 2026参加申し込みは 9月1日（火）10:00開始予定です。";
   display: block;
   font-size: 16px;
   font-weight: 700;
@@ -27,7 +27,7 @@ p.verify-layout__description {
   font-size: 0 !important;
 }
 p.verify-layout__description::before {
-  content: "公開まで今しばらくお待ちください";
+  content: "受付開始まで今しばらくお待ちください。";
   display: block;
   font-size: 14px;
   line-height: 1.5;
