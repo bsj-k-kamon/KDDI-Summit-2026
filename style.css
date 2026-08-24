@@ -1087,12 +1087,6 @@ div.web-layout > section > div.next-button > button > span {
   line-height: inherit;
   letter-spacing: inherit;
 }
-/* 「予約済み」ボタンが右寄せになっていたのをボックス中央に変更
-   （金額表示を非表示にしているため、右詰め用の margin-left:auto が
-   そのまま残ってしまい、右端に寄って見えていた） */
-.card-amount.ticket-price__detail-amount {
-  margin: 0 auto !important;
-}
 /* カートに入れた後＞画面下のカートボタン押下＞削除ボタン 色変更 */
 button.item-delete-button__content.v-btn.v-btn--contained.theme--light.v-size--default {
   background-color: #0e0d6a !important;
