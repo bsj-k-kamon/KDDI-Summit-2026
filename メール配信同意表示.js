@@ -12,36 +12,55 @@
     return location.pathname.indexOf(TARGET_PATH) !== -1;
   }
 
+  function fixDetail(detail) {
+    var label = detail.querySelector(".profile-contents__detail__label");
+    if (!label || label.textContent.indexOf(NOTE_TEXT) === -1) return;
+
+    var valueEl = detail.querySelector(VALUE_SELECTOR);
+    if (valueEl) {
+      var textHolder = valueEl.querySelector("span") || valueEl;
+      if (
+        textHolder.textContent.replace(/\s+/g, "") &&
+        textHolder.textContent.trim() !== "同意する"
+      ) {
+        textHolder.textContent = "同意する";
+      }
+      var placeholder = detail.querySelector("." + PLACEHOLDER_CLASS);
+      if (placeholder) placeholder.remove();
+    } else if (!detail.querySelector("." + PLACEHOLDER_CLASS)) {
+      var ph = document.createElement("div");
+      ph.className = "profile-contents__detail__value " + PLACEHOLDER_CLASS;
+      ph.textContent = "同意しない";
+      detail.appendChild(ph);
+    }
+  }
+
   function apply() {
     if (!isTargetPage()) return;
+    var details = document.querySelectorAll(".profile-contents__detail");
+    for (var i = 0; i < details.length; i++) fixDetail(details[i]);
+  }
 
-    var labels = document.querySelectorAll(
-      ".profile-contents__detail__label"
-    );
-    for (var i = 0; i < labels.length; i++) {
-      if (labels[i].textContent.indexOf(NOTE_TEXT) === -1) continue;
-
-      var detail = labels[i].closest(".profile-contents__detail");
-      if (!detail) continue;
-
-      var valueEl = detail.querySelector(VALUE_SELECTOR);
-      if (valueEl) {
-        var textHolder = valueEl.querySelector("span") || valueEl;
-        if (
-          textHolder.textContent.replace(/\s+/g, "") &&
-          textHolder.textContent.trim() !== "同意する"
-        ) {
-          textHolder.textContent = "同意する";
-        }
-        var placeholder = detail.querySelector("." + PLACEHOLDER_CLASS);
-        if (placeholder) placeholder.remove();
-      } else if (!detail.querySelector("." + PLACEHOLDER_CLASS)) {
-        var ph = document.createElement("div");
-        ph.className =
-          "profile-contents__detail__value " + PLACEHOLDER_CLASS;
-        ph.textContent = "同意しない";
-        detail.appendChild(ph);
-      }
+  // 追加されたノードだけを見て直す。Vueがこの行をスクロール中などに
+  // 再描画すると、そのたびに一旦「元の状態」に戻ってから直前の状態に
+  // 復元されるため、直しに行くタイミングを遅らせると復元前の一瞬が
+  // 目に見えてしまい「出たり消えたりする」ように見える。
+  // MutationObserverのコールバックは変更が起きたのと同じタイミング
+  // （描画の直前）で呼ばれるので、ここで即座に直せばちらつきが起きない。
+  // 全件再スキャンではなく変更されたノードだけを見るので、無関係な
+  // DOM変更が多発しても重くならない。
+  function handleAddedNode(node) {
+    if (node.nodeType !== 1) return;
+    if (node.matches && node.matches(".profile-contents__detail")) {
+      fixDetail(node);
+    }
+    if (node.querySelectorAll) {
+      var found = node.querySelectorAll(".profile-contents__detail");
+      for (var i = 0; i < found.length; i++) fixDetail(found[i]);
+    }
+    if (node.closest) {
+      var parent = node.closest(".profile-contents__detail");
+      if (parent) fixDetail(parent);
     }
   }
 
@@ -50,27 +69,23 @@
   setTimeout(apply, 300);
   setTimeout(apply, 1000);
 
-  // MutationObserverのコールバックを直接applyにせず、
-  // 「前回の実行から最低200ms空ける」形にまとめて実行する。
-  // 監視自体は止めない（止めると、後からVueが該当箇所を再描画した際に
-  // 直しに行けず「同意する」が出たり消えたりする不具合が起きるため）。
-  // 代わりに実行頻度を絞ることで、スクロール中にDOM変更が連続発生しても
-  // 毎フレーム処理が走ってカクつく、ということが起きないようにする。
-  var MIN_INTERVAL_MS = 200;
-  var lastRun = 0;
-  var pending = false;
-  function scheduleApply() {
-    if (pending) return;
-    pending = true;
-    var wait = Math.max(0, MIN_INTERVAL_MS - (Date.now() - lastRun));
-    setTimeout(function () {
-      pending = false;
-      lastRun = Date.now();
-      apply();
-    }, wait);
-  }
+  new MutationObserver(function (mutations) {
+    if (!isTargetPage()) return;
+    for (var i = 0; i < mutations.length; i++) {
+      var mutation = mutations[i];
+      var added = mutation.addedNodes;
+      for (var j = 0; j < added.length; j++) handleAddedNode(added[j]);
 
-  new MutationObserver(scheduleApply).observe(document.documentElement, {
+      if (mutation.type === "characterData") {
+        var target =
+          mutation.target.nodeType === 1
+            ? mutation.target
+            : mutation.target.parentElement;
+        var detail = target && target.closest(".profile-contents__detail");
+        if (detail) fixDetail(detail);
+      }
+    }
+  }).observe(document.documentElement, {
     childList: true,
     subtree: true,
     characterData: true,
