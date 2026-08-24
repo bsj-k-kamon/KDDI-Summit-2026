@@ -22,7 +22,20 @@
   setTimeout(apply, 300);
   setTimeout(apply, 1000);
 
-  new MutationObserver(apply).observe(document.documentElement, {
+  // MutationObserverのコールバックを直接applyにせず、
+  // rAFで1フレームに1回だけまとめて実行する（重複実行によるページの
+  // 重さ・カクつきを防ぐため）
+  var scheduled = false;
+  function scheduleApply() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(function () {
+      scheduled = false;
+      apply();
+    });
+  }
+
+  new MutationObserver(scheduleApply).observe(document.documentElement, {
     childList: true,
     subtree: true,
     characterData: true,
