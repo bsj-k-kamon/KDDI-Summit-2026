@@ -90,6 +90,18 @@ button.register__button__content.v-btn.v-btn--contained.theme--light.v-size--lar
 button.widget__header.v-btn.v-btn--flat.v-btn--text.v-btn--tile.theme--light.v-size--default.widget__header__event {
   color: #0e0d6a !important;
 }
+/* 「もっとみる」を「一覧でみる」に変更
+   （テキストとアイコンが同じ v-btn__content 内にあり、
+   テキストのみ個別クラスを持たないため、font-size:0で元テキストを
+   隠して ::before で差し替える。アイコンは独自のfont-sizeを
+   持つため影響を受けない） */
+.widget__header__event .v-btn__content {
+  font-size: 0 !important;
+}
+.widget__header__event .v-btn__content::before {
+  content: "一覧でみる";
+  font-size: 14px;
+}
 /* --- 追従ボタン --- */
 i.v-icon.notranslate.material-icons.theme--dark {
   color: #ffffff !important;
