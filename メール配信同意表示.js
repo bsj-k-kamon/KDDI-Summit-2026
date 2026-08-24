@@ -17,12 +17,17 @@
     if (!label || label.textContent.indexOf(NOTE_TEXT) === -1) return;
 
     var valueEl = detail.querySelector(VALUE_SELECTOR);
-    if (valueEl) {
-      var textHolder = valueEl.querySelector("span") || valueEl;
-      if (
-        textHolder.textContent.replace(/\s+/g, "") &&
-        textHolder.textContent.trim() !== "同意する"
-      ) {
+    var textHolder = valueEl && (valueEl.querySelector("span") || valueEl);
+    // 値の要素自体は存在するが中身が空、というタイミングがVueの再描画中に
+    // 一瞬発生する。そのときに「値あり」と誤判定してプレースホルダーだけ
+    // 消してしまうと、何も表示されない空白が見えてしまう
+    // （＝「出たり消えたりする」不具合の原因だった）ため、中身が実際に
+    // 入っているかどうかで判定する。
+    var hasText =
+      textHolder && textHolder.textContent.replace(/\s+/g, "");
+
+    if (hasText) {
+      if (textHolder.textContent.trim() !== "同意する") {
         textHolder.textContent = "同意する";
       }
       var placeholder = detail.querySelector("." + PLACEHOLDER_CLASS);
