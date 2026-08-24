@@ -1,47 +1,47 @@
 (function () {
   var NOTE_TEXT = "不要な方はチェックを外してください";
   // マイページ＞会員情報（「変更する」ボタンがある一覧画面）でのみ動作させる。
-  // 参加登録フォーム（/users/mypage/profile）など、同じ注記テキストが
-  // 出る別画面には影響させない。
+  // 同じ注記テキストが出る参加登録フォームや、編集用モーダル
+  // （長い規約文をそのまま見せる必要がある画面）には影響させない。
   var TARGET_PATH = "/users/mypage/member-profile";
+  var VALUE_SELECTOR =
+    ".profile-contents__detail__value, .profile-contents__detail__selector-value";
+  var PLACEHOLDER_CLASS = "mail-consent-placeholder";
 
   function isTargetPage() {
     return location.pathname.indexOf(TARGET_PATH) !== -1;
   }
 
-  function findTargetWrap() {
-    var labels = document.querySelectorAll(".item__label__text");
-    for (var i = 0; i < labels.length; i++) {
-      if (labels[i].textContent.indexOf(NOTE_TEXT) !== -1) {
-        return labels[i].closest(".item__wrap");
-      }
-    }
-    return null;
-  }
-
   function apply() {
     if (!isTargetPage()) return;
-    var wrap = findTargetWrap();
-    if (!wrap) return;
 
-    var checkLayout = wrap.querySelector(".item__check-layout");
-    if (!checkLayout) return;
+    var labels = document.querySelectorAll(
+      ".profile-contents__detail__label"
+    );
+    for (var i = 0; i < labels.length; i++) {
+      if (labels[i].textContent.indexOf(NOTE_TEXT) === -1) continue;
 
-    var label = checkLayout.querySelector(".checkbox-parts");
-    if (label) {
-      if (label.textContent.trim() !== "同意する") {
-        label.textContent = "同意する";
+      var detail = labels[i].closest(".profile-contents__detail");
+      if (!detail) continue;
+
+      var valueEl = detail.querySelector(VALUE_SELECTOR);
+      if (valueEl) {
+        var textHolder = valueEl.querySelector("span") || valueEl;
+        if (
+          textHolder.textContent.replace(/\s+/g, "") &&
+          textHolder.textContent.trim() !== "同意する"
+        ) {
+          textHolder.textContent = "同意する";
+        }
+        var placeholder = detail.querySelector("." + PLACEHOLDER_CLASS);
+        if (placeholder) placeholder.remove();
+      } else if (!detail.querySelector("." + PLACEHOLDER_CLASS)) {
+        var ph = document.createElement("div");
+        ph.className =
+          "profile-contents__detail__value " + PLACEHOLDER_CLASS;
+        ph.textContent = "同意しない";
+        detail.appendChild(ph);
       }
-      var placeholder = checkLayout.querySelector(
-        ".mail-consent-placeholder"
-      );
-      if (placeholder) placeholder.remove();
-    } else if (!checkLayout.querySelector(".mail-consent-placeholder")) {
-      // チェック項目自体が無い（＝配信対象のメールが無い）場合
-      var span = document.createElement("span");
-      span.className = "mail-consent-placeholder";
-      span.textContent = "同意しない";
-      checkLayout.appendChild(span);
     }
   }
 
