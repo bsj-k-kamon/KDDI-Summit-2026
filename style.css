@@ -1397,3 +1397,11 @@ span.title__content__text {
 h1.title__content {
   padding: 16px 0 0 !important;
 }
+
+/* ログイン画面の見出し・案内文、携帯版のみ左寄せに変更 */
+@media screen and (max-width: 650px) {
+  .users-view .custom-title,
+  .users-view .login-message {
+    text-align: left;
+  }
+}
