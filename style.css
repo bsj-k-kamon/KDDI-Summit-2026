@@ -553,8 +553,13 @@ button.ticket-card-detail__dialog__content__yes.v-btn.v-btn--contained.theme--li
   flex: 0 0 0 !important;
 }
 /* 「このチケットをキャンセルする」を「この予約をキャンセルする」に変更 */
+/* 元のテキストはfont-size:0で隠しているが、letter-spacingは
+   文字サイズに関係なく幅を持つため、隠れているはずの元テキストの
+   分だけ右側に余白ができ、中央に見えなくなっていた。
+   letter-spacingも0にして幅を残さないようにする。 */
 button.payment-button-cancel span.v-btn__content {
   font-size: 0 !important;
+  letter-spacing: 0 !important;
 }
 button.payment-button-cancel span.v-btn__content::before {
   content: "この予約をキャンセルする";
