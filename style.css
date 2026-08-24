@@ -543,6 +543,10 @@ button.ticket-card-detail__dialog__content__yes.v-btn.v-btn--contained.theme--li
 #app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-card-detail.v-card.v-sheet.theme--light > div.v-card__actions > button.payment-button-cancel.px-8.mb-4.v-btn.v-btn--flat.v-btn--text.theme--dark.v-size--default.red--text > span {
   color: #ff0a00;
 }
+/* 「この予約をキャンセルする」を下の区切り線の幅に対して中央に配置 */
+#app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-card-detail.v-card.v-sheet.theme--light > div.v-card__actions:has(> button.payment-button-cancel) {
+  justify-content: center;
+}
 /* 「このチケットをキャンセルする」を「この予約をキャンセルする」に変更 */
 button.payment-button-cancel span.v-btn__content {
   font-size: 0 !important;
