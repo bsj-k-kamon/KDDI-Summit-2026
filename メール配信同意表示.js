@@ -4,9 +4,14 @@
   // 同じ注記テキストが出る参加登録フォームや、編集用モーダル
   // （長い規約文をそのまま見せる必要がある画面）には影響させない。
   var TARGET_PATH = "/users/mypage/member-profile";
-  var VALUE_SELECTOR =
-    ".profile-contents__detail__value, .profile-contents__detail__selector-value";
+  // 自分で挿入するプレースホルダーにも見た目を揃えるため
+  // profile-contents__detail__value クラスを付けているので、
+  // ここで自分自身を拾ってしまわないよう :not() で除外する。
   var PLACEHOLDER_CLASS = "mail-consent-placeholder";
+  var VALUE_SELECTOR =
+    ".profile-contents__detail__value:not(." +
+    PLACEHOLDER_CLASS +
+    "), .profile-contents__detail__selector-value";
 
   function isTargetPage() {
     return location.pathname.indexOf(TARGET_PATH) !== -1;
