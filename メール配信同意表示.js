@@ -63,9 +63,19 @@
     });
   }
 
-  new MutationObserver(scheduleApply).observe(document.documentElement, {
+  var observer = new MutationObserver(scheduleApply);
+  observer.observe(document.documentElement, {
     childList: true,
     subtree: true,
     characterData: true,
   });
+
+  // このページはVueの初回描画が終われば内容が変わらない読み取り専用の
+  // 一覧画面のため、初回描画が落ち着いたタイミングで監視を止める。
+  // 監視を止めないと、スクロール中などにVue側で発生する無関係な
+  // DOM変更のたびに毎回スキャンが走り、スクロールがカクつく原因になる。
+  setTimeout(function () {
+    observer.disconnect();
+    apply();
+  }, 3000);
 })();
