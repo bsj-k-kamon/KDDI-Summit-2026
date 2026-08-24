@@ -2219,7 +2219,7 @@ body:has(.session-modal:target) {
   .ev-address {
     display: inline-block;
     margin-top: 6px;
-    color: #0e0d6a;
+    color: #4a5568;
     line-height: 1.5;
   }
 
