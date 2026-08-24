@@ -543,6 +543,26 @@ button.ticket-card-detail__dialog__content__yes.v-btn.v-btn--contained.theme--li
 #app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-card-detail.v-card.v-sheet.theme--light > div.v-card__actions > button.payment-button-cancel.px-8.mb-4.v-btn.v-btn--flat.v-btn--text.theme--dark.v-size--default.red--text > span {
   color: #ff0a00;
 }
+/* 「このチケットをキャンセルする」を「この予約をキャンセルする」に変更 */
+button.payment-button-cancel span.v-btn__content {
+  font-size: 0 !important;
+}
+button.payment-button-cancel span.v-btn__content::before {
+  content: "この予約をキャンセルする";
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.25px;
+}
+/* 「このチケットをキャンセルする場合」を「この予約をキャンセルする場合」に変更 */
+.payment-period {
+  font-size: 0 !important;
+}
+.payment-period::before {
+  content: "この予約をキャンセルする場合";
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff0000;
+}
 /* 閉じるボタン */
 #app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-card-detail.v-card.v-sheet.theme--light > div.v-card__actions.ticket-card-detail__actions > button.ticket-card-detail__action-button--close.v-btn.v-btn--contained.theme--dark.v-size--default {
   border-color: #0e0d6a !important;
