@@ -188,25 +188,6 @@ svg.qr-area__event-icon-color > path {
     padding-bottom: 4px !important;
   }
 }
-/* ヘッダーロゴを約2倍のサイズに変更 */
-@media screen and (min-width: 851px) {
-  .header-logo__wrap {
-    width: 300px !important;
-  }
-  .header-logo__image-pc {
-    width: 284px !important;
-    height: 54px !important;
-  }
-}
-@media screen and (max-width: 850px) {
-  .header-logo__wrap {
-    width: 284px !important;
-  }
-  .header-logo__image-sp {
-    width: 268px !important;
-    height: 54px !important;
-  }
-}
 /** マイページの「マイQR」モーダル表示中はヘッダーを非表示にする
     （モーダルの後ろにヘッダーの「戻る」等が透けて見えてしまうため） **/
 body:has(.member-code-overlay.v-overlay--active) .header__wrap.event__header {
