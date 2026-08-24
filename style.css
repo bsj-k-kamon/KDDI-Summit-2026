@@ -1089,6 +1089,17 @@ div.web-layout > section > div.next-button > button > span {
   line-height: inherit;
   letter-spacing: inherit;
 }
+/* 「予約済み」タブのチケットカード：「無料」アイコン・文言の行を削除 */
+.row.ticket-card__contents.row--dense {
+  display: none !important;
+}
+/* 「予約済み」タブのチケットカード：タイトルが2行で見切れる問題を解消 */
+.ticket-card__title__name {
+  -webkit-line-clamp: unset !important;
+  overflow: visible !important;
+  height: auto !important;
+  display: block !important;
+}
 /* カートに入れた後＞画面下のカートボタン押下＞削除ボタン 色変更 */
 button.item-delete-button__content.v-btn.v-btn--contained.theme--light.v-size--default {
   background-color: #0e0d6a !important;
