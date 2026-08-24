@@ -12,16 +12,17 @@ body,
   font-family: "Noto Sans JP", sans-serif !important;
 }
 
-/**** パスコード画面（公開前の文言差し替え） ****/
+/**** パスコード画面（受付開始前の文言差し替え） ****/
 p.verify-layout__title {
   font-size: 0 !important;
 }
 p.verify-layout__title::before {
-  content: "KDDI SUMMIT 2026参加申し込みは 9月1日（火）10:00開始予定です。";
+  content: "KDDI SUMMIT 2026参加申し込みは\A 9月1日（火）10:00開始予定です。";
   display: block;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
+  white-space: pre-line;
 }
 p.verify-layout__description {
   font-size: 0 !important;
