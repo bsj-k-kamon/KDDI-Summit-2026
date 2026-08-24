@@ -195,6 +195,15 @@ section.header-logo__wrap {
   height: 100% !important;
   padding-top: 8px !important;
 }
+
+@media screen and (max-width: 600px) {
+  section.header__wrap.event__header {
+    background-color: #0e0d6a;
+  }
+  .header__wrap[data-v-1ba7a36e] {
+    padding: 4px 0;
+  }
+}
 /** マイページの「マイQR」モーダル表示中はヘッダーを非表示にする
     （モーダルの後ろにヘッダーの「戻る」等が透けて見えてしまうため） **/
 body:has(.member-code-overlay.v-overlay--active) .header__wrap.event__header {
