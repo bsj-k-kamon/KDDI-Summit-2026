@@ -175,6 +175,12 @@ svg.qr-area__event-icon-color > path {
     padding-bottom: 4px !important;
   }
 }
+/** マイページの「マイQR」モーダル表示中はヘッダーを非表示にする
+    （モーダルの後ろにヘッダーの「戻る」等が透けて見えてしまうため） **/
+body:has(.member-code-overlay.v-overlay--active) .header__wrap.event__header {
+  display: none !important;
+}
+
 /** ヘッダーカラー変更 **/
 
 /* ヘッダー文字色変更
