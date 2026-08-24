@@ -1,5 +1,13 @@
 (function () {
   var NOTE_TEXT = "不要な方はチェックを外してください";
+  // マイページ＞会員情報（「変更する」ボタンがある一覧画面）でのみ動作させる。
+  // 参加登録フォーム（/users/mypage/profile）など、同じ注記テキストが
+  // 出る別画面には影響させない。
+  var TARGET_PATH = "/users/mypage/member-profile";
+
+  function isTargetPage() {
+    return location.pathname.indexOf(TARGET_PATH) !== -1;
+  }
 
   function findTargetWrap() {
     var labels = document.querySelectorAll(".item__label__text");
@@ -12,6 +20,7 @@
   }
 
   function apply() {
+    if (!isTargetPage()) return;
     var wrap = findTargetWrap();
     if (!wrap) return;
 
