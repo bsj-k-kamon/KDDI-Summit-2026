@@ -1081,6 +1081,8 @@ div.web-layout > section > div.next-button > button > span {
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  text-align: center;
   color: #fff !important;
   -webkit-text-fill-color: #fff !important;
   font-size: 1em;
