@@ -1,32 +1,20 @@
-<div class="login-left">
-  <div class="login-left__brand">
-    <!-- ロゴ画像の src を差し替えてください -->
-    <img class="login-left__logo" src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-e8273fe3-fe61-433a-9062-7a04333f6a52.png" alt="KDDI SUMMIT 2026">
-  </div>
-  <p class="login-left__text">すでに会員登録がお済みの方は「ログイン」、<br>初めてご利用の方は「新規会員登録」へ<br>お進みください。</p>
-</div>
-
 <style>
-  /* PC背景 */
-html,
-body,
-#__nuxt,
-#__layout,
-.wrap.layout-wrap,
-#app,
-.v-application--wrap,
-.register__fast-layout,
-.fast-register-layout__wrap {
-  background-image: url("https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-729a4588-270d-424b-b350-deb2a9534c31.jpg") !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-attachment: fixed !important;
-  background-color: transparent !important;
-}
+  /* ==========================================
+     1. 画像のレスポンシブ設定（ロゴをカードに統合）
+     ========================================== */
+  .responsive-img {
+    width: 100%;
+    max-width: 625px; /* 2.5倍のサイズ */
+    height: auto;
+    background-color: transparent !important;
+    display: block;
+    margin: 0 auto 30px auto; /* 下に余白をあけてテキストと分離 */
+    border-radius: 8px 8px 0 0;
+  }
 
-/* スマホ背景 */
-@media (max-width: 767px) {
+  /* ==========================================
+     2. 全体の背景とトーン＆マナー
+     ========================================== */
   html,
   body,
   #__nuxt,
@@ -36,75 +24,137 @@ body,
   .v-application--wrap,
   .register__fast-layout,
   .fast-register-layout__wrap {
-    background-image: url("https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-729a4588-270d-424b-b350-deb2a9534c31.jpg") !important;
-    background-size: cover !important;
+    background-image: url("https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-28c9f5b8-9045-4d3f-bbff-533d2d945f32.jpg") !important; 
     background-position: center center !important;
-  }
-}
-
-  /* 左カラム：既存の空タイトルを隠す */
-  .login__section .title__wrap {
-    display: none !important;
-  }
-  .login__section .title-layout {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    background-color: #f0f3f7 !important;
-  }
-  .login__section .login-layout__message {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    width: 100% !important;
-    height: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-color: #f5f5f5 !important;
   }
 
-  /* 左カラムのデザイン（新規会員登録画面と統一：左揃え）
-     既存の .login-left 等のスタイルと詳細度が同じため、
-     !important を付けないと後勝ちにならない場合がある */
-  .login-left {
+  /* カード内のテキストカラーと行間 */
+  .fast-register-title-layout .fr-view,
+  .fast-register-title-layout .fr-view * {
+    color: #333333 !important;
+    text-align: center;
+    line-height: 1.8;
+  }
+
+  /* 初期状態（PC）ではSP用の改行を非表示にする */
+  .sp-br {
+    display: none;
+  }
+
+  .users-view {
     display: flex;
     flex-direction: column;
-    align-items: flex-start !important;
-    justify-content: center;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0;
-    text-align: left !important;
   }
-  .login-left__brand {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
+  
+  .login-message {
+    font-size: 16px;
+    font-weight: bold;
   }
-  .login-left__logo {
-    display: block;
-    width: 100% !important;
-    max-width: 625px !important;
-    height: auto;
-    object-fit: contain;
-  }
-  .login-left__text {
-    width: 100% !important;
-    margin: 0 !important;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 700;
-    font-size: 16px !important;
-    line-height: 1.8 !important;
-    letter-spacing: 0;
-    color: #333333 !important;
-    word-break: keep-all;
-    line-break: strict;
-    overflow-wrap: normal;
-  }
+
+  /* ==========================================
+     3. SP（スマートフォン）向け表示
+     ========================================== */
   @media (max-width: 767px) {
-    .login-left__text {
-      font-size: 14px;
+    .fast-register-title-layout .fr-view {
+      padding: 20px !important;
+      background: rgba(255, 255, 255, 0.95) !important;
+      border-radius: 12px;
+      margin: 10px !important;
+    }
+
+    img.responsive-img {
+      margin-bottom: 20px !important;
+      padding-top: 10px !important;
+    }
+
+    /* SP時のみ、クラス「sp-br」の改行を有効化する */
+    .sp-br {
+      display: inline;
+    }
+
+    /* SP時、テキストサイズ調整 */
+    .fast-register-title-layout .fr-view,
+    .fast-register-title-layout .fr-view *:not(.custom-title) {
+      font-size: 14px !important;
+    }
+    .login-layout__message {
+        display: flex;
+        align-items: start;
+        text-align: center;
     }
   }
+
+  /* ==========================================
+     4. システムの不要要素の非表示（最重要）
+     ========================================== */
+  /* システムが自動で出力する邪魔なタイトル群をすべて非表示 */
+  .title_wrap p.title__content,
+  #app .register-layout__title > p.title__content,
+  #app > div > section > div > div.fast-register-title-layout > div > p {
+    display: none !important;
+  }
+
+  /* イベントTOPに戻るを非表示 */
+  #__layout > section > div.contents-header,
+  .title__wrap {
+    display: none !important;
+  }
+
+  /* ==========================================
+     5. PC向けのレイアウト（中央の半透明カード）
+     ========================================== */
+  @media screen and (min-width: 1201px) {
+    .fast-register-title-layout {
+        padding: 80px 0 !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* PCのみ: テキスト領域を半透明のカード風にして中央に配置 */
+    #app > div > section > div > div.fast-register-title-layout > div > div.fr-view {
+      position: relative; 
+      width: 750px; /* カード幅を広げてロゴ(625px)を綺麗に収める */
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 0 50px 50px 50px; /* 上のパディングを0にして画像を上部に詰める */
+      border-radius: 16px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+      z-index: 10;
+      overflow: hidden; 
+    }
+
+    /* 画像タグ（ロゴ）をカードの最上部にぴったりくっつける調整 */
+    .responsive-img {
+      margin-top: 0;
+      padding-top: 40px; 
+    }
+
+    /* PCの時の基本テキストサイズ */
+    #app > div > section > div > div.fast-register-title-layout > div > div.fr-view,
+    #app > div > section > div > div.fast-register-title-layout > div > div.fr-view *:not(.custom-title) {
+      font-size: 16px !important;
+    }
+  }
+  
+  /* ==========================================
+     6. カード内の独自タイトルのスタイル
+     ========================================== */
+  .custom-title {
+      font-size: 24px !important;
+      font-weight: bold !important;
+      margin-bottom: 20px !important;
+  }
 </style>
+
+<div class="users-view">
+  <img src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-e8273fe3-fe61-433a-9062-7a04333f6a52.png" class="fr-fic fr-dib fr-fil responsive-img" alt="KDDI Summit 2026 Logo">
+
+  <h3 class="custom-title">ログイン</h3>
+  
+  <p class="login-message">すでに会員登録がお済みの方は「ログイン」、<br>初めてご利用の方は「新規会員登録」へ<br>お進みください。</p>
+  <br><br>
+</div>
