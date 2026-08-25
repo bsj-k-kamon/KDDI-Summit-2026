@@ -1512,6 +1512,13 @@ body:has(.session-modal:target) {
   justify-content: center;
 }
 
+/* QRを表示するカード（label要素で実装）だけ、他の3枚（a要素）と
+   同じCSSでもアイコン・ボタンの位置が上にずれる（原因不明のブラウザ側
+   の描画差）。実測したズレ量ぶんだけ下にずらして揃える。 */
+.qr-toggle-btn .action-card__icon-wrap {
+  margin-top: 29.2px;
+}
+
 .action-card__arrow {
   display: flex;
   align-items: center;
