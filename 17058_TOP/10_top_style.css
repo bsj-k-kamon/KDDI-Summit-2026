@@ -1503,6 +1503,13 @@ body:has(.session-modal:target) {
   white-space: nowrap;
   text-align: center;
   flex-shrink: 0;
+  /* 一部のカードだけラベルに<br>が入り2行になっていて、
+     アイコン・ボタンの位置がカードごとにずれていたため、
+     ラベル部分の高さを2行分に固定して揃える */
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .action-card__arrow {
