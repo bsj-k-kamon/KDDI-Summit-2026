@@ -24,7 +24,7 @@
       <div aria-hidden="true" class="timetable__title-line"><br /></div>
       <p class="timetable__pdf-link">
         タイムテーブルの一覧（PDF）は
-        <a href="#">こちら</a>
+        <a href="http://k-project.branddialog.jp/summit/summit2026/pdf/kddi2026_timetable.pdf">こちら</a>
         からご確認ください。
       </p>
       <p class="timetable__note">※掲載情報は8月6日時点のものです。</p>
@@ -36,7 +36,7 @@
           
           <span class="timetable__tab-day">DAY 1</span>
           <span class="timetable__tab-date">10.27</span>
-          <span class="timetable__tab-weekday">THU</span>
+          <span class="timetable__tab-weekday">TUE</span>
           
         </label>
         <label class="timetable__tab" for="tab-day2" role="tab">
@@ -53,7 +53,7 @@
       <div class="timetable__grid">
         <!-- Time Labels -->
         <div aria-hidden="true" class="timetable__times">
-          <span class="timetable__time-label">9:00</span>
+          <span class="timetable__time-label">9:30</span>
           <span class="timetable__time-label">10:00</span>
           <span class="timetable__time-label">11:00</span>
           <span class="timetable__time-label">12:00</span>
@@ -63,7 +63,6 @@
           <span class="timetable__time-label">16:00</span>
           <span class="timetable__time-label">17:00</span>
           <span class="timetable__time-label">18:00</span>
-          <span class="timetable__time-label">19:00</span>
         </div>
         <div class="timetable__stages-scroll">
           <div class="timetable__stages">
@@ -86,8 +85,10 @@
             <div class="timetable__body">
               <!-- Open Marker -->
               <div class="timetable__marker timetable__marker--open">
-                <span class="timetable__marker-time">9:30</span>
-                <span class="timetable__marker-label">会場オープン</span>
+                <div class="timetable__marker-sticky">
+                  <span class="timetable__marker-time">9:30</span>
+                  <span class="timetable__marker-label">会場オープン</span>
+                </div>
               </div>
               <!-- MAIN STAGE -->
               <div class="stage-col stage-col--main">
@@ -102,9 +103,9 @@
                     <br />
                     オープニング基調講演
                   </h3>
-                  <p class="session__subtitle">～ 一人ひとりを輝かせる AIの可能性を、現実へ ～</p>
+                  <p class="session__subtitle">～ 一人ひとりを輝かせる AIの可能性を、現実へ。 ～</p>
                   <div class="session__speakers">
-                    <div class="session__speaker session__speaker--with-photo">
+                    <div class="session__speaker session__speaker--with-photo session__speaker--hero">
                       <div aria-hidden="true" class="session__speaker-photo">
                         <img
                           src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-015bdd7d-c89d-40ee-983d-4649db9e2769.jpg"
@@ -115,7 +116,7 @@
                       <span class="session__speaker-info">KDDI株式会社 代表取締役社長 CEO</span>
                       <span class="session__speaker-name">松田 浩路</span>
                     </div>
-                    <div class="session__speaker session__speaker--with-photo">
+                    <div class="session__speaker session__speaker--with-photo session__speaker--hero">
                       <div aria-hidden="true" class="session__speaker-photo">
                         <img
                           src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-7b309df5-9578-4b1e-9b59-7f06cc298fe9.jpg"
@@ -126,13 +127,13 @@
                       <span class="session__speaker-info">
                         ユニバーサル ミュージック合同会社 社長兼最高経営責任者（CEO）
                       </span>
-                      <span class="session__speaker-name">藤倉 尚</span>
+                      <span class="session__speaker-name">藤倉 尚 氏</span>
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-main-1">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-main-1">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -175,9 +176,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-main-2">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-main-2">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -199,7 +200,7 @@
                   </div>
                 </article>
                 <!-- 12:40 - 13:10 特別講演 -->
-                <article class="session session--sp-compact" style="--start: 220; --duration: 30;">
+                <article class="session session--sp-compact session--photo-lg" style="--start: 220; --duration: 30;">
                   <div class="session__header">
                     <time class="session__time" datetime="12:40/13:10">12:40 - 13:10</time>
                     <span class="session__tag">特別講演</span>
@@ -222,9 +223,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-main-3">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-main-3">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -259,9 +260,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-main-4">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-main-4">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -298,9 +299,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-main-5">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-main-5">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -324,12 +325,12 @@
                 <!-- 15:30 - 16:10 -->
                 <article class="session" style="--start: 390; --duration: 40;">
                   <time class="session__time" datetime="15:30/16:10">15:30 - 16:10</time>
-                  <h3 class="session__title">KDDI&times;PIVOT 特別セッション</h3>
+                  <h3 class="session__title">PIVOT &times; KDDI KDDI SUMMIT 2026 特別ステージ</h3>
                   <p class="session__subtitle">※詳細は近日公開</p>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-main-6">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-main-6">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -347,22 +348,22 @@
                   <p class="session__subtitle">～ AI前提社会における金融サービスの進化 ～</p>
                   <div class="session__speakers">
                     <div class="session__speaker">
+                      <span class="session__speaker-name">松本 大 氏</span>
+                      <span class="session__speaker-info">
+                        マネックスグループ株式会社 会長 Coincheck Group N.V.、コインチェック株式会社 取締役
+                      </span>
+                    </div>
+                    <div class="session__speaker">
                       <span class="session__speaker-name">勝木 朋彦</span>
                       <span class="session__speaker-info">
                         KDDI株式会社 取締役執行役員常務 CSO 兼 CDO 経営戦略本部長 兼 オープンイノベーション推進本部長
                       </span>
                     </div>
-                    <div class="session__speaker">
-                      <span class="session__speaker-name">松本 大</span>
-                      <span class="session__speaker-info">
-                        マネックスグループ株式会社 会長 Coincheck Group N.V.、コインチェック株式会社 取締役
-                      </span>
-                    </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-main-7">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-main-7">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -386,26 +387,26 @@
                 <!-- 17:30 - 18:10 -->
                 <article class="session session--sp-compact" style="--start: 510; --duration: 40;">
                   <time class="session__time" datetime="17:30/18:10">17:30 - 18:10</time>
-                  <h3 class="session__title">移動をもっとスマートに、地域をもっとポジティブに</h3>
-                  <p class="session__subtitle">～ 自動運転時代に生まれる、新たなユーザー接点と地域経済圏 ～</p>
+                  <h3 class="session__title">あらゆる地域に移動の自由を</h3>
+                  <p class="session__subtitle">～ 交通手段とビジネスモデルの両立 ～</p>
                   <div class="session__speakers">
+                    <div class="session__speaker">
+                      <span class="session__speaker-name">五十嵐 立青 氏</span>
+                      <span class="session__speaker-info">茨城県つくば市 市長</span>
+                    </div>
+                    <div class="session__speaker">
+                      <span class="session__speaker-name">百瀬 敬 氏</span>
+                      <span class="session__speaker-info">長野県塩尻市 市長</span>
+                    </div>
                     <div class="session__speaker">
                       <span class="session__speaker-name">松田 慧</span>
                       <span class="session__speaker-info">KDDIスマートモビリティ株式会社 代表取締役社長</span>
                     </div>
-                    <div class="session__speaker">
-                      <span class="session__speaker-name">五十嵐 立青（いがらし たつお）</span>
-                      <span class="session__speaker-info">茨城県つくば市 市長</span>
-                    </div>
-                    <div class="session__speaker">
-                      <span class="session__speaker-name">百瀬 敬（ももせ たかし）</span>
-                      <span class="session__speaker-info">長野県塩尻市 市長</span>
-                    </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-main-8">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-main-8">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -436,7 +437,7 @@
                   <p class="session__subtitle">～ Buffmeeが拓く、情報と「対話」するコミュニケーションの新次元 ～</p>
                   <div class="session__speakers">
                     <div class="session__speaker">
-                      <span class="session__speaker-name">田中 爽太</span>
+                      <span class="session__speaker-name">田中 爽太 氏</span>
                       <span class="session__speaker-info">
                         吉本興業株式会社 コンテンツビジネス本部 株式会社FANY プラットフォーム事業部 プロデューサー
                       </span>
@@ -447,9 +448,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-sub-1">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-sub-1">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -477,11 +478,11 @@
                   <p class="session__subtitle">～ 地域課題の解決から、市場創造へ ～</p>
                   <div class="session__speakers">
                     <div class="session__speaker">
-                      <span class="session__speaker-name">中原 康平</span>
+                      <span class="session__speaker-name">中原 康平 氏</span>
                       <span class="session__speaker-info">森ビル都市企画株式会社 維新ホール館長</span>
                     </div>
                     <div class="session__speaker">
-                      <span class="session__speaker-name">橋本 千嘉子</span>
+                      <span class="session__speaker-name">橋本 千嘉子 氏</span>
                       <span class="session__speaker-info">株式会社ARCH 代表取締役</span>
                     </div>
                     <div class="session__speaker">
@@ -505,9 +506,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-sub-2">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-sub-2">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -548,9 +549,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-sub-3">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-sub-3">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -578,6 +579,10 @@
                   <p class="session__subtitle">～ 世界最前線から学ぶ、モバイルサブブランドの本質 ～</p>
                   <div class="session__speakers">
                     <div class="session__speaker">
+                      <span class="session__speaker-name">石野 純也 氏</span>
+                      <span class="session__speaker-info">モバイルジャーナリスト</span>
+                    </div>
+                    <div class="session__speaker">
                       <span class="session__speaker-name">濱田 達弥</span>
                       <span class="session__speaker-info">KDDI Digital Life株式会社 代表取締役社長</span>
                     </div>
@@ -587,15 +592,11 @@
                         KDDI株式会社 パーソナルグロース事業本部 グローバルコンシューマ本部長
                       </span>
                     </div>
-                    <div class="session__speaker">
-                      <span class="session__speaker-name">石野 純也</span>
-                      <span class="session__speaker-info">モバイルジャーナリスト</span>
-                    </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-sub-4">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-sub-4">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -636,9 +637,8 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-sub-5">
-                      
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-sub-5">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -662,12 +662,12 @@
                 <!-- 16:50 - 17:10 -->
                 <article class="session" style="--start: 470; --duration: 20;">
                   <time class="session__time" datetime="16:50/17:10">16:50 - 17:10</time>
-                  <h3 class="session__title">KDDI&times;PIVOT 特別セッション</h3>
+                  <h3 class="session__title">PIVOT特別ステージ</h3>
                   <p class="session__note">※詳細は近日公開 ※本ステージのオンライン配信はございません。</p>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-sub-pivot">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-sub-pivot">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -685,30 +685,30 @@
                   <p class="session__subtitle">～ 投資先スタートアップ4社のピッチとともに ～</p>
                   <div class="session__speakers">
                     <div class="session__speaker">
-                      <span class="session__speaker-name">舘林 俊平</span>
-                      <span class="session__speaker-info">KDDI株式会社 オープンイノベーション推進本部 副本部長</span>
-                    </div>
-                    <div class="session__speaker">
-                      <span class="session__speaker-name">道間 健太郎</span>
+                      <span class="session__speaker-name">道間 健太郎 氏</span>
                       <span class="session__speaker-info">MODE,Inc. 事業開発部長</span>
                     </div>
                     <div class="session__speaker">
-                      <span class="session__speaker-name">大古 力也</span>
+                      <span class="session__speaker-name">大古 力也 氏</span>
                       <span class="session__speaker-info">Idein株式会社 Account Development部 部長代行</span>
                     </div>
                     <div class="session__speaker">
-                      <span class="session__speaker-name">山城悠</span>
+                      <span class="session__speaker-name">山城 悠 氏</span>
                       <span class="session__speaker-info">株式会社JIJ 代表取締役 CEO</span>
                     </div>
                     <div class="session__speaker">
-                      <span class="session__speaker-name">会田 武史</span>
+                      <span class="session__speaker-name">会田 武史 氏</span>
                       <span class="session__speaker-info">株式会社RevComm 代表取締役</span>
+                    </div>
+                    <div class="session__speaker">
+                      <span class="session__speaker-name">舘林 俊平</span>
+                      <span class="session__speaker-info">KDDI株式会社 オープンイノベーション推進本部 副本部長</span>
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-sub-6">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-sub-6">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -750,9 +750,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-ws-1">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-ws-1">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -789,9 +789,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d1-ws-2">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d1-ws-2">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -813,11 +813,6 @@
                   </div>
                 </article>
               </div>
-              <!-- Close Marker -->
-              <div class="timetable__marker timetable__marker--close">
-                <span class="timetable__marker-time">18:30</span>
-                <span class="timetable__marker-label">会場クローズ</span>
-              </div>
               <!-- Bottom band -->
               <div aria-hidden="true" class="timetable__bottom-band"><br /></div>
             </div>
@@ -829,7 +824,7 @@
     <div class="timetable__grid-scroll" id="day2-panel" role="tabpanel">
       <div class="timetable__grid timetable__grid--day2">
         <div aria-hidden="true" class="timetable__times">
-          <span class="timetable__time-label">9:00</span>
+          <span class="timetable__time-label">9:30</span>
           <span class="timetable__time-label">10:00</span>
           <span class="timetable__time-label">11:00</span>
           <span class="timetable__time-label">12:00</span>
@@ -859,8 +854,10 @@
             </div>
             <div class="timetable__body">
               <div class="timetable__marker timetable__marker--open">
-                <span class="timetable__marker-time">9:30</span>
-                <span class="timetable__marker-label">会場オープン</span>
+                <div class="timetable__marker-sticky">
+                  <span class="timetable__marker-time">9:30</span>
+                  <span class="timetable__marker-label">会場オープン</span>
+                </div>
               </div>
               <!-- MAIN STAGE -->
               <div class="stage-col stage-col--main">
@@ -884,9 +881,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d2-main-1">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d2-main-1">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -920,9 +917,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d2-main-2">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d2-main-2">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -954,9 +951,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d2-main-3">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d2-main-3">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -979,7 +976,7 @@
                 </article>
                 <article class="session session--sp-compact" style="--start: 240; --duration: 30;">
                   <time class="session__time" datetime="13:00/13:30">13:00 - 13:30</time>
-                  <h3 class="session__title">AIを動かし続ける力。人と現場が創るAI-BPO</h3>
+                  <h3 class="session__title">AIを動かし続ける力、人と現場が創るAI-BPO</h3>
                   <div class="session__speakers">
                     <div class="session__speaker">
                       <span class="session__speaker-name">藤原 昌也</span>
@@ -989,9 +986,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d2-main-4">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d2-main-4">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -1024,9 +1021,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d2-main-5">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d2-main-5">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -1060,9 +1057,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d2-main-6">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d2-main-6">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -1089,7 +1086,7 @@
                   <p class="session__subtitle">～ ロボット社会の基盤を創る、通信とAIのアプローチ ～</p>
                   <div class="session__speakers">
                     <div class="session__speaker">
-                      <span class="session__speaker-name">曽根岡 侑也</span>
+                      <span class="session__speaker-name">曽根岡 侑也 氏</span>
                       <span class="session__speaker-info">株式会社ELYZA 代表取締役 CEO</span>
                     </div>
                     <div class="session__speaker">
@@ -1100,9 +1097,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d2-main-7">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d2-main-7">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -1138,9 +1135,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d2-sub-1">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d2-sub-1">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -1180,9 +1177,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d2-sub-2">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d2-sub-2">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -1216,9 +1213,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d2-sub-3">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d2-sub-3">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -1246,14 +1243,14 @@
                     <div class="session__speaker">
                       <span class="session__speaker-name">鶴田 悟史</span>
                       <span class="session__speaker-info">
-                        KDDI株式会社 ビジネスグロース事業本部 グロース事業開発本部長 兼 グロースビジネス企画1部長
+                        KDDI株式会社 ビジネスグロース事業本部 グロース事業開発本部長 兼 グロースビジネス企画1部 部長
                       </span>
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d2-sub-4">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d2-sub-4">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -1293,9 +1290,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d2-sub-5">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d2-sub-5">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -1334,9 +1331,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d2-ws-1">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d2-ws-1">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -1367,19 +1364,6 @@
                   <p class="session__subtitle">～ 事業を加速する新しい開発プロセスを体感 ～</p>
                   <div class="session__speakers">
                     <div class="session__speaker">
-                      <span class="session__speaker-name">西川 雅之</span>
-                      <span class="session__speaker-info">
-                        先端技術統括本部 先端プラットフォーム開発本部 コミュニケーションプラットフォーム部 開発４Ｇ
-                        グループリーダー
-                      </span>
-                    </div>
-                    <div class="session__speaker">
-                      <span class="session__speaker-name">渡辺 千洋</span>
-                      <span class="session__speaker-info">
-                        先端技術統括本部 先端プラットフォーム開発本部 コミュニケーションプラットフォーム部
-                      </span>
-                    </div>
-                    <div class="session__speaker">
                       <span class="session__speaker-name">河路 慶一</span>
                       <span class="session__speaker-info">
                         KDDIアジャイル開発センター株式会社 ビジネスイノベーション開発5部 エキスパート
@@ -1391,11 +1375,24 @@
                         KDDIアジャイル開発センター株式会社 ビジネスイノベーション開発2部 部長
                       </span>
                     </div>
+                    <div class="session__speaker">
+                      <span class="session__speaker-name">西川 雅之</span>
+                      <span class="session__speaker-info">
+                        KDDI株式会社 先端技術統括本部 先端プラットフォーム開発本部 コミュニケーションプラットフォーム部
+                        開発４Ｇ グループリーダー
+                      </span>
+                    </div>
+                    <div class="session__speaker">
+                      <span class="session__speaker-name">渡辺 千洋</span>
+                      <span class="session__speaker-info">
+                        KDDI株式会社 先端技術統括本部 先端プラットフォーム開発本部 コミュニケーションプラットフォーム部
+                      </span>
+                    </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d2-ws-2">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d2-ws-2">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -1427,9 +1424,9 @@
                     </div>
                   </div>
                   <div class="session__footer">
-                    <label aria-label="詳細を見る" class="session__plus" for="toggle-modal-d2-ws-3">
+                    <label aria-label="詳細を見る" class="session__plus session__plus-size" for="toggle-modal-d2-ws-3">
                       
-                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#0e0d6a"/><path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         <path d="M18 11v14M11 18h14" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
                       </svg>
                       
@@ -1506,6 +1503,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-main-1"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -1527,9 +1529,12 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">10:00 - 11:20</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <span class="session-modal__tag">基調講演</span>
           <h2 class="session-modal__title" id="modal-d1-main-1-title">
             KDDI SUMMIT 2026
@@ -1538,9 +1543,11 @@
           </h2>
           <p class="session-modal__subtitle">～ 一人ひとりを輝かせる AIの可能性を、現実へ ～</p>
           <p class="session-modal__body">
-            KDDIは、「つなぐチカラ」を進化させ、AI前提社会における新たな価値創出に挑戦しています。AIが社会インフラとして広く浸透していくなかで、暮らし・産業・地域はどのように進化するのか。講演では、ゲストにユニバーサル
-            ミュージック合同会社 社長兼最高経営責任者（CEO）
-            藤倉尚氏をお迎えし、AIがもたらす可能性とテクノロジーの活用、その先にある人間らしさが発揮できる未来社会について語り合います。
+            KDDIは、「つなぐチカラ」を進化させ、AI前提社会における新たな価値創出に挑戦しています。
+            <br />
+            AIが社会インフラとして広く浸透していくなかで、暮らし・産業・地域はどのように進化するのか。
+            <br />
+            講演では、ゲストにユニバーサル ミュージック合同会社 社長兼最高経営責任者（CEO） 藤倉 尚 氏をお迎えし、AIがもたらす可能性とテクノロジーの活用、その先にある人間らしさが発揮できる未来社会について語り合います。
           </p>
           <div class="session-modal__speakers">
             <div class="session-modal__speaker">
@@ -1556,9 +1563,15 @@
                 <p class="session-modal__speaker-role">代表取締役社長 CEO</p>
                 <p class="session-modal__speaker-name">松田 浩路</p>
                 <p class="session-modal__speaker-intro">
-                  96年に国際電信電話（現KDDI）に入社。
-                  商品技術部長、商品企画部長、コンシューママーケティング部門の責任者などを経て2020年以降は執行役員として事業創造や経営戦略を担当し、グローバル企業との交渉を担う。2024年にはCDOとして先端技術領域を統括。2025年4月、代表取締役社長
-                  CEOに就任。 「夢中に挑戦できる会社」を掲げている。
+                  1996年に国際電信電話（現KDDI）に入社。
+                  <br />
+                  商品技術部長、商品企画部長、コンシューママーケティング部門の責任者などを経て2020年以降は執行役員として事業創造や経営戦略を担当し、グローバル企業との交渉を担う。
+                  <br />
+                  2024年にはCDOとして先端技術領域を統括。
+                  <br />
+                  2025年4月、代表取締役社長 CEOに就任。
+                  <br />
+                  「夢中に挑戦できる会社」を掲げている。
                 </p>
               </div>
             </div>
@@ -1573,14 +1586,19 @@
               <div class="session-modal__speaker-text">
                 <p class="session-modal__speaker-company">ユニバーサル ミュージック合同会社</p>
                 <p class="session-modal__speaker-role">社長兼最高経営責任者（CEO）</p>
-                <p class="session-modal__speaker-name">藤倉 尚</p>
+                <p class="session-modal__speaker-name">藤倉 尚 氏</p>
                 <p class="session-modal__speaker-intro">
-                  92年にポリドール(現ユニバーサル ミュージック合同会社)に入社。
-                  ユニバーサルミュージック邦楽レーベル、ユニバーサルシグマ宣伝本部本部長、同プロダクトマネジメント本部本部長などを経て2008年、執行役員、2012年に副社長兼執行役員就任、邦楽事業を統括。2014年1月より現職。
+                  1992年にポリドール(現ユニバーサル ミュージック合同会社)に入社。
+                  <br />
+                  ユニバーサルミュージック邦楽レーベル、ユニバーサルシグマ宣伝本部本部長、同プロダクトマネジメント本部本部長などを経て2008年、執行役員、2012年に副社長兼執行役員就任、邦楽事業を統括。
+                  <br />
+                  2014年1月より現職。
+                  <br />
                   Billboard Global Power Playersに19年、2021年からは6年連続選出。
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -1614,6 +1632,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-main-2"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -1635,15 +1658,24 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">11:40 - 12:20</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d1-main-2-title">
             ビジネスの最前線でAIを躍動させる次世代インフラ
           </h2>
           <p class="session-modal__subtitle">～ デジタルベルト構想が拓く、ビジネスの可能性 ～</p>
           <p class="session-modal__body">
-            「AI前提社会」の到来に伴い、ビジネスが求めるインフラへの要件は変化すると考えられます。この時代において、企業はどのようなインフラを求めるのでしょうか。本講演の前半では吉村専務がAI前提社会における次世代インフラ構想を語ります。後半ではゲストをお迎えし、古畑CNO、上村本部長による三者対談を通じて、AI時代におけるビジネスの変化とインフラの役割について議論し、ビジネスの可能性を探ります。
+            「AI前提社会」の到来に伴い、ビジネスが求めるインフラへの要件は変化すると考えられます。
+            <br />
+            この時代において、企業はどのようなインフラを求めるのでしょうか。
+            <br />
+            本講演の前半では吉村専務がAI前提社会における次世代インフラ構想を語ります。
+            <br />
+            後半ではゲストをお迎えし、古畑CNO、上村本部長による三者対談を通じて、AI時代におけるビジネスの変化とインフラの役割について議論し、ビジネスの可能性を探ります。
           </p>
           <div class="session-modal__speakers">
             <div class="session-modal__speaker">
@@ -1704,6 +1736,7 @@
               </div>
             </div>
           </div>
+          </div>
           <div class="session-actions">
             <a
               class="session-actions__link session-actions__link--reserve"
@@ -1736,6 +1769,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-main-3"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -1757,17 +1795,24 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">12:40 - 13:10</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <span class="session-modal__tag">特別講演</span>
           <h2 class="session-modal__title" id="modal-d1-main-3-title">KDDIが描く&ldquo;AI生活力&rdquo;</h2>
           <p class="session-modal__subtitle">～ データ&times;リアル接点&times;AIで挑む顧客起点の変革 ～</p>
           <p class="session-modal__body">
             AIが浸透する社会で真の差別化価値を築く鍵は、利便性だけでない顧客起点の体験づくりです。
+            <br />
             本講演ではKDDIが挑む次世代の暮らしと体験変革を展望。
-            多様な顧客データを土台に、auショップやローソン等のリアル接点とAIを融合。
+            <br />
+            多様な顧客データを土台に、auショップやローソンなどのリアル接点とAIを融合。
+            <br />
             テクノロジーを暮らしに活かし、一人ひとりに寄り添うことで、より豊かに生きるための力となる「AI生活力」の未来像。
+            <br />
             その実現に向けたKDDIの挑戦に迫ります。
           </p>
           <div class="session-modal__speakers">
@@ -1789,6 +1834,7 @@
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -1822,6 +1868,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-main-4"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -1843,15 +1894,22 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">13:30 - 14:10</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d1-main-4-title">
             AIエージェントとカスタマーデジタルツインが創る、新しい顧客体験
           </h2>
           <p class="session-modal__subtitle">～ 顧客接点とデータの好循環で拓く&quot;AI生活力&quot; ～</p>
           <p class="session-modal__body">
-            auショップやPontaパスなどの顧客接点では、すでにAIエージェントが接客支援や対話品質の自動改善に動き始めています。KDDIはその先に、約3,000万人の顧客データに生活者の&quot;心&quot;を掛け合わせるカスタマーデジタルツイン（CDT）を構想。一人ひとりの&quot;心&quot;に寄り添う1to1体験と、体験を通じて顧客理解がさらに深まる好循環&mdash;&mdash;「AI生活力」を支える実装の現在地と未来構想を語ります。
+            auショップやPontaパスなどの顧客接点では、すでにAIエージェントが接客支援や対話品質の自動改善に動き始めています。
+            <br />
+            KDDIはその先に、約3,000万人の顧客データに生活者の&quot;心&quot;を掛け合わせるカスタマーデジタルツイン（CDT）を構想。
+            <br />
+            一人ひとりの&quot;心&quot;に寄り添う1to1体験と、体験を通じて顧客理解がさらに深まる好循環——「AI生活力」を支える実装の現在地と未来構想を語ります。
           </p>
           <div class="session-modal__speakers">
             <div class="session-modal__speaker">
@@ -1874,6 +1932,7 @@
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -1907,6 +1966,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-main-5"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -1928,14 +1992,19 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">14:30 - 15:10</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d1-main-5-title">AI&times;パートナーで推進する地域変革</h2>
           <p class="session-modal__subtitle">～ ローソン・池田市と挑む「未来のまちづくり」 ～</p>
           <p class="session-modal__body">
             技術の同質化が進むAI前提社会で、企業が生き残る鍵は「リアル接点」と「深い顧客理解」にあります。
+            <br />
             本講演では、KDDI・ローソン・池田市の力を結集した「ハッピー・ローソンタウン池田伏尾台店」プロジェクトを題材に、三者がどう地域課題を解決し、新しい顧客体験を実装したのかを紐解きます。
+            <br />
             パートナー企業の皆様の事業成長につながる、次世代ビジネス共創のヒントをお伝えします。
           </p>
           <div class="session-modal__speakers">
@@ -1966,10 +2035,11 @@
                 <p class="session-modal__speaker-role">執行役員 パーソナルグロース事業本部長</p>
                 <p class="session-modal__speaker-name">村元 伸弥</p>
                 <p class="session-modal__speaker-intro">
-                  1995年入社。通信および非通信ビジネスに幅広く携わり、マーケティングの推進や事業データドリブン化に取り組むなど、様々な領域で実践を重ねる。2026年より現職。現在は、金融・決済、ライフスタイル各種サービスに加え、ローソン、デバイス、エネルギー、新規グローバル領域まで、当社が描くパーソナルグロース事業全般の管轄責任を担う。
+                  1995年入社。通信および非通信ビジネスに幅広く携わり、マーケティングの推進や事業データドリブン化に取り組むなど、さまざまな領域で実践を重ねる。2026年より現職。現在は、金融・決済、ライフスタイル各種サービスに加え、ローソン、デバイス、エネルギー、新規グローバル領域まで、当社が描くパーソナルグロース事業全般の管轄責任を担う。
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -2003,6 +2073,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-main-6"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -2024,10 +2099,14 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">15:30 - 16:10</time>
           </div>
-          <h2 class="session-modal__title" id="modal-d1-main-6-title">KDDI&times;PIVOT 特別セッション</h2>
+          
+          <h2 class="session-modal__title" id="modal-d1-main-6-title">
+            PIVOT &times; KDDI KDDI SUMMIT 2026 特別ステージ
+          </h2>
           <p class="session-modal__body">※詳細は近日公開</p>
         </div>
       </div>
@@ -2047,6 +2126,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-main-7"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -2068,15 +2152,44 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">16:30 - 17:10</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d1-main-7-title">トークン化が拓く次世代金融の未来</h2>
           <p class="session-modal__subtitle">～ AI前提社会における金融サービスの進化 ～</p>
           <p class="session-modal__body">
-            ステーブルコインの発行や暗号資産市場の拡大、そして資産のデジタル化の進展により、金融業界は100年に一度ともいわれる大きな変革期を迎えています。その中で、次世代金融を支える新たな基盤として注目されているのが、資産や権利の「トークン化」です。2026年5月のコインチェックグループへの出資を契機に、通信と金融、デジタルアセットの融合は新たなステージへ。本講演では、AI前提社会における金融サービスの進化とトークン化がもたらす変化を展望。通信・金融・デジタルアセットの融合が生み出す新たな顧客体験と未来像を語ります。
+            ステーブルコインの発行や暗号資産市場の拡大、そして資産のデジタル化の進展により、金融業界は100年に一度ともいわれる大きな変革期を迎えています。
+            <br />
+            その中で、次世代金融を支える新たな基盤として注目されているのが、資産や権利の「トークン化」です。
+            <br />
+            2026年5月のコインチェックグループへの出資を契機に、通信と金融、デジタルアセットの融合は新たなステージへ。
+            <br />
+            本講演では、AI前提社会における金融サービスの進化とトークン化がもたらす変化を展望。
+            <br />
+            通信・金融・デジタルアセットの融合が生み出す新たな顧客体験と未来像を語ります。
           </p>
           <div class="session-modal__speakers">
+            <div class="session-modal__speaker">
+              <div class="session-modal__speaker-photo">
+                <img
+                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-ec67aff1-509c-4911-8bd1-fbbd7b66c45f.jpg"
+                  alt="松本 大 氏"
+                  class="fr-fic fr-dii"
+                />
+              </div>
+              <div class="session-modal__speaker-text">
+                <p class="session-modal__speaker-company">マネックスグループ株式会社</p>
+                <p class="session-modal__speaker-role">会長 Coincheck Group N.V.、コインチェック株式会社 取締役</p>
+                <p class="session-modal__speaker-name">松本 大 氏</p>
+                <p class="session-modal__speaker-intro">
+                  ソロモン・ブラザーズ、ゴールドマン・サックス・パートナーを経て、1999年、マネックスを創業。2004年マネックスグループ設立。米NASDAQに上場するコインチェックグループを傘下に持ち、グローバルにオンラインファイナンス、オンチェーンファイナンス、アセットマネジメントを展開。米マスターカード社外取締役、東京証券取引所元社外取締役、ヒューマン・ライツ・ウォッチ元副会長。
+                  2023年、UTCMR及びルビ財団を設立。
+                </p>
+              </div>
+            </div>
             <div class="session-modal__speaker">
               <div class="session-modal__speaker-photo">
                 <img
@@ -2099,24 +2212,7 @@
                 </p>
               </div>
             </div>
-            <div class="session-modal__speaker">
-              <div class="session-modal__speaker-photo">
-                <img
-                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-ec67aff1-509c-4911-8bd1-fbbd7b66c45f.jpg"
-                  alt="松本 大"
-                  class="fr-fic fr-dii"
-                />
-              </div>
-              <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">マネックスグループ株式会社</p>
-                <p class="session-modal__speaker-role">会長 Coincheck Group N.V.、コインチェック株式会社 取締役</p>
-                <p class="session-modal__speaker-name">松本 大</p>
-                <p class="session-modal__speaker-intro">
-                  ソロモン・ブラザーズ、ゴールドマン・サックス・パートナーを経て、1999年、マネックスを創業。2004年マネックスグループ設立。米NASDAQに上場するコインチェックグループを傘下に持ち、グローバルにオンラインファイナンス、オンチェーンファイナンス、アセットマネジメントを展開。米マスターカード社外取締役、東京証券取引所元社外取締役、ヒューマン・ライツ・ウォッチ元副会長。
-                  2023年、UTCMR及びルビ財団を設立。
-                </p>
-              </div>
-            </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -2150,6 +2246,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-main-8"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -2171,17 +2272,58 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">17:30 - 18:10</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d1-main-8-title">
-            移動をもっとスマートに、地域をもっとポジティブに
+            あらゆる地域に移動の自由を
           </h2>
-          <p class="session-modal__subtitle">～ 自動運転時代に生まれる、新たなユーザー接点と地域経済圏 ～</p>
+          <p class="session-modal__subtitle">～ 交通手段とビジネスモデルの両立 ～</p>
           <p class="session-modal__body">
-            人口減少と高齢化が進む地域で、持続可能な交通手段の確保は待ったなしの課題です。本講演では、自動運転と通信技術で住民の「移動の自由」を守りながら、新たなビジネスモデルを築く具体策を、自治体の皆様とともに考えます。KDDIの取り組み事例を交え、実現への課題と展望をお話しします。
+            人口減少と高齢化が進む地域で、持続可能な交通手段の確保は待ったなしの課題です。
+            <br />
+            本講演では、自動運転と通信技術で住民の「移動の自由」を守りながら、新たなビジネスモデルを築く具体策を、自治体の皆様とともに考えます。
+            <br />
+            KDDIの取り組み事例を交え、実現への課題と展望をお話しします。
           </p>
           <div class="session-modal__speakers">
+            <div class="session-modal__speaker">
+              <div class="session-modal__speaker-photo">
+                <img
+                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-bb609c92-b117-4862-9096-27560ed39ae7.png"
+                  alt="五十嵐 立青 氏"
+                  class="fr-fic fr-dii"
+                />
+              </div>
+              <div class="session-modal__speaker-text">
+                <p class="session-modal__speaker-company">茨城県</p>
+                <p class="session-modal__speaker-role">つくば市 市長</p>
+                <p class="session-modal__speaker-name">五十嵐 立青 氏</p>
+                <p class="session-modal__speaker-intro">
+                  1978年つくば市生まれ。筑波大学卒業後、ロンドン大学UCLで公共政策を学び、筑波大学大学院で博士号を取得。つくば市議、NPO法人つくばアグリチャレンジ代表を経て、2016年につくば市長に就任。現在3期目を務め、科学技術と市民生活をつなぐまちづくりを推進している。
+                </p>
+              </div>
+            </div>
+            <div class="session-modal__speaker">
+              <div class="session-modal__speaker-photo">
+                <img
+                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-660780ba-4615-4f58-994f-c737006090ae.png"
+                  alt="百瀬 敬 氏"
+                  class="fr-fic fr-dii"
+                />
+              </div>
+              <div class="session-modal__speaker-text">
+                <p class="session-modal__speaker-company">長野県</p>
+                <p class="session-modal__speaker-role">塩尻市 市長</p>
+                <p class="session-modal__speaker-name">百瀬 敬 氏</p>
+                <p class="session-modal__speaker-intro">
+                  1970年長野県塩尻市生まれ。日本大学法学部卒業後、塩尻市役所に入庁。企画、情報推進、観光、産業政策などを担当し、産業振興事業部長を歴任。2022年10月に塩尻市長へ就任。市民との対話と現場主義を重視し、「ともに支えあえる心豊かな地域」の実現に取り組む。
+                </p>
+              </div>
+            </div>
             <div class="session-modal__speaker">
               <div class="session-modal__speaker-photo">
                 <img
@@ -2202,40 +2344,7 @@
                 </p>
               </div>
             </div>
-            <div class="session-modal__speaker">
-              <div class="session-modal__speaker-photo">
-                <img
-                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-bb609c92-b117-4862-9096-27560ed39ae7.png"
-                  alt="五十嵐 立青（いがらし たつお）"
-                  class="fr-fic fr-dii"
-                />
-              </div>
-              <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">茨城県</p>
-                <p class="session-modal__speaker-role">つくば市 市長</p>
-                <p class="session-modal__speaker-name">五十嵐 立青（いがらし たつお）</p>
-                <p class="session-modal__speaker-intro">
-                  1978年つくば市生まれ。筑波大学卒業後、ロンドン大学UCLで公共政策を学び、筑波大学大学院で博士号を取得。つくば市議、NPO法人つくばアグリチャレンジ代表を経て、2016年につくば市長に就任。現在3期目を務め、科学技術と市民生活をつなぐまちづくりを推進している。
-                </p>
-              </div>
-            </div>
-            <div class="session-modal__speaker">
-              <div class="session-modal__speaker-photo">
-                <img
-                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-660780ba-4615-4f58-994f-c737006090ae.png"
-                  alt="百瀬 敬（ももせ たかし）"
-                  class="fr-fic fr-dii"
-                />
-              </div>
-              <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">長野県</p>
-                <p class="session-modal__speaker-role">塩尻市 市長</p>
-                <p class="session-modal__speaker-name">百瀬 敬（ももせ たかし）</p>
-                <p class="session-modal__speaker-intro">
-                  1970年長野県塩尻市生まれ。日本大学法学部卒業後、塩尻市役所に入庁。企画、情報推進、観光、産業政策などを担当し、産業振興事業部長を歴任。2022年10月に塩尻市長へ就任。市民との対話と現場主義を重視し、「ともに支えあえる心豊かな地域」の実現に取り組む。
-                </p>
-              </div>
-            </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -2269,6 +2378,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-sub-1"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -2290,13 +2404,17 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">12:30 - 13:00</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d1-sub-1-title">AIで、コンテンツに新たな息吹を</h2>
           <p class="session-modal__subtitle">～ Buffmeeが拓く、情報と「対話」するコミュニケーションの新次元 ～</p>
           <p class="session-modal__body">
             本講演では、7月に公開した書籍などと対話できるAIサービス「Buffmee」の新たな挑戦として、吉本興業が持つ芸人のトーク技術やエンタメ力とAIの融合を紹介します。
+            <br />
             本サービスに&ldquo;笑い&rdquo;を掛け合わせることで生まれる新たな体験や、複数企業のコンテンツをAIで組み合わせて提供する、新しいコンテンツデータ資産活用ビジネスの可能性を探ります。
           </p>
           <div class="session-modal__speakers">
@@ -2304,7 +2422,7 @@
               <div class="session-modal__speaker-photo">
                 <img
                   src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-cdd8c2fc-925a-401e-958a-85308c5fd147.jpg"
-                  alt="田中 爽太"
+                  alt="田中 爽太 氏"
                   class="fr-fic fr-dii"
                 />
               </div>
@@ -2313,11 +2431,13 @@
                 <p class="session-modal__speaker-role">
                   コンテンツビジネス本部 株式会社FANY プラットフォーム事業部 プロデューサー
                 </p>
-                <p class="session-modal__speaker-name">田中 爽太</p>
+                <p class="session-modal__speaker-name">田中 爽太 氏</p>
                 <p class="session-modal__speaker-intro">
-                  株式会社FANY アライアンス戦略本部、プラットフォーム統括本部等兼任。
+                  株式会社FANY  アライアンス戦略本部、プラットフォーム統括本部など兼任。
+                  <br />
                   2016年吉本興業入社後、タレントマネジメントを経て、2018年よりデジタル事業に従事。
-                  現在エンタメプラットフォーム「FANY」において、アライアンス推進・DX・AI事業等を担当。
+                  <br />
+                  現在エンタメプラットフォーム「FANY」において、アライアンス推進・DX・AI事業などを担当。
                 </p>
               </div>
             </div>
@@ -2334,12 +2454,15 @@
                 <p class="session-modal__speaker-role">事業創造本部 AIプロダクト部長</p>
                 <p class="session-modal__speaker-name">木村 塁</p>
                 <p class="session-modal__speaker-intro">
-                  2007年
-                  KDDI株式会社に新卒入社。2020年データガバナンス室長として、KDDIグループのプライバシーガバナンスに従事し、2023年よりData&amp;AIセンター長として、AI・データのガバナンスと利活用の全社戦略立案と推進を担当。2026年からは現職でAI
-                  領域での新規事業を推進。
+                  2007年 KDDI株式会社に新卒入社。
+                  <br />
+                  2020年データガバナンス室長として、KDDIグループのプライバシーガバナンスに従事し、2023年よりData&amp;AIセンター長として、AI・データのガバナンスと利活用の全社戦略立案と推進を担当。
+                  <br />
+                  2026年からは現職でAI 領域での新規事業を推進。
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -2373,6 +2496,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-sub-2"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -2394,15 +2522,19 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">13:20 - 14:00</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d1-sub-2-title">
             地域を起点に生み出す「社会価値と事業成長の好循環」
           </h2>
           <p class="session-modal__subtitle">～ 地域課題の解決から、市場創造へ ～</p>
           <p class="session-modal__body">
             本講演では、地域の魅力化を通じた社会価値の創造と事業成長を目指すKDDIの取り組みを紹介します。
+            <br />
             パネルディスカッションでは、山口県で挑戦を続ける実践者との対話を通じ、地域課題の解決が新たな需要を生み、収益と次の挑戦が地域に還流する好循環の条件を探ります。
           </p>
           <div class="session-modal__speakers">
@@ -2410,14 +2542,14 @@
               <div class="session-modal__speaker-photo">
                 <img
                   src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-b2f286f7-def7-4c8f-a211-8050fdfc3de4.jpg"
-                  alt="中原 康平"
+                  alt="中原 康平 氏"
                   class="fr-fic fr-dii"
                 />
               </div>
               <div class="session-modal__speaker-text">
                 <p class="session-modal__speaker-company">森ビル都市企画株式会社</p>
                 <p class="session-modal__speaker-role">維新ホール館長</p>
-                <p class="session-modal__speaker-name">中原 康平</p>
+                <p class="session-modal__speaker-name">中原 康平 氏</p>
                 <p class="session-modal__speaker-intro">
                   2014年森ビル株式会社入社。2018年より森ビル都市企画株式会社へ出向し、地方都市の再開発事業に従事。2022年よりKDDI維新ホールの統括責任者として、施設運営に加え、産学官民連携による地域共創や人材育成、オープンイノベーションの推進を担当。
                   地域の多様な主体をつなぎ、新たな価値創出に取り組んでいる。
@@ -2428,14 +2560,14 @@
               <div class="session-modal__speaker-photo">
                 <img
                   src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-6dc6213e-aa80-43dc-942e-de119b31ecb6.jpg"
-                  alt="橋本 千嘉子"
+                  alt="橋本 千嘉子 氏"
                   class="fr-fic fr-dii"
                 />
               </div>
               <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">株式会社</p>
-                <p class="session-modal__speaker-role">ARCH 代表取締役</p>
-                <p class="session-modal__speaker-name">橋本 千嘉子</p>
+                <p class="session-modal__speaker-company">株式会社ARCH</p>
+                <p class="session-modal__speaker-role">代表取締役</p>
+                <p class="session-modal__speaker-name">橋本 千嘉子 氏</p>
                 <p class="session-modal__speaker-intro">
                   家業の不動産会社で22年間、賃貸仲介・管理に携わり、2024年に独立起業。山口県下関市を拠点に、空き家・空き店舗を「面」で捉え、宿やコワーキング、コミュニティバー、シェア農園などへ再生。不動産・教育・地域・行政をつなぎ、エリア全体を学びと挑戦の場に変える公民共創のまちづくりを実践する5児の母。2024年、国土交通省「地域価値を共創する不動産業アワード」空き家部門優秀賞受賞。
                 </p>
@@ -2454,7 +2586,11 @@
                 <p class="session-modal__speaker-role">コーポレート統括本部 地域共創・SX推進本部長</p>
                 <p class="session-modal__speaker-name">中里 靖夫</p>
                 <p class="session-modal__speaker-intro">
-                  1990年入社後、固定通信及び移動通信の事業企画を経て、企業法務、リスクマネジメント等に従事。2021年より、総務本部長として、国内10総支社の統括を担当し、総支社業務の集約・効率化を支援。2026年、新たに立ち上げた地域共創・SX推進本部の本部長として、引続き総支社の統括を行うと共に、サステナビリティ活動の企画・推進、地域共創案件の開拓、地域課題の解決等に取り組む。
+                  1990年入社後、固定通信及び移動通信の事業企画を経て、企業法務、リスクマネジメントなどに従事。
+                  <br />
+                  2021年より、総務本部長として、国内10総支社の統括を担当し、総支社業務の集約・効率化を支援。
+                  <br />
+                  2026年、新たに立ち上げた地域共創・SX推進本部の本部長として、引続き総支社の統括を行うと共に、サステナビリティ活動の企画・推進、地域共創案件の開拓、地域課題の解決などに取り組む。
                 </p>
               </div>
             </div>
@@ -2497,6 +2633,7 @@
               </div>
             </div>
           </div>
+          </div>
           <div class="session-actions">
             <a
               class="session-actions__link session-actions__link--reserve"
@@ -2529,6 +2666,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-sub-3"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -2550,14 +2692,22 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">14:20 - 14:50</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d1-sub-3-title">AI時代の事業を伸ばすKDDIの人財戦略</h2>
           <p class="session-modal__subtitle">～ KDDIが目指すHR Fusionの姿 ～</p>
           <p class="session-modal__body">
             AI時代だからこそ、人財の重要性はいっそう高まっています。
-            本講演では、事業と人財の成長の両立に向け、社員一人ひとりの「夢中」に火をつけるKDDIの挑戦を紐解きます。鍵を握るのは、多様なスキル・経験の「Fusion」。適所適財で、個の輝きを事業の推進力へ変える、KDDIの人財戦略に迫ります。
+            <br />
+            本講演では、事業と人財の成長の両立に向け、社員一人ひとりの「夢中」に火をつけるKDDIの挑戦を紐解きます。
+            <br />
+            鍵を握るのは、多様なスキル・経験の「Fusion」。
+            <br />
+            適所適財で、個の輝きを事業の推進力へ変える、KDDIの人財戦略に迫ります。
           </p>
           <div class="session-modal__speakers">
             <div class="session-modal__speaker">
@@ -2597,6 +2747,7 @@
               </div>
             </div>
           </div>
+          </div>
           <div class="session-actions">
             <a
               class="session-actions__link session-actions__link--reserve"
@@ -2629,6 +2780,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-sub-4"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -2650,15 +2806,37 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">15:10 - 15:40</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d1-sub-4-title">世界povoサミット</h2>
           <p class="session-modal__subtitle">～ 世界最前線から学ぶ、モバイルサブブランドの本質 ～</p>
           <p class="session-modal__body">
-            世界のモバイルサブブランドの「今」と「未来」を展望するセッション。海外モバイルサブブランドを率いるリーダーのインタビューを交え、ゲストとともに、AIによる新たな顧客体験や直面する課題、そして今後の可能性について、グローバルな視点から解き明かします。
+            世界のモバイルサブブランドの「今」と「未来」を展望するセッション。
+            <br />
+            海外モバイルサブブランドを率いるリーダーのインタビューを交え、ゲストとともに、AIによる新たな顧客体験や直面する課題、そして今後の可能性について、グローバルな視点から解き明かします。
           </p>
           <div class="session-modal__speakers">
+            <div class="session-modal__speaker">
+              <div class="session-modal__speaker-photo">
+                <img
+                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-79df32ec-5323-46ec-9428-ada760076f74.jpg"
+                  alt="石野 純也 氏"
+                  class="fr-fic fr-dii"
+                />
+              </div>
+              <div class="session-modal__speaker-text">
+                <p class="session-modal__speaker-company"><br /></p>
+                <p class="session-modal__speaker-role">モバイルジャーナリスト</p>
+                <p class="session-modal__speaker-name">石野 純也 氏</p>
+                <p class="session-modal__speaker-intro">
+                  慶應義塾大学卒業後、宝島社に入社。IT関連のムックを編集する部署で、数々のケータイ関連誌を立ち上げる。独立後はジャーナリスト／ライターとして、モバイルに関連した幅広い企業を取材。ウェブメディアや雑誌を中心に執筆活動を行う。ネットワークから端末、コンテンツまで、モバイルの全レイヤーをカバーする。近著に『通信ビジネス』（クロスメディア・パブリッシング）。iPhoneなどスマホ関連の書籍も多数手がける。
+                </p>
+              </div>
+            </div>
             <div class="session-modal__speaker">
               <div class="session-modal__speaker-photo">
                 <img
@@ -2668,8 +2846,8 @@
                 />
               </div>
               <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">KDDI株式会社</p>
-                <p class="session-modal__speaker-role">KDDI Digital Life株式会社 代表取締役社長</p>
+                <p class="session-modal__speaker-company">KDDI Digital Life株式会社</p>
+                <p class="session-modal__speaker-role">代表取締役社長</p>
                 <p class="session-modal__speaker-name">濱田 達弥</p>
                 <p class="session-modal__speaker-intro">
                   １９９７年第二電電株式会社（現KDDI）入社。欧州各国の海外拠点や本社グローバル事業部門で事業開発・経営に従事。2016年よりモンゴル最大手通信事業者MobicomのCEOとして通信・デジタル事業の成長を牽引。2025年より現職。povoを中核とするデジタルライフ事業の成長戦略を推進し、次世代の顧客接点創出と事業領域拡大をリードする。
@@ -2695,23 +2873,7 @@
                 </p>
               </div>
             </div>
-            <div class="session-modal__speaker">
-              <div class="session-modal__speaker-photo">
-                <img
-                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-79df32ec-5323-46ec-9428-ada760076f74.jpg"
-                  alt="石野 純也"
-                  class="fr-fic fr-dii"
-                />
-              </div>
-              <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company"><br /></p>
-                <p class="session-modal__speaker-role">モバイルジャーナリスト</p>
-                <p class="session-modal__speaker-name">石野 純也</p>
-                <p class="session-modal__speaker-intro">
-                  慶應義塾大学卒業後、宝島社に入社。IT関連のムックを編集する部署で、数々のケータイ関連誌を立ち上げる。独立後はジャーナリスト／ライターとして、モバイルに関連した幅広い企業を取材。ウェブメディアや雑誌を中心に執筆活動を行う。ネットワークから端末、コンテンツまで、モバイルの全レイヤーをカバーする。近著に『通信ビジネス』（クロスメディア・パブリッシング）。iPhoneなどスマホ関連の書籍も多数手がける。
-                </p>
-              </div>
-            </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -2745,6 +2907,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-sub-5"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -2766,13 +2933,20 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">16:00 - 16:30</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d1-sub-5-title">データとAIで紡ぐ次世代の顧客体験</h2>
           <p class="session-modal__subtitle">～ KDDIが描くリテールメディアの未来 ～</p>
           <p class="session-modal__body">
-            リテールメディアを新規事業として立ち上げたい小売企業様へ、強力な推進力となる次世代ソリューションを提示します。本講演ではKDDIが持つ膨大なデータ、セキュアなデータクリーンルーム、高度な分析・メディアノウハウを融合し、顧客体験を高めながら収益性の高いリテールメディア事業を迅速かつ効果的に立ち上げる具体的なアプローチを解説。企業と顧客の新たな絆を結び、ビジネスを次なる成長へ導く未来図をお届けします。
+            リテールメディアを新規事業として立ち上げたい小売企業様へ、強力な推進力となる次世代ソリューションを提示します。
+            <br />
+            本講演ではKDDIが持つ膨大なデータ、セキュアなデータクリーンルーム、高度な分析・メディアノウハウを融合し、顧客体験を高めながら収益性の高いリテールメディア事業を迅速かつ効果的に立ち上げる具体的なアプローチを解説。
+            <br />
+            企業と顧客の新たな絆を結び、ビジネスを次なる成長へ導く未来図をお届けします。
           </p>
           <div class="session-modal__speakers">
             <div class="session-modal__speaker">
@@ -2814,6 +2988,7 @@
               </div>
             </div>
           </div>
+          </div>
           <div class="session-actions">
             <a
               class="session-actions__link session-actions__link--reserve"
@@ -2846,6 +3021,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-sub-pivot"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -2867,11 +3047,19 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">16:50 - 17:10</time>
           </div>
-          <h2 class="session-modal__title" id="modal-d1-sub-pivot-title">KDDI&times;PIVOT 特別セッション</h2>
-          <p class="session-modal__body">※詳細は近日公開 ※本ステージのオンライン配信はございません。</p>
+          
+          <h2 class="session-modal__title" id="modal-d1-sub-pivot-title">
+            PIVOT特別ステージ
+          </h2>
+          <p class="session-modal__body">
+            ※本ステージのオンライン配信はございません
+            <br />
+            ※詳細は近日公開
+          </p>
         </div>
       </div>
     </div>
@@ -2890,6 +3078,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-sub-6"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -2911,15 +3104,98 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">17:10 - 17:50</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d1-sub-6-title">AI時代の事業共創最前線</h2>
           <p class="session-modal__subtitle">～ 投資先スタートアップ4社のピッチとともに ～</p>
           <p class="session-modal__body">
-            KDDIは15年以上にわたりオープンイノベーションを推進し、多様なスタートアップとの事業共創を通じて新たな価値創出に挑戦してきました。本講演では、KDDIの取り組みや最新の協業事例の紹介に加え、AI領域を牽引する投資先スタートアップ3社によるピッチを実施。AIがビジネスにもたらす変革と、共創による新たな価値創出の可能性を紹介します。
+            KDDIは15年以上にわたりオープンイノベーションを推進し、多様なスタートアップとの事業共創を通じて新たな価値創出に挑戦してきました。
+            <br />
+            本講演では、KDDIの取り組みや最新の協業事例の紹介に加え、AI領域を牽引する投資先スタートアップ3社によるピッチを実施。
+            <br />
+            AIがビジネスにもたらす変革と、共創による新たな価値創出の可能性を紹介します。
           </p>
           <div class="session-modal__speakers">
+            <div class="session-modal__speaker">
+              <div class="session-modal__speaker-photo">
+                <img
+                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-c7e6f3cd-2446-4df1-9ee1-39f7c2b430ff.jpg"
+                  alt="道間 健太郎 氏"
+                  class="fr-fic fr-dii"
+                />
+              </div>
+              <div class="session-modal__speaker-text">
+                <p class="session-modal__speaker-company">MODE,Inc.</p>
+                <p class="session-modal__speaker-role">事業開発部長</p>
+                <p class="session-modal__speaker-name">道間 健太郎 氏</p>
+                <p class="session-modal__speaker-intro">
+                  国内における「BizStack」事業の推進責任者を務める。エンジニアとしてのバックグラウンドと現場目線の双方を活かし、現場のリアルタイムデータと生成AIを組み合わせた「AI-driven
+                  IoT」ソリューションの普及に尽力。人手不足や技術承継に悩む建設・鉄道・製造などの産業現場に対し、ITスキル不要でデータを活用できる次世代の現場DXを提唱し、数多くのセミナーやカンファレンスでも登壇を重ねている。
+                </p>
+              </div>
+            </div>
+            <div class="session-modal__speaker">
+              <div class="session-modal__speaker-photo">
+                <img
+                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-fd96d25e-6176-4dea-9914-96b36d6a5bb1.jpg"
+                  alt="大古 力也 氏"
+                  class="fr-fic fr-dii"
+                />
+              </div>
+              <div class="session-modal__speaker-text">
+                <p class="session-modal__speaker-company">Idein株式会社</p>
+                <p class="session-modal__speaker-role">Account Development部 部長代行</p>
+                <p class="session-modal__speaker-name">大古 力也 氏</p>
+                <p class="session-modal__speaker-intro">
+                  複数社のAIスタートアップにて営業部門・組織設計の立ち上げを経験し、2020年にIdein株式会社へ入社。リテール領域の事業責任者として弊社の
+                  「Actcast」を活用したAI（画像認識・音声認識）やIoTの実装・運用提案に従事。2026年7月より現職。
+                </p>
+              </div>
+            </div>
+            <div class="session-modal__speaker">
+              <div class="session-modal__speaker-photo">
+                <img
+                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-b6b84a04-6d05-47a8-af0c-3d11b23d7171.jpg"
+                  alt="山城 悠 氏"
+                  class="fr-fic fr-dii"
+                />
+              </div>
+              <div class="session-modal__speaker-text">
+                <p class="session-modal__speaker-company">株式会社JIJ</p>
+                <p class="session-modal__speaker-role">代表取締役 CEO</p>
+                <p class="session-modal__speaker-name">山城 悠 氏</p>
+                <p class="session-modal__speaker-intro">
+                  東京工業大学（現・東京科学大学）大学院の西森研究室で量子アニーリングを研究し、OISTでは量子情報処理に従事。JST-STARTプロジェクトの成果をもとに2018年に株式会社JIJを創業。代表取締役CEO。Forbes
+                  Asia「30 Under 30 2021」、Forbes JAPAN「30 UNDER 30
+                  2023」に選出。2025年、日本物理学会第30回論文賞を共著者として受賞。
+                </p>
+              </div>
+            </div>
+            <div class="session-modal__speaker">
+              <div class="session-modal__speaker-photo">
+                <img
+                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-d5fc2c32-f85c-4031-b644-0991af9e835f.jpg"
+                  alt="会田 武史 氏"
+                  class="fr-fic fr-dii"
+                />
+              </div>
+              <div class="session-modal__speaker-text">
+                <p class="session-modal__speaker-company">株式会社RevComm</p>
+                <p class="session-modal__speaker-role">代表取締役</p>
+                <p class="session-modal__speaker-name">会田 武史 氏</p>
+                <p class="session-modal__speaker-intro">
+                  三菱商事株式会社にて自動車のトレーディング、クロスボーダーの投資案件・新会社設立、M&amp;A案件などに従事。
+                  <br />
+                  2017年7月株式会社RevComm設立。
+                  <br />
+                  電話解析AI「MiiTel Phone」、Web会議解析AI「MiiTel Meetings」、対面会話解析AI「MiiTel RecPod」を提供。
+                </p>
+              </div>
+            </div>
             <div class="session-modal__speaker">
               <div class="session-modal__speaker-photo">
                 <img
@@ -2933,88 +3209,15 @@
                 <p class="session-modal__speaker-role">オープンイノベーション推進本部 副本部長</p>
                 <p class="session-modal__speaker-name">舘林 俊平</p>
                 <p class="session-modal__speaker-intro">
-                  2006年⼊社。2012年よりKDDI&infin;Labo、KDDI Open Innovation
-                  Fundに携わり、ゲーム、スポーツ、エンタメ、XR、バーチャル渋谷等を担当。2022年 BI推進部長。 KDDI Open
-                  Innovation Fund 、KDDI&infin;Laboなどのオープンイノベーション活動を統括。2023年
-                  Web3推進部長。&alpha;Uサービス（Web3/メタバース）、XR事業を管掌。2025年より現職。オープンイノベーション活動とWeb3、モビリティを含む新規事業を管掌。株式会社HashPort
-                  社外取締役、au Coincheck Digital Assets 社外取締役東京大学大学院工学系研究科非常勤講師
+                  2006年⼊社。2012年よりKDDI∞Labo、KDDI Open Innovation Fundに携わり、ゲーム、スポーツ、エンタメ、XR、バーチャル渋谷などを担当。2022年 BI推進部長。
+                  <br />
+                  KDDI Open Innovation Fund 、KDDI∞Laboなどのオープンイノベーション活動を統括。2023年 Web3推進部長。αUサービス（Web3/メタバース）、XR事業を管掌。2025年より現職。オープンイノベーション活動とWeb3、モビリティを含む新規事業を管掌。
+                  <br />
+                  株式会社HashPort 社外取締役、au Coincheck Digital Assets 社外取締役東京大学大学院工学系研究科非常勤講師
                 </p>
               </div>
             </div>
-            <div class="session-modal__speaker">
-              <div class="session-modal__speaker-photo">
-                <img
-                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-c7e6f3cd-2446-4df1-9ee1-39f7c2b430ff.jpg"
-                  alt="道間 健太郎"
-                  class="fr-fic fr-dii"
-                />
-              </div>
-              <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">MODE,Inc.</p>
-                <p class="session-modal__speaker-role">事業開発部長</p>
-                <p class="session-modal__speaker-name">道間 健太郎</p>
-                <p class="session-modal__speaker-intro">
-                  国内における「BizStack」事業の推進責任者を務める。エンジニアとしてのバックグラウンドと現場目線の双方を活かし、現場のリアルタイムデータと生成AIを組み合わせた「AI-driven
-                  IoT」ソリューションの普及に尽力。人手不足や技術承継に悩む建設・鉄道・製造などの産業現場に対し、ITスキル不要でデータを活用できる次世代の現場DXを提唱し、数多くのセミナーやカンファレンスでも登壇を重ねている。
-                </p>
-              </div>
-            </div>
-            <div class="session-modal__speaker">
-              <div class="session-modal__speaker-photo">
-                <img
-                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-fd96d25e-6176-4dea-9914-96b36d6a5bb1.jpg"
-                  alt="大古 力也"
-                  class="fr-fic fr-dii"
-                />
-              </div>
-              <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">Idein株式会社</p>
-                <p class="session-modal__speaker-role">Account Development部 部長代行</p>
-                <p class="session-modal__speaker-name">大古 力也</p>
-                <p class="session-modal__speaker-intro">
-                  複数社のAIスタートアップにて営業部門・組織設計の立ち上げを経験し、2020年にIdein株式会社へ入社。リテール領域の事業責任者として弊社の
-                  「Actcast」を活用したAI（画像認識・音声認識）やIoTの実装・運用提案に従事。2026年7月より現職。
-                </p>
-              </div>
-            </div>
-            <div class="session-modal__speaker">
-              <div class="session-modal__speaker-photo">
-                <img
-                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-b6b84a04-6d05-47a8-af0c-3d11b23d7171.jpg"
-                  alt="山城悠"
-                  class="fr-fic fr-dii"
-                />
-              </div>
-              <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">株式会社</p>
-                <p class="session-modal__speaker-role">JIJ 代表取締役 CEO</p>
-                <p class="session-modal__speaker-name">山城悠</p>
-                <p class="session-modal__speaker-intro">
-                  東京工業大学（現・東京科学大学）大学院の西森研究室で量子アニーリングを研究し、OISTでは量子情報処理に従事。JST-STARTプロジェクトの成果をもとに2018年に株式会社JIJを創業。代表取締役CEO。Forbes
-                  Asia「30 Under 30 2021」、Forbes JAPAN「30 UNDER 30
-                  2023」に選出。2025年、日本物理学会第30回論文賞を共著者として受賞。
-                </p>
-              </div>
-            </div>
-            <div class="session-modal__speaker">
-              <div class="session-modal__speaker-photo">
-                <img
-                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-d5fc2c32-f85c-4031-b644-0991af9e835f.jpg"
-                  alt="会田 武史"
-                  class="fr-fic fr-dii"
-                />
-              </div>
-              <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">株式会社</p>
-                <p class="session-modal__speaker-role">RevComm 代表取締役</p>
-                <p class="session-modal__speaker-name">会田 武史</p>
-                <p class="session-modal__speaker-intro">
-                  三菱商事株式会社にて自動車のトレーディング、クロスボーダーの投資案件・新会社設立、M&amp;A案件等に従事。
-                  2017年7月株式会社RevComm設立。 電話解析AI「MiiTel Phone」、Web会議解析AI「MiiTel
-                  Meetings」、対面会話解析AI「MiiTel RecPod」を提供。
-                </p>
-              </div>
-            </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -3042,6 +3245,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-ws-1"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label aria-label="閉じる" class="session-modal__close session-modal__close--toggle" for="toggle-modal-d1-ws-1">
           
@@ -3059,9 +3267,12 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">12:00 - 14:00</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d1-ws-1-title">
             SalesforceのAIエージェント（Agentforce）&times;
             <br />
@@ -3069,8 +3280,9 @@
           </h2>
           <p class="session-modal__subtitle">～ AIで変わる次世代カスタマーサービスとリッチメッセージの実装 ～</p>
           <p class="session-modal__body">
-            Salesforce社の最新AIエージェント「Agentforce」と、到達率・視認性に優れた「SMS/RCS（KDDI Message
-            Cast）」の連携を体験するハンズオンです。車検リマインド等のリッチメッセージ配信から、顧客返信へのAI自動応答・日程調整までの業務自動化をノーコード/ローコードで構築し、ご自身のスマートフォンでの実機受信を通じて次世代カスタマーサービスを体感いただけます。
+            Salesforce社の最新AIエージェント「Agentforce」と、到達率・視認性に優れた「SMS/RCS（KDDI Message Cast）」の連携を体験するハンズオンです。
+            <br />
+            車検リマインドなどのリッチメッセージ配信から、顧客返信へのAI自動応答・日程調整までの業務自動化をノーコード/ローコードで構築し、ご自身のスマートフォンでの実機受信を通じて次世代カスタマーサービスを体感いただけます。
           </p>
           <div class="session-modal__speakers">
             <div class="session-modal__speaker">
@@ -3091,6 +3303,7 @@
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -3118,6 +3331,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d1-ws-2"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label aria-label="閉じる" class="session-modal__close session-modal__close--toggle" for="toggle-modal-d1-ws-2">
           
@@ -3135,15 +3353,24 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
-            <span class="session-modal__date">10.27 THU</span>
+            <span class="session-modal__day">DAY 01</span>
+            <span class="session-modal__date">10.27 TUE</span>
             <time class="session-modal__time">16:30 - 17:20</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d1-ws-2-title">
             コラボ事例に学ぶ！povoと生み出す新しい協業のかたちとは？
           </h2>
           <p class="session-modal__subtitle">～ サミット来場者限定のデータプラン進呈 ～</p>
           <p class="session-modal__body">
-            KDDIのプリペイド型MNOサブブランド「povo2.0」は、従来の通信キャリアとの協業の枠組みを超えた、新しいアプローチを提案します。本講演では、直近の実例をもとに、povoのサービスの独自性と優位性をご説明します。さらに、参加者全員に「povo2.0で使えるKDDIサミット限定データプラン」をプレゼント。この機会にpovo2.0回線をスマホに入れ、au回線の快適性をお試しください。
+            KDDIのプリペイド型MNOサブブランド「povo2.0」は、従来の通信キャリアとの協業の枠組みを超えた、新しいアプローチを提案します。
+            <br />
+            本講演では、直近の実例をもとに、povoのサービスの独自性と優位性をご説明します。
+            <br />
+            さらに、参加者全員に「povo2.0で使えるKDDIサミット限定データプラン」をプレゼント。
+            <br />
+            この機会にpovo2.0回線をスマホに入れ、au回線の快適性をお試しください。
           </p>
           <div class="session-modal__speakers">
             <div class="session-modal__speaker">
@@ -3155,11 +3382,19 @@
                 />
               </div>
               <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">KDDI株式会社</p>
-                <p class="session-modal__speaker-role">KDDI Digital Life株式会社 代表取締役社長</p>
+                <p class="session-modal__speaker-company">KDDI Digital Life株式会社</p>
+                <p class="session-modal__speaker-role">代表取締役社長</p>
                 <p class="session-modal__speaker-name">濱田 達弥</p>
                 <p class="session-modal__speaker-intro">
-                  １９９７年第二電電株式会社（現KDDI）入社。欧州各国の海外拠点や本社グローバル事業部門で事業開発・経営に従事。2016年よりモンゴル最大手通信事業者MobicomのCEOとして通信・デジタル事業の成長を牽引。2025年より現職。povoを中核とするデジタルライフ事業の成長戦略を推進し、次世代の顧客接点創出と事業領域拡大をリードする。
+                  1997年第二電電株式会社（現KDDI）入社。
+                  <br />
+                  欧州各国の海外拠点や本社グローバル事業部門で事業開発・経営に従事。
+                  <br />
+                  2016年よりモンゴル最大手通信事業者MobicomのCEOとして通信・デジタル事業の成長を牽引。
+                  <br />
+                  2025年より現職。
+                  <br />
+                  povoを中核とするデジタルライフ事業の成長戦略を推進し、次世代の顧客接点創出と事業領域拡大をリードする。
                 </p>
               </div>
             </div>
@@ -3172,8 +3407,8 @@
                 />
               </div>
               <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">KDDI株式会社</p>
-                <p class="session-modal__speaker-role">KDDI Digital Life株式会社 ビジネス開発部長</p>
+                <p class="session-modal__speaker-company">KDDI Digital Life株式会社</p>
+                <p class="session-modal__speaker-role">ビジネス開発部長</p>
                 <p class="session-modal__speaker-name">北田 渉</p>
                 <p class="session-modal__speaker-intro">
                   グローバルアパレル企業にてブランドマーケティングおよび新規事業開発に従事。データ活用による戦略立案やマーケティング、ライブコマース事業の立ち上げを推進。2024年よりKDDIに参画し、「povo」の事業開発を担当。Data
@@ -3181,6 +3416,7 @@
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -3214,6 +3450,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d2-main-1"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -3235,14 +3476,21 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
+            <span class="session-modal__day">DAY 02</span>
             <span class="session-modal__date">10.28 WED</span>
             <time class="session-modal__time">10:00 - 10:40</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <span class="session-modal__tag">特別講演</span>
           <h2 class="session-modal__title" id="modal-d2-main-1-title">AI前提社会におけるKDDI BUSINESS戦略</h2>
           <p class="session-modal__body">
             AIの進化により事業環境が大きく変化する中、企業には新たな成長機会の創出と
-            業務変革への対応が求められています。本講演では、KDDIが培ってきた強固な通信基盤と顧客接点の強みに加え、グループの専門性を融合した価値創出の取り組みを紹介。お客さまの持続的な成長を支えるKDDI
+            業務変革への対応が求められています。
+            <br />
+            本講演では、KDDIが培ってきた強固な通信基盤と顧客接点の強みに加え、グループの専門性を融合した価値創出の取り組みを紹介。
+            <br />
+            お客さまの持続的な成長を支えるKDDI
             BUSINESSの戦略をお伝えします。
           </p>
           <div class="session-modal__speakers">
@@ -3265,6 +3513,7 @@
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -3298,6 +3547,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d2-main-2"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -3319,15 +3573,22 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
+            <span class="session-modal__day">DAY 02</span>
             <span class="session-modal__date">10.28 WED</span>
             <time class="session-modal__time">11:00 - 11:30</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d2-main-2-title">
             フロンティアAI時代のサイバーセキュリティ最前線
           </h2>
           <p class="session-modal__subtitle">～ AIが変えるもの、変えないもの ～</p>
           <p class="session-modal__body">
-            「フロンティアAI」の登場により、サイバー攻撃と防御の構図は大きく変化しつつあります。本講演では、1日19億件超のログを監視する国内最大級のセキュリティ監視センター「JSOC」が観測する攻撃動向や、5,000件を超えるインシデント対応実績を持つ「サイバー救急センター」の知見をもとに、最新のサイバー脅威情勢を解説します。また、AIによって何が変わり、何が変わらないのかを紐解きながら、企業が優先して取り組むべき対策や組織のあり方、AI時代に価値を発揮する人材と組織の条件について考察します。
+            「フロンティアAI」の登場により、サイバー攻撃と防御の構図は大きく変化しつつあります。
+            <br />
+            本講演では、1日19億件超のログを監視する国内最大級のセキュリティ監視センター「JSOC」が観測する攻撃動向や、5,000件を超えるインシデント対応実績を持つ「サイバー救急センター」の知見をもとに、最新のサイバー脅威情勢を解説します。
+            <br />
+            また、AIによって何が変わり、何が変わらないのかを紐解きながら、企業が優先して取り組むべき対策や組織のあり方、AI時代に価値を発揮する人材と組織の条件について考察します。
           </p>
           <div class="session-modal__speakers">
             <div class="session-modal__speaker">
@@ -3339,14 +3600,15 @@
                 />
               </div>
               <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">株式会社</p>
-                <p class="session-modal__speaker-role">ラック 取締役 上席執行役員 CTO 次世代サイバー技術開発本部長</p>
+                <p class="session-modal__speaker-company">株式会社ラック</p>
+                <p class="session-modal__speaker-role">取締役 上席執行役員 CTO 次世代サイバー技術開発本部長</p>
                 <p class="session-modal__speaker-name">倉持 浩明</p>
                 <p class="session-modal__speaker-intro">
                   1996年に株式会社ラックへ入社。金融、製造、流通、小売分野のシステム開発を経て、現在は次世代サイバーセキュリティ事業開発およびサイバー安全保障を担当。専門はWebアプリケーションセキュリティ、脅威インテリジェンス、AIセキュリティ。一般社団法人ソフトウェア協会理事、一般社団法人日本スマートフォンセキュリティ協会理事。著書に『基本がわかる安全設計のWebシステム』（日経BP）など。CISSP、情報処理安全確保支援士、PMP。
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -3380,6 +3642,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d2-main-3"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -3401,13 +3668,20 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
+            <span class="session-modal__day">DAY 02</span>
             <span class="session-modal__date">10.28 WED</span>
             <time class="session-modal__time">11:50 - 12:20</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d2-main-3-title">AI時代の競争力を支える「創る力」とは</h2>
           <p class="session-modal__subtitle">～ KDDIグループ内製化10年から見えた実装力 ～</p>
           <p class="session-modal__body">
-            KDDIグループ10年の内製化の実践知をもとに、AI時代のシステム開発変革のリアルを紐解きます。単にAIを「使う」段階を超え、新たな価値を「創り出し」、確実に「現場へ実装する」ことで企業の競争力を劇的に高める開発体制と真の「実装力」の本質に迫ります。AI駆動開発と現場力を融合させ、迅速なビジネス立ち上げと持続的成長を両立する『具体的な成功の条件』を、生々しい実践プロセスとともにお届けします。
+            KDDIグループ10年の内製化の実践知をもとに、AI時代のシステム開発変革のリアルを紐解きます。
+            <br />
+            単にAIを「使う」段階を超え、新たな価値を「創り出し」、確実に「現場へ実装する」ことで企業の競争力を劇的に高める開発体制と真の「実装力」の本質に迫ります。
+            <br />
+            AI駆動開発と現場力を融合させ、迅速なビジネス立ち上げと持続的成長を両立する『具体的な成功の条件』を、生々しい実践プロセスとともにお届けします。
           </p>
           <div class="session-modal__speakers">
             <div class="session-modal__speaker">
@@ -3423,11 +3697,19 @@
                 <p class="session-modal__speaker-role">代表取締役社長</p>
                 <p class="session-modal__speaker-name">髙木 秀悟</p>
                 <p class="session-modal__speaker-intro">
-                  1997年、第二電電株式会社（現
-                  KDDI株式会社）入社。大手法人営業、新ビジネス企画・アライアンス推進等を経て、官公庁営業部副部長、パートナー営業部長、エネルギー・運輸営業部長を歴任。2022年よりビジネスデザイン本部副本部長としてエンタープライズセールス部門を担当。その後、執行役員に就任し、2025年10月よりビジネスイノベーション本部長。2026年4月より現職。
+                  1997年、第二電電株式会社（現 KDDI株式会社）入社。
+                  <br />
+                  大手法人営業、新ビジネス企画・アライアンス推進などを経て、官公庁営業部副部長、パートナー営業部長、エネルギー・運輸営業部長を歴任。
+                  <br />
+                  2022年よりビジネスデザイン本部副本部長としてエンタープライズセールス部門を担当。
+                  <br />
+                  その後、執行役員に就任し、2025年10月よりビジネスイノベーション本部長。
+                  <br />
+                  2026年4月より現職。
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -3461,6 +3743,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d2-main-4"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -3482,12 +3769,19 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
+            <span class="session-modal__day">DAY 02</span>
             <span class="session-modal__date">10.28 WED</span>
             <time class="session-modal__time">13:00 - 13:30</time>
           </div>
-          <h2 class="session-modal__title" id="modal-d2-main-4-title">AIを動かし続ける力。人と現場が創るAI-BPO</h2>
+          <div class="session-modal__scroll">
+          
+          <h2 class="session-modal__title" id="modal-d2-main-4-title">
+            AIを動かし続ける力、人と現場が創るAI-BPO
+          </h2>
           <p class="session-modal__body">
-            AI導入そのものが目的となる時代は次の段階へ。求められるのは、AIを業務へ定着させ、継続的な成果へ結びつける仕組みです。長年培った現場運営の知見とAIを融合し、導入から運用、改善まで伴走。人とAIが協働し成果を生み続けるAI-BPOの実践を紹介します。
+            AI導入そのものが目的となる時代は次の段階へ。求められるのは、AIを業務へ定着させ、継続的な成果へ結びつける仕組みです。
+            <br />
+            長年培った現場運営の知見とAIを融合し、導入から運用、改善まで伴走。人とAIが協働し成果を生み続けるAI-BPOの実践を紹介します。
           </p>
           <div class="session-modal__speakers">
             <div class="session-modal__speaker">
@@ -3509,6 +3803,7 @@
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -3542,6 +3837,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d2-main-5"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -3563,12 +3863,17 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
+            <span class="session-modal__day">DAY 02</span>
             <span class="session-modal__date">10.28 WED</span>
             <time class="session-modal__time">13:50 - 14:30</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d2-main-5-title">KDDIの実践知が示すAI実装の道筋</h2>
           <p class="session-modal__body">
-            AI活用が実証から実装へ進む中、企業には現場課題を起点に、成果へつなげる力が求められています。本講演では、KDDI法人事業の成長領域を統括する立場から、企業が持続的な成長を実現するために必要な要素や実装のステップを、KDDIの実践知と具体事例を交えながら解説します。
+            AI活用が実証から実装へ進む中、企業には現場課題を起点に、成果へつなげる力が求められています。
+            <br />
+            本講演では、KDDI法人事業の成長領域を統括する立場から、企業が持続的な成長を実現するために必要な要素や実装のステップを、KDDIの実践知と具体事例を交えながら解説します。
           </p>
           <div class="session-modal__speakers">
             <div class="session-modal__speaker">
@@ -3589,6 +3894,7 @@
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -3622,6 +3928,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d2-main-6"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -3643,9 +3954,12 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
+            <span class="session-modal__day">DAY 02</span>
             <span class="session-modal__date">10.28 WED</span>
             <time class="session-modal__time">14:50 - 15:30</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d2-main-6-title">
             「Drone as a Service（DaaS）」が拓く、次世代の社会基盤
           </h2>
@@ -3654,6 +3968,7 @@
           </p>
           <p class="session-modal__body">
             全国のドローンポートを社会基盤として構築する「Drone as a Service（DaaS）」の最前線を紹介します。
+            <br />
             通信圏外の制約を超える「Starlink直接通信」と先端AI技術、そして共創パートナーの産業知見を融合させることで、新時代の社会インフラビジネスの可能性を紐解きます。
           </p>
           <div class="session-modal__speakers">
@@ -3676,6 +3991,7 @@
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -3709,6 +4025,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d2-main-7"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -3730,16 +4051,21 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
+            <span class="session-modal__day">DAY 02</span>
             <span class="session-modal__date">10.28 WED</span>
             <time class="session-modal__time">15:50 - 16:50</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d2-main-7-title">
             フィジカルAIを支えるKDDIグループの技術と事業戦略
           </h2>
           <p class="session-modal__subtitle">～ ロボット社会の基盤を創る、通信とAIのアプローチ ～</p>
           <p class="session-modal__body">
             LLMの発展を経て、AIは現実世界で認識・判断・行動するフェーズへ進化しました。
+            <br />
             本講演では、ドローン・モビリティ領域で培った実績を基に、ELYZAと共に取り組むKDDIのフィジカルAI事業戦略と研究開発で得られた技術的アプローチを紹介。
+            <br />
             さらに、KDDIグループの強みである「通信」「AI基盤」を活かした、フィジカルAIの今後の展望を語ります。
           </p>
           <div class="session-modal__speakers">
@@ -3747,14 +4073,14 @@
               <div class="session-modal__speaker-photo">
                 <img
                   src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-07a9d426-f37c-44fb-b0ba-a55a32bd5887.jpg"
-                  alt="曽根岡 侑也"
+                  alt="曽根岡 侑也 氏"
                   class="fr-fic fr-dii"
                 />
               </div>
               <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">株式会社</p>
-                <p class="session-modal__speaker-role">ELYZA 代表取締役 CEO</p>
-                <p class="session-modal__speaker-name">曽根岡 侑也</p>
+                <p class="session-modal__speaker-company">株式会社ELYZA</p>
+                <p class="session-modal__speaker-role">代表取締役 CEO</p>
+                <p class="session-modal__speaker-name">曽根岡 侑也 氏</p>
                 <p class="session-modal__speaker-intro">
                   東京大学大学院工学系研究科
                   松尾研究室修士課程修了。学生時代に未踏プロジェクトに採択され、起業を経験。その後、松尾研究室にて共同研究のプロジェクトマネジャーやNLP講座の企画・講師を務める。
@@ -3783,6 +4109,7 @@
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -3816,6 +4143,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d2-sub-1"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -3837,15 +4169,20 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
+            <span class="session-modal__day">DAY 02</span>
             <span class="session-modal__date">10.28 WED</span>
             <time class="session-modal__time">11:30 - 12:00</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d2-sub-1-title">
             グローバル事業を加速させる「現場力」で切り拓く次の一手
           </h2>
           <p class="session-modal__body">
             海外事業の拡大には、攻めの事業展開と、それを支えるセキュリティをはじめとしたインフラ整備が不可欠です。
-            本講演では、日本企業が持つ「現場力」をいかに海外で価値転換するか、そして事業成長を止めないためのインフラ戦略について、お客様との実装実例を交えながら紹介。
+            <br />
+            本講演では、日本企業が持つ「現場力」をいかに海外で価値転換するか、そして事業成長を止めないためのインフラ戦略について、お客さまとの実装実例を交えながら紹介。
+            <br />
             攻めと守りの「次の一手」を共に踏み出しましょう。
           </p>
           <div class="session-modal__speakers">
@@ -3862,11 +4199,21 @@
                 <p class="session-modal__speaker-role">執行役員 ビジネスグロース事業本部 副事業本部長</p>
                 <p class="session-modal__speaker-name">松浦 謙太郎</p>
                 <p class="session-modal__speaker-intro">
-                  1996年入社。国内法人営業として大手自動車メーカー様、製造業様、商社様を担当。その後、海外事業に従事。ミャンマー駐在時には法人向け通信サービス事業の立上げと拡大を推進。APAC統括拠点長としてシンガポール赴任時には、APAC
-                  15ヵ国の責任者として各国通信事業者との提携、現地財閥との協業によるスマートシティ、IOT等の新規事業開発を牽引。2026年4月より現職。
+                  1996年入社。
+                  <br />
+                  国内法人営業として大手自動車メーカー様、製造業様、商社様を担当。
+                  <br />
+                  その後、海外事業に従事。
+                  <br />
+                  ミャンマー駐在時には法人向け通信サービス事業の立上げと拡大を推進。
+                  <br />
+                  APAC統括拠点長としてシンガポール赴任時には、APAC 15ヵ国の責任者として各国通信事業者との提携、現地財閥との協業によるスマートシティ、IOTなどの新規事業開発を牽引。
+                  <br />
+                  2026年4月より現職。
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -3900,6 +4247,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d2-sub-2"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -3921,9 +4273,12 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
+            <span class="session-modal__day">DAY 02</span>
             <span class="session-modal__date">10.28 WED</span>
             <time class="session-modal__time">12:20 - 12:50</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d2-sub-2-title">
             次世代モビリティを支えるコネクティッドの真価とは？
           </h2>
@@ -3939,10 +4294,8 @@
                 />
               </div>
               <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">KDDI株式会社</p>
-                <p class="session-modal__speaker-role">
-                  KDDI Spherience AB Head of Portfolio ＆ Global Operations and CEO
-                </p>
+                <p class="session-modal__speaker-company">KDDI Spherience AB</p>
+                <p class="session-modal__speaker-role">Head of Portfolio ＆ Global Operations and CEO</p>
                 <p class="session-modal__speaker-name">Bo Ribbing</p>
                 <p class="session-modal__speaker-intro"><br /></p>
               </div>
@@ -3964,6 +4317,7 @@
                 <p class="session-modal__speaker-intro"><br /></p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -3997,6 +4351,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d2-sub-3"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -4018,14 +4377,22 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
+            <span class="session-modal__day">DAY 02</span>
             <span class="session-modal__date">10.28 WED</span>
             <time class="session-modal__time">13:10 - 13:40</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d2-sub-3-title">AI時代に求められる次世代ネットワークとは</h2>
           <p class="session-modal__subtitle">～ AI導入だけでは、変革は加速しない ～</p>
           <p class="session-modal__body">
-            AIを支えるネットワークやセキュリティ、運用基盤が従来のままでは、AI導入の効果を十分に引き出すことはできません。これからの競争力を左右するのは、AIそのものではなく、AIを継続的に活用できる事業基盤をいかに整えるかです。
-            本講演では、AI時代に顕在化するネットワーク運用の課題と、その解決策としてKDDIが提供する次世代ネットワークを紹介します。ネットワーク・セキュリティ・運用を一体で最適化し、企業変革を支える新たなインフラの姿をお伝えします。
+            AIを支えるネットワークやセキュリティ、運用基盤が従来のままでは、AI導入の効果を十分に引き出すことはできません。
+            <br />
+            これからの競争力を左右するのは、AIそのものではなく、AIを継続的に活用できる事業基盤をいかに整えるかです。
+            <br />
+            本講演では、AI時代に顕在化するネットワーク運用の課題と、その解決策としてKDDIが提供する次世代ネットワークを紹介します。
+            <br />
+            ネットワーク・セキュリティ・運用を一体で最適化し、企業変革を支える新たなインフラの姿をお伝えします。
           </p>
           <div class="session-modal__speakers">
             <div class="session-modal__speaker">
@@ -4046,6 +4413,7 @@
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -4079,6 +4447,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d2-sub-4"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -4100,16 +4473,21 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
+            <span class="session-modal__day">DAY 02</span>
             <span class="session-modal__date">10.28 WED</span>
             <time class="session-modal__time">15:30 - 16:00</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d2-sub-4-title">
             Real&times;Techの価値をお客さまに届けるAI実装力
           </h2>
           <p class="session-modal__body">
             AIが人々の生活に溶け込む時代を見越して、各産業の現場のデータやノウハウを蓄積・分析する能力が必要です。
+            <br />
             日本の高い品質やおもてなしのある現場のノウハウは、世界に誇れるものであり、重要なものです。
-            KDDIが、AIを街や店舗、アリーナ等といったリアルな現場空間へ実装し、PoCに留まらず継続的に、かつ日本らしい価値を創出するチャレンジを、実事例と共に紹介します。
+            <br />
+            KDDIが、AIを街や店舗、アリーナなどといったリアルな現場空間へ実装し、PoCに留まらず継続的に、かつ日本らしい価値を創出するチャレンジを、実事例と共に紹介します。
           </p>
           <div class="session-modal__speakers">
             <div class="session-modal__speaker">
@@ -4122,9 +4500,7 @@
               </div>
               <div class="session-modal__speaker-text">
                 <p class="session-modal__speaker-company">KDDI株式会社</p>
-                <p class="session-modal__speaker-role">
-                  ビジネスグロース事業本部 グロース事業開発本部長 兼 グロースビジネス企画1部長
-                </p>
+                <p class="session-modal__speaker-role">ビジネスグロース事業本部 グロース事業開発本部長 兼 グロースビジネス企画1部 部長</p>
                 <p class="session-modal__speaker-name">鶴田 悟史</p>
                 <p class="session-modal__speaker-intro">
                   1998年ツーカーセルラー
@@ -4135,6 +4511,7 @@
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -4168,6 +4545,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d2-sub-5"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label
           aria-label="閉じる"
@@ -4189,13 +4571,20 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
+            <span class="session-modal__day">DAY 02</span>
             <span class="session-modal__date">10.28 WED</span>
             <time class="session-modal__time">16:20 - 16:50</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d2-sub-5-title">「人とAIの協働」が生み出す、新しいお客さま体験</h2>
           <p class="session-modal__subtitle">～ 音声&times;AIが描くフロント業務変革 ～</p>
           <p class="session-modal__body">
-            近年の顧客接点においては、「会話の文脈を理解した応対」や「お客さまの課題をワンストップで解決する体験」がますます求められています。音声AIエージェントと人がそれぞれの強みを活かしながら、顧客体験の向上を実現。本講演では、KDDIの音声・AI技術とアルティウスリンクの顧客対応・運用設計ノウハウを組み合わせ、顧客理解の深化やCX向上につながる新たな顧客接点のあり方を紹介します。
+            近年の顧客接点においては、「会話の文脈を理解した応対」や「お客さまの課題をワンストップで解決する体験」がますます求められています。
+            <br />
+            音声AIエージェントと人がそれぞれの強みを活かしながら、顧客体験の向上を実現。
+            <br />
+            本講演では、KDDIの音声・AI技術とアルティウスリンクの顧客対応・運用設計ノウハウを組み合わせ、顧客理解の深化やCX向上につながる新たな顧客接点のあり方を紹介します。
           </p>
           <div class="session-modal__speakers">
             <div class="session-modal__speaker">
@@ -4211,7 +4600,9 @@
                 <p class="session-modal__speaker-role">サービス統括本部 企画開発第1本部長</p>
                 <p class="session-modal__speaker-name">田村 敏紀</p>
                 <p class="session-modal__speaker-intro">
-                  2005年入社、BPO・コンタクトセンターのマネジメント、チャットボットやRPAの専門部隊立上げを経験したのち、2020年にコンタクトセンターのコンサルティング部長に就任。2025年4月からはAIやDXサービスの企画・開発責任者として、デジタルを活用したお客様企業と顧客におけるタッチポイントの最適化や、顧客のカスタマーエクスペリエンス向上につながるソリューションを企画、開発などを推進。
+                  2005年入社、BPO・コンタクトセンターのマネジメント、チャットボットやRPAの専門部隊立上げを経験したのち、2020年にコンタクトセンターのコンサルティング部長に就任。
+                  <br />
+                  2025年4月からはAIやDXサービスの企画・開発責任者として、デジタルを活用したお客さま企業と顧客におけるタッチポイントの最適化や、顧客のカスタマーエクスペリエンス向上につながるソリューションを企画、開発などを推進。
                 </p>
               </div>
             </div>
@@ -4234,6 +4625,7 @@
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -4261,6 +4653,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d2-ws-1"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label aria-label="閉じる" class="session-modal__close session-modal__close--toggle" for="toggle-modal-d2-ws-1">
           
@@ -4278,9 +4675,12 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
+            <span class="session-modal__day">DAY 02</span>
             <span class="session-modal__date">10.28 WED</span>
             <time class="session-modal__time">10:00 - 12:00</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d2-ws-1-title">
             明日から始める！
             <br />
@@ -4289,7 +4689,9 @@
           <p class="session-modal__subtitle">～ 業務成果へ導く、AIエージェント活用のための人と組織の設計図 ～</p>
           <p class="session-modal__body">
             AI定着の「壁」を構造化して可視化し、職種別ユースケースのデモ実演を通じてAIエージェント活用のイメージを膨らませます。
+            <br />
             さらに、自社の現場業務をタスクに分解し「人間がやるべきこと」と「AIに任せること」を再設計する作業を体験。
+            <br />
             自社で「人と組織」の変革を主導するための具体的なアイデアと課題の打ち手（設計図）をお持ち帰りいただきます。
           </p>
           <div class="session-modal__speakers">
@@ -4302,17 +4704,19 @@
                 />
               </div>
               <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">株式会社</p>
-                <p class="session-modal__speaker-role">ディジタルグロースアカデミア 執行役員 副社長</p>
+                <p class="session-modal__speaker-company">株式会社ディジタルグロースアカデミア</p>
+                <p class="session-modal__speaker-role">執行役員 副社長</p>
                 <p class="session-modal__speaker-name">神宮司 剛</p>
                 <p class="session-modal__speaker-intro">
-                  大手製薬のDX変革を含む支援、大手ITサービス等のビジネスプロデューサー育成、
-                  大手ネットワークサービス導入支援・プロジェクトマネジメントなどの実績を持つ。
-                  実績を持つコンサルティング会社を経て、B2B立ち上げ、プロトマーケッツのコンサルタント、
-                  同エバンジェリストのSGを歴任。 IT・AIを担う事業の人材・組織マネジメントを推進した実績を持つ。
+                  大手製薬のDX変革を含む支援、大手ITサービスなどのビジネスプロデューサー育成、 大手ネットワークサービス導入支援・プロジェクトマネジメントなどの実績を持つ。
+                  <br />
+                  実績を持つコンサルティング会社を経て、B2B立ち上げ、プロトマーケッツのコンサルタント、 同エバンジェリストのSGを歴任。
+                  <br />
+                  IT・AIを担う事業の人材・組織マネジメントを推進した実績を持つ。
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -4340,6 +4744,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d2-ws-2"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label aria-label="閉じる" class="session-modal__close session-modal__close--toggle" for="toggle-modal-d2-ws-2">
           
@@ -4357,9 +4766,12 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
+            <span class="session-modal__day">DAY 02</span>
             <span class="session-modal__date">10.28 WED</span>
             <time class="session-modal__time">12:30 - 14:00</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d2-ws-2-title">
             スピードと品質を両立する
             <br />
@@ -4367,50 +4779,13 @@
           </h2>
           <p class="session-modal__subtitle">～ 事業を加速する新しい開発プロセスを体感 ～</p>
           <p class="session-modal__body">
-            生成AIは、サービスデザインや設計、コード生成、レビュー、リリースまでサービス開発全体を変え始めています。本ワークショップでは、AIと人が協働する新しい開発プロセスを実際に体感し、スピードと品質を両立するAI駆動サービス開発への理解を深めます。さらに、自社のサービス開発や組織へどのように適用できるかを考える実践型ワークショップです。
+            生成AIは、サービスデザインや設計、コード生成、レビュー、リリースまでサービス開発全体を変え始めています。
+            <br />
+            本ワークショップでは、AIと人が協働する新しい開発プロセスを実際に体感し、スピードと品質を両立するAI駆動サービス開発への理解を深めます。
+            <br />
+            さらに、自社のサービス開発や組織へどのように適用できるかを考える実践型ワークショップです。
           </p>
           <div class="session-modal__speakers">
-            <div class="session-modal__speaker">
-              <div class="session-modal__speaker-photo">
-                <img
-                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-53feb973-ce50-4d40-9b8e-e6aff26ec0c2.png"
-                  alt="西川 雅之"
-                  class="fr-fic fr-dii"
-                />
-              </div>
-              <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">KDDI株式会社</p>
-                <p class="session-modal__speaker-role">
-                  先端技術統括本部 先端プラットフォーム開発本部 コミュニケーションプラットフォーム部 開発４Ｇ
-                  グループリーダー
-                </p>
-                <p class="session-modal__speaker-name">西川 雅之</p>
-                <p class="session-modal__speaker-intro">
-                  KDDI入社後、エンジニアとして宅内機器開発を経て、着うたやニュース配信など、大規模なコンテンツ配信システムの開発・運用を担当。
-                  以後、全社サービスのAWS移行・IT基盤構築を牽引し、現在はグループリーダーとして、AI駆動開発によるメッセージ配信プラットフォームのモダン化を推進。
-                </p>
-              </div>
-            </div>
-            <div class="session-modal__speaker">
-              <div class="session-modal__speaker-photo">
-                <img
-                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-dbbb5cd7-d349-4720-81da-4ffe583f7d11.png"
-                  alt="渡辺 千洋"
-                  class="fr-fic fr-dii"
-                />
-              </div>
-              <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">KDDI株式会社</p>
-                <p class="session-modal__speaker-role">
-                  先端技術統括本部 先端プラットフォーム開発本部 コミュニケーションプラットフォーム部
-                </p>
-                <p class="session-modal__speaker-name">渡辺 千洋</p>
-                <p class="session-modal__speaker-intro">
-                  フィーチャーフォンのデバイスドライバ開発を経てKDDIへ入社。Android/iOS向けアプリやSDKの開発、端末仕様の策定を担当。
-                  以後、AWS上でのメッセージ配信基盤の構築やRCSサービスの立ち上げに従事。現在はテックリードとして、AI駆動開発の全社展開を推進。
-                </p>
-              </div>
-            </div>
             <div class="session-modal__speaker">
               <div class="session-modal__speaker-photo">
                 <img
@@ -4424,8 +4799,12 @@
                 <p class="session-modal__speaker-role">ビジネスイノベーション開発5部 エキスパート</p>
                 <p class="session-modal__speaker-name">河路 慶一</p>
                 <p class="session-modal__speaker-intro">
-                  2009年にKDDI株式会社へ入社。運用部門での保守運用業務の経験後、アジャイル開発の立ち上げにエンジニアとして参加。
-                  以降アジャイル一筋でエンジニア、スクラムマスターとして様々なプロダクト開発を推進。
+                  2009年にKDDI株式会社へ入社。
+                  <br />
+                  運用部門での保守運用業務の経験後、アジャイル開発の立ち上げにエンジニアとして参加。
+                  <br />
+                  以降アジャイル一筋でエンジニア、スクラムマスターとしてさまざまなプロダクト開発を推進。
+                  <br />
                   2022年からKDDIアジャイル開発センター株式会社へ出向し、現在はプロダクトオーナーを支援する役割として、生成AIを活用したプロダクト開発の推進や教育事業の推進を担当。
                 </p>
               </div>
@@ -4443,12 +4822,55 @@
                 <p class="session-modal__speaker-role">ビジネスイノベーション開発2部 部長</p>
                 <p class="session-modal__speaker-name">横瀬 広明</p>
                 <p class="session-modal__speaker-intro">
-                  KDDIの運用部門を経て、2017年よりエンジニア・スクラムマスターとしてau
-                  HOME関連サービス、法人向けサービス販売サイト等の開発に従事。
+                  KDDIの運用部門を経て、2017年よりエンジニア・スクラムマスターとしてau HOME関連サービス、法人向けサービス販売サイトなどの開発に従事。
+                  <br />
                   2022年からKDDIアジャイル開発センター株式会社へ出向し、内製開発支援、新規サービス立ち上げにおけるアーキテクチャ設計支援や新人向けソフトウェア開発研修の運営にも携わる。
                 </p>
               </div>
             </div>
+            <div class="session-modal__speaker">
+              <div class="session-modal__speaker-photo">
+                <img
+                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-53feb973-ce50-4d40-9b8e-e6aff26ec0c2.png"
+                  alt="西川 雅之"
+                  class="fr-fic fr-dii"
+                />
+              </div>
+              <div class="session-modal__speaker-text">
+                <p class="session-modal__speaker-company"><br /></p>
+                <p class="session-modal__speaker-role">
+                  先端技術統括本部 先端プラットフォーム開発本部 コミュニケーションプラットフォーム部 開発４Ｇ
+                  グループリーダー
+                </p>
+                <p class="session-modal__speaker-name">西川 雅之</p>
+                <p class="session-modal__speaker-intro">
+                  KDDI入社後、エンジニアとして宅内機器開発を経て、着うたやニュース配信など、大規模なコンテンツ配信システムの開発・運用を担当。
+                  <br />
+                  以後、全社サービスのAWS移行・IT基盤構築を牽引し、現在はグループリーダーとして、AI駆動開発によるメッセージ配信プラットフォームのモダン化を推進。
+                </p>
+              </div>
+            </div>
+            <div class="session-modal__speaker">
+              <div class="session-modal__speaker-photo">
+                <img
+                  src="https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-dbbb5cd7-d349-4720-81da-4ffe583f7d11.png"
+                  alt="渡辺 千洋"
+                  class="fr-fic fr-dii"
+                />
+              </div>
+              <div class="session-modal__speaker-text">
+                <p class="session-modal__speaker-company"><br /></p>
+                <p class="session-modal__speaker-role">
+                  先端技術統括本部 先端プラットフォーム開発本部 コミュニケーションプラットフォーム部
+                </p>
+                <p class="session-modal__speaker-name">渡辺 千洋</p>
+                <p class="session-modal__speaker-intro">
+                  フィーチャーフォンのデバイスドライバ開発を経てKDDIへ入社。Android/iOS向けアプリやSDKの開発、端末仕様の策定を担当。
+                  以後、AWS上でのメッセージ配信基盤の構築やRCSサービスの立ち上げに従事。現在はテックリードとして、AI駆動開発の全社展開を推進。
+                </p>
+              </div>
+            </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
@@ -4476,6 +4898,11 @@
         class="session-modal__overlay session-modal__overlay--hash"
         aria-label="閉じる"
       ></a>
+      <label
+        for="toggle-modal-d2-ws-3"
+        class="session-modal__overlay session-modal__overlay--toggle"
+        aria-label="閉じる"
+      ></label>
       <div class="session-modal__wrapper">
         <label aria-label="閉じる" class="session-modal__close session-modal__close--toggle" for="toggle-modal-d2-ws-3">
           
@@ -4493,16 +4920,21 @@
         </a>
         <div class="session-modal__panel">
           <div class="session-modal__meta">
+            <span class="session-modal__day">DAY 02</span>
             <span class="session-modal__date">10.28 WED</span>
             <time class="session-modal__time">14:30 - 16:00</time>
           </div>
+          <div class="session-modal__scroll">
+          
           <h2 class="session-modal__title" id="modal-d2-ws-3-title">
             AIとの共創で実現！「AI&times;カメラ」プロダクトを創ろう！
           </h2>
           <p class="session-modal__subtitle">～ AI駆動型の事業構想プログラムの体験 ～</p>
           <p class="session-modal__body">
             KDDI DIGITAL
-            GATEでは、新規ビジネスの創出や成長、DX・AI推進を伴走支援しています。本ワークショップでは、「AI&times;カメラ」でどのようなことが現実世界できるか？をアイデア発想からプロトタイプ開発まで行い、AI駆動で進めていく構想プロセスを体験いただきます。
+            GATEでは、新規ビジネスの創出や成長、DX・AI推進を伴走支援しています。
+            <br />
+            本ワークショップでは、「AI&times;カメラ」でどのようなことが現実世界できるか？をアイデア発想からプロトタイプ開発まで行い、AI駆動で進めていく構想プロセスを体験いただきます。
           </p>
           <div class="session-modal__speakers">
             <div class="session-modal__speaker">
@@ -4514,7 +4946,7 @@
                 />
               </div>
               <div class="session-modal__speaker-text">
-                <p class="session-modal__speaker-company">KDDI株式会社</p>
+                <p class="session-modal__speaker-company"><br /></p>
                 <p class="session-modal__speaker-role">KDDI DIGITAL GATE サービスデザイナー</p>
                 <p class="session-modal__speaker-name">松本 翔太</p>
                 <p class="session-modal__speaker-intro">
@@ -4524,6 +4956,7 @@
                 </p>
               </div>
             </div>
+          </div>
           </div>
           <div class="session-actions">
             <a
