@@ -596,6 +596,7 @@ section.event__layout.widget__wrap {
   align-items: center;
   gap: 12px;
   margin-bottom: 4px;
+  padding-top: 10px;
   flex-wrap: wrap;
   justify-content: space-between;
 }
