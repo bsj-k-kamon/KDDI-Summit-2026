@@ -611,6 +611,10 @@ section.event__layout.widget__wrap {
   margin-bottom: 2px;
 }
 
+.session--sp-compact > .session__time {
+  padding-top: 10px;
+}
+
 .session__tag {
   display: inline-flex;
   align-items: center;
