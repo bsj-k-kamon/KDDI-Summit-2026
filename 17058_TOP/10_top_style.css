@@ -611,7 +611,7 @@ section.event__layout.widget__wrap {
   margin-bottom: 2px;
 }
 
-.session--sp-compact > .session__time {
+.session > .session__time {
   padding-top: 10px;
 }
 
