@@ -579,7 +579,7 @@ section.event__layout.widget__wrap {
   background: var(--color-white);
   border-radius: 8px;
   box-shadow: var(--card-shadow);
-  padding: 0 16px 4px;
+  padding: 0;
   position: relative;
   z-index: 2;
   display: flex;
@@ -780,7 +780,7 @@ section.event__layout.widget__wrap {
 
 /* ---- 「KDDIが描く"AI生活力"」カード専用：登壇者写真を拡大 ---- */
 .session--photo-lg {
-  padding: 0 16px 2px;
+  padding: 0;
 }
 
 .session--photo-lg .session__header {
@@ -1822,7 +1822,7 @@ body:has(.session-modal:target) {
   }
 
   .session--sp-compact {
-    padding: 0 36px 10px 20px;
+    padding: 0;
   }
 
   .session--sp-compact .session__title {
