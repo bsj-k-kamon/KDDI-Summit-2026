@@ -12,22 +12,23 @@ body,
   font-family: "Noto Sans JP", sans-serif !important;
 }
 
-/**** パスコード画面（公開前の文言差し替え） ****/
+/**** パスコード画面（受付開始前の文言差し替え） ****/
 p.verify-layout__title {
   font-size: 0 !important;
 }
 p.verify-layout__title::before {
-  content: "サイトは9/1に公開されます";
+  content: "KDDI SUMMIT 2026参加申し込みは\A 9月1日（火）10:00開始予定です。";
   display: block;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
+  white-space: pre-line;
 }
 p.verify-layout__description {
   font-size: 0 !important;
 }
 p.verify-layout__description::before {
-  content: "公開まで今しばらくお待ちください";
+  content: "受付開始まで今しばらくお待ちください。";
   display: block;
   font-size: 14px;
   line-height: 1.5;
@@ -89,6 +90,18 @@ button.register__button__content.v-btn.v-btn--contained.theme--light.v-size--lar
 /* --- もっとみるボタン --- */
 button.widget__header.v-btn.v-btn--flat.v-btn--text.v-btn--tile.theme--light.v-size--default.widget__header__event {
   color: #0e0d6a !important;
+}
+/* 「もっとみる」を「一覧でみる」に変更
+   （テキストとアイコンが同じ v-btn__content 内にあり、
+   テキストのみ個別クラスを持たないため、font-size:0で元テキストを
+   隠して ::before で差し替える。アイコンは独自のfont-sizeを
+   持つため影響を受けない） */
+.widget__header__event .v-btn__content {
+  font-size: 0 !important;
+}
+.widget__header__event .v-btn__content::before {
+  content: "一覧でみる";
+  font-size: 14px;
 }
 /* --- 追従ボタン --- */
 i.v-icon.notranslate.material-icons.theme--dark {
@@ -163,6 +176,48 @@ svg.qr-area__event-icon-color > path {
   box-shadow: 0 2px 8px rgba(14, 13, 106, 0.08);
   box-sizing: border-box;
 }
+.header__content {
+  height: 100%;
+}
+.header__wrap .header__content .spacer {
+  display: none;
+}
+.header__wrap .header__content .header__logo {
+  height: 100%;
+}
+.header__wrap .header__content .header__logo .header-logo__wrap{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header__wrap .header__content .header__logo .header-logo__wrap .header-logo__image-pc {
+  background-position: center;
+  height: 70%;
+}
+/** PC表示：ロゴがヘッダーの上寄りになってしまう不具合を修正
+    （header__content の高さがヘッダー全体の高さ(64px)より低く、
+    上詰めになっていたため縦中央に来ていなかった） **/
+@media screen and (min-width: 851px) {
+  .header__wrap.event__header .header__content {
+    height: 100%;
+  }
+  .header-logo__wrap {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header__wrap .header__content .header__logo {
+    margin: auto;
+    max-width: 200px;
+  }
+}
+/** マイページの「マイQR」モーダル表示中はヘッダーを非表示にする
+    （モーダルの後ろにヘッダーの「戻る」等が透けて見えてしまうため） **/
+body:has(.member-code-overlay.v-overlay--active) .header__wrap.event__header {
+  display: none !important;
+}
+
 /** ヘッダーカラー変更 **/
 
 /* ヘッダー文字色変更
@@ -511,6 +566,40 @@ button.ticket-card-detail__dialog__content__yes.v-btn.v-btn--contained.theme--li
 }
 #app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-card-detail.v-card.v-sheet.theme--light > div.v-card__actions > button.payment-button-cancel.px-8.mb-4.v-btn.v-btn--flat.v-btn--text.theme--dark.v-size--default.red--text > span {
   color: #ff0a00;
+}
+/* 「この予約をキャンセルする」を下の区切り線の幅に対して中央に配置 */
+/* ボタン前後の.spacerが伸びて中央寄せする作りだが効いていないため、
+   spacerを無効化しjustify-content:centerを強制する */
+#app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-card-detail.v-card.v-sheet.theme--light > div.v-card__actions:has(> button.payment-button-cancel) {
+  justify-content: center !important;
+}
+#app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-card-detail.v-card.v-sheet.theme--light > div.v-card__actions:has(> button.payment-button-cancel) > .spacer {
+  flex: 0 0 0 !important;
+}
+/* 「このチケットをキャンセルする」を「この予約をキャンセルする」に変更 */
+/* 元のテキストはfont-size:0で隠しているが、letter-spacingは
+   文字サイズに関係なく幅を持つため、隠れているはずの元テキストの
+   分だけ右側に余白ができ、中央に見えなくなっていた。
+   letter-spacingも0にして幅を残さないようにする。 */
+button.payment-button-cancel span.v-btn__content {
+  font-size: 0 !important;
+  letter-spacing: 0 !important;
+}
+button.payment-button-cancel span.v-btn__content::before {
+  content: "この予約をキャンセルする";
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.25px;
+}
+/* 「このチケットをキャンセルする場合」を「この予約をキャンセルする場合」に変更 */
+.payment-period {
+  font-size: 0 !important;
+}
+.payment-period::before {
+  content: "この予約をキャンセルする場合";
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff0000;
 }
 /* 閉じるボタン */
 #app > div.v-dialog__content.v-dialog__content--active > div > div > div.ticket-card-detail.v-card.v-sheet.theme--light > div.v-card__actions.ticket-card-detail__actions > button.ticket-card-detail__action-button--close.v-btn.v-btn--contained.theme--dark.v-size--default {
@@ -1015,6 +1104,40 @@ div.web-layout > section > div.next-button > button > span {
 .card__content .card-date-message .card-date-message__text:empty::after {
   content: none !important;
 }
+/* 講演詳細モーダル内の「申込済み」ボタンを「予約済み」に変更
+   （font-size:0だと表示崩れするため、上と同じ透明化+::after方式で対応） */
+.card-amount__number__zero {
+  position: relative;
+  display: inline-block;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  overflow: hidden;
+  vertical-align: baseline;
+}
+.card-amount__number__zero::after {
+  content: "予約済み";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  font-size: 1em;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+/* 「予約済み」タブのチケットカード：「無料」アイコン・文言の行を削除 */
+.row.ticket-card__contents.row--dense {
+  display: none !important;
+}
+/* 「予約済み」タブのチケットカード：タイトルが2行で見切れる問題を解消 */
+.ticket-card__title__name {
+  -webkit-line-clamp: unset !important;
+  overflow: visible !important;
+  height: auto !important;
+  display: block !important;
+}
 /* カートに入れた後＞画面下のカートボタン押下＞削除ボタン 色変更 */
 button.item-delete-button__content.v-btn.v-btn--contained.theme--light.v-size--default {
   background-color: #0e0d6a !important;
@@ -1106,13 +1229,20 @@ button.confirm__button .v-btn__content::after {
   content: "選択中の　講演";
   font-size: 14px;
 }
-/* 「チケット」を「予約済講演」に変更 */
+/* 予約確認画面：1行目（講演タイトル）のラベルを「予約済講演」に、
+   2行目（枚数）のラベルは「枚数」のまま表示する。
+   どちらも同じ .detail__ticket__label クラスを使っているため、
+   .detail__ticket 内での行の順番（1番目 / 2番目）で区別する */
 .detail__ticket__label {
   font-size: 0 !important;
 }
-.detail__ticket__label::after {
+.detail__ticket > .layout.align-center:first-child .detail__ticket__label::after {
   content: "予約済講演";
   font-size: 14px; /* 元の文字サイズに合わせて調整 */
+}
+.detail__ticket > .layout.align-center:not(:first-child) .detail__ticket__label::after {
+  content: "枚数";
+  font-size: 14px;
 }
 /* 申し込み完了画面 OKボタン 色変更*/
 button.complete-button__content.v-btn.v-btn--contained.theme--light.v-size--large {
@@ -1120,7 +1250,7 @@ button.complete-button__content.v-btn.v-btn--contained.theme--light.v-size--larg
 }
 /* 申し込み完了画面 カラフルな画像を他の画像に上書き */
 .complete__image {
-  background-image: url(https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-16ac10d7-bbf4-4ea5-9905-26cbb05549e8.png) !important;
+  background-image: url(https://kddi-summit.eventos.tokyo/file/wysiwyg/1360/file-480a0049-9edd-40c5-adc5-bc7c853be18b.jpg) !important;
 }
 /* 申し込み完了画面  */
 .ticket-page-content-wrapper__content .complete-layout__wrap {
@@ -1290,4 +1420,27 @@ span.title__content__text {
 }
 h1.title__content {
   padding: 16px 0 0 !important;
+}
+
+/* ログイン画面の見出し・案内文、携帯版のみ左寄せに変更 */
+@media screen and (max-width: 650px) {
+  .users-view .custom-title,
+  .users-view .login-message {
+    text-align: left;
+  }
+}
+
+/* 新規会員登録画面の見出し・案内文、携帯版のみ左寄せに変更 */
+@media screen and (max-width: 650px) {
+  .register-layout__title .custom-title,
+  .register-layout__title p {
+    text-align: left;
+  }
+.flex.header__logo.justify-center {
+    height: 100%;
+}
+section.header-logo__wrap {
+    height: 100% !important;
+    padding-top: 8px !important;
+}
 }
