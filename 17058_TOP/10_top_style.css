@@ -703,7 +703,7 @@ section.event__layout.widget__wrap {
   color: var(--color-text);
   letter-spacing: 0.7px;
   line-height: 1.3;
-  min-width: 70px;
+  width: 112px;
   flex-shrink: 0;
 }
 
