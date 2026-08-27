@@ -1637,7 +1637,7 @@ body:has(.session-modal:target) {
     --stage-header-height: 108px;
     --row-unit: calc(var(--hour-height) / 12);
     --col-width: 270px;
-    --time-col-width: 52px;
+    --time-col-width: 40px;
     --timetable-grid-gap: 15px;
     --timetable-stages-width: calc(var(--col-width) * 3);
     --timetable-grid-width: calc(var(--time-col-width) + var(--timetable-grid-gap) + var(--timetable-stages-width));
