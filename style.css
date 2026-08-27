@@ -249,11 +249,6 @@ padding-top: 8px !important;
     margin: auto;
     max-width: 200px;
   }
-  section.header__wrap.event__header {
-    margin: auto;
-    background-color: #0e0d6a;
-    max-width: 200px;
-  }
   .header__wrap[data-v-1ba7a36e] {
     padding: 4px 0;
   }
