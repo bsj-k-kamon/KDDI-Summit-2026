@@ -1195,6 +1195,7 @@ div.web-layout > section > div.next-button > button > span {
     overflow: visible !important;
     height: auto !important;
     display: block !important;
+    margin: 0 0 40px !important;
   }
 }
 /* カートに入れた後＞画面下のカートボタン押下＞削除ボタン 色変更 */
