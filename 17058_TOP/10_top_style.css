@@ -703,8 +703,15 @@ section.event__layout.widget__wrap {
   color: var(--color-text);
   letter-spacing: 0.7px;
   line-height: 1.3;
-  width: 112px;
+  min-width: 70px;
   flex-shrink: 0;
+}
+
+/* 写真無しの登壇者一覧（複数人が横並びで名前＋役職を並べる形式）だけ、
+   名前列の幅を固定して役職の開始位置を揃える。写真付き（グリッド
+   レイアウト）には影響させない。 */
+.session__speaker:not(.session__speaker--with-photo) .session__speaker-name {
+  width: 112px;
 }
 
 .session__speaker-info {
