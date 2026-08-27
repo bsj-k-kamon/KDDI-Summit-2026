@@ -1327,6 +1327,7 @@ body:has(.session-modal:target) {
 }
 
 .session-modal__speaker-company {
+  display: inline;
   margin: 0 0 0;
   font-family: var(--font-ja);
   font-size: 14px;
@@ -1337,7 +1338,12 @@ body:has(.session-modal:target) {
   margin-bottom: 0 !important;
 }
 
+.session-modal__speaker-company:not(:empty)::after {
+  content: "　";
+}
+
 .session-modal__speaker-role {
+  display: inline;
   margin: 0 0 10px !important;
   font-family: var(--font-ja);
   font-size: 14px;
@@ -1348,7 +1354,7 @@ body:has(.session-modal:target) {
 }
 
 .session-modal__speaker-name {
-  margin: 0 0 10px !important;
+  margin: 10px 0 10px !important;
   font-family: var(--font-ja);
   font-size: 21px;
   font-weight: 700;
