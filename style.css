@@ -1184,6 +1184,10 @@ div.web-layout > section > div.next-button > button > span {
 .row.ticket-card__contents.row--dense {
   display: none !important;
 }
+/* 「予約済み」タブのチケットカード：タイトル下の余白を12pxに調整 */
+.ticket-card__title__name {
+  margin: 0 0 12px !important;
+}
 /* 「予約済み」タブのチケットカード：タイトルが2行で見切れる問題を解消（PCのみ） */
 @media screen and (min-width: 601px) {
   .ticket-card__title__name {
