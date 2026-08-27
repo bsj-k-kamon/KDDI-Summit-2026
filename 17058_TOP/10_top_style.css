@@ -1606,7 +1606,7 @@ body:has(.session-modal:target) {
   }
 
 .global-nav__item {
-    width: 180px;
+    width: 150px;
 }
 
   .global-nav__link {
