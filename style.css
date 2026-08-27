@@ -148,6 +148,14 @@ button.widget__bottom.v-btn.v-btn--contained.theme--dark.v-size--default.widget_
 button.widget__bottom.v-btn.v-btn--contained.theme--dark.v-size--default {
    background: #0e0d6a !important;
 }
+/* 「もっとみる」を「一覧でみる」に変更（SP） */
+.widget__bottom__event .v-btn__content {
+  font-size: 0 !important;
+}
+.widget__bottom__event .v-btn__content::before {
+  content: "一覧でみる";
+  font-size: 14px;
+}
 }
 /* QR読みとり */
 .qr-area__event-icon-color {
