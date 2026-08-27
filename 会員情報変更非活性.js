@@ -47,7 +47,23 @@
   setTimeout(apply, 300);
   setTimeout(apply, 1000);
 
-  new MutationObserver(apply).observe(document.documentElement, {
+  // MutationObserverのコールバックを直接applyにせず、
+  // rAFで1フレームに1回だけまとめて実行する。SPAなのでこのスクリプトは
+  // ページ遷移のたびに再読み込みされるわけではなく、他ページでの
+  // DOM変更（メニュー遷移時など）のたびに同期的にapplyが走っていたのが、
+  // ページ遷移時の重さや不具合の原因になり得るため、まとめて実行するよう
+  // 修正した。
+  var scheduled = false;
+  function scheduleApply() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(function () {
+      scheduled = false;
+      apply();
+    });
+  }
+
+  new MutationObserver(scheduleApply).observe(document.documentElement, {
     childList: true,
     subtree: true,
   });
