@@ -1595,10 +1595,10 @@ body:has(.session-modal:target) {
   }
 
   .global-nav__list {
-    gap: 24px 24px;
+    gap: 16px;
     justify-content: center;
     width: 100%;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .global-nav__label {
@@ -1606,7 +1606,7 @@ body:has(.session-modal:target) {
   }
 
 .global-nav__item {
-    width: 150px;
+    width: 100%;
 }
 
   .global-nav__link {
