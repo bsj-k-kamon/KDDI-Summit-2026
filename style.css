@@ -65,6 +65,17 @@ button.register-button.v-btn.v-btn--depressed.theme--light.v-size--large,
 .smart__forget__link {
   color: #1B2C55 !important;
 }
+.contents-header {
+  display: none;
+}
+.reset-buton .reset-buton__content,
+.reset-password__button .reset-password__button__content {
+  background-color: #1B2C55!important;
+}
+.reset-cancel .reset-cancel__link,
+.reset-password__cancel .reset-password__cancel__link {
+  color: #1B2C55;
+}
 
 /**** 新規登録画面 ****/
 /* --- 新規登録ボタン（#0077FF / #1976D2 → #1B2C55） --- */
@@ -140,17 +151,6 @@ span.mypage-content__event-color {
   border-radius: 8px;
   background:  #0e0d6a5c !important;
 }
-/* --- カードのタイトル文言がボックスからはみ出す場合は省略（SP） --- */
-@media screen and (max-width: 600px) {
-  .ticket-card-title__text {
-    display: -webkit-box !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-line-clamp: 2 !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-  }
-}
-
 /* --- SPもっと見るボタン --- */
 @media screen and (max-width: 850px) {
 button.widget__bottom.v-btn.v-btn--contained.theme--dark.v-size--default.widget__bottom__event {
@@ -161,13 +161,14 @@ button.widget__bottom.v-btn.v-btn--contained.theme--dark.v-size--default {
 }
 /* 「もっとみる」を「一覧でみる」に変更（SP） */
 .widget__bottom__event .v-btn__content {
-  font-size: 0 !important;
+font-size: 0 !important;
 }
 .widget__bottom__event .v-btn__content::before {
-  content: "一覧でみる";
-  font-size: 14px;
+content: "一覧でみる";
+font-size: 14px;
 }
 }
+
 /* QR読みとり */
 .qr-area__event-icon-color {
   fill: #0e0d6a !important;
@@ -195,6 +196,24 @@ svg.qr-area__event-icon-color > path {
   box-shadow: 0 2px 8px rgba(14, 13, 106, 0.08);
   box-sizing: border-box;
 }
+.header__content {
+  height: 100%;
+}
+.header__wrap .header__content .spacer {
+  display: none;
+}
+.header__wrap .header__content .header__logo {
+  height: 100%;
+}
+.header__wrap .header__content .header__logo .header-logo__wrap{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header__wrap .header__content .header__logo .header-logo__wrap .header-logo__image-pc {
+  background-position: center;
+  height: 70%;
+}
 /** PC表示：ロゴがヘッダーの上寄りになってしまう不具合を修正
     （header__content の高さがヘッダー全体の高さ(64px)より低く、
     上詰めになっていたため縦中央に来ていなかった） **/
@@ -208,16 +227,21 @@ svg.qr-area__event-icon-color > path {
   }
 }
 .flex.header__logo.justify-center {
-  height: 100%;
+height: 100%;
 }
 section.header-logo__wrap {
-  height: 100% !important;
-  padding-top: 8px !important;
+height: 100% !important;
+padding-top: 8px !important;
 }
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
+  .header__wrap .header__content .header__logo {
+    margin: auto;
+    max-width: 200px;
+  }
   section.header__wrap.event__header {
+    margin: auto;
     background-color: #0e0d6a;
+    max-width: 200px;
   }
   .header__wrap[data-v-1ba7a36e] {
     padding: 4px 0;
@@ -254,21 +278,6 @@ p.menu__name__area {
   caret-color: #0e0d6a !important;
 }
 
-/** メニュー横のアイコン変更 **/
-/* ヘッダー矢印を消す
-img.menu__icon__detail {
-  display: none;
-}
-ヘッダー矢印の画像を変更*/
-/* p.menu__name__area:after {
-  background-image: url(https://ps-demo.eventos.tokyo/file/wysiwyg/585/file-ea94b43a-c0ba-45be-8846-a71b6855e7d5.png);
-  content: "　";
-  background-size: cover;
-} */
-/** メニュー横の矢印の画像はそのまま、色を変更する **/
-/* img.menu__icon__detail {
-  filter: invert(75%) sepia(81%) saturate(1534%) hue-rotate(335deg) brightness(98%) contrast(101%);
-} */
 
 /* 右下のアンカーボタンの色を変更*/
 .theme--dark.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
@@ -321,6 +330,18 @@ p.mypage-title__text {
 .menu-item__image {
   display: none;
 }
+div.flex.mypage-contents__contents > section > div > div:nth-child(3) > div > div > div:nth-child(2) {
+  width: 100%;
+}
+div.flex.mypage-contents__contents > section > div > div:nth-child(3) > div > div > div:nth-child(2) > p.menu-item__message {
+  visibility: hidden;
+  position: relative;
+}
+div.flex.mypage-contents__contents > section > div > div:nth-child(3) > div > div > div:nth-child(2) > p.menu-item__message::before {
+  visibility: visible;
+  position: absolute;
+  content: "予約済みの講演・ワークショップが確認できます";
+}
 /* 会員QRアイコン非表示 */
 .mypage-title__button__image {
   display: none;
@@ -343,8 +364,9 @@ button.mypage-title__button .v-btn__content {
   font-size: 0 !important;
 }
 .mypage-title__button__text::after {
-  content: "マイQR";
+  content: "my QR";
   font-size: 14px; /* 元の文字サイズに合わせて調整 */
+  text-transform: initial;
   line-height: 1;
   position: absolute;
   left: 50%;
@@ -370,7 +392,16 @@ svg.event-color.mypage-title__icon__image * {
   border-color: #0e0d6a; /* THEME_COLOR */
 }
 
-
+/* QRの表示 */
+.mypage__layout .member-code-overlay .member-code-overlay__content p  {
+  visibility: hidden;
+  position: relative;
+}
+.mypage__layout .member-code-overlay .member-code-overlay__content p::before  {
+  content: "my QR";
+  visibility: visible;
+  position: absolute;
+}
 
 /*  */
 /******** 左側メニュー列 *********/
@@ -1447,5 +1478,11 @@ h1.title__content {
   .register-layout__title p {
     text-align: left;
   }
-
+.flex.header__logo.justify-center {
+    height: 100%;
+}
+section.header-logo__wrap {
+    height: 100% !important;
+    padding-top: 8px !important;
+}
 }
