@@ -1642,7 +1642,7 @@ body:has(.session-modal:target) {
     --timetable-stages-width: calc(var(--col-width) * 3);
     --timetable-grid-width: calc(var(--time-col-width) + var(--timetable-grid-gap) + var(--timetable-stages-width));
     --color-row-band-bottom-height: 50px;
-    padding: 60px 20px 80px 10px;
+    padding: 60px 20px 80px 0;
   }
 
   .timetable__header {
