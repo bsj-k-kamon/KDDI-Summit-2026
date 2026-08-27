@@ -1346,7 +1346,7 @@ body:has(.session-modal:target) {
 }
 
 .session-modal__speaker-company:not(:empty)::after {
-  content: "　";
+  content: " ";
 }
 
 .session-modal__speaker-role {
