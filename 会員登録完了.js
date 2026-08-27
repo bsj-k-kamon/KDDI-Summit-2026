@@ -2,7 +2,7 @@
   var FROM =
     "\u30d7\u30ed\u30d5\u30a3\u30fc\u30eb\u3092\u767b\u9332\u3057\u307e\u3057\u305f";
   var TO_HTML =
-    "KDDI SUMMIT 2026\u3078\u306e\u53c2\u52a0\u767b\u9332\u304c<br>\u5b8c\u4e86\u3057\u307e\u3057\u305f";
+    "KDDI SUMMIT 2026\u3078\u306e\u53c2\u52a0\u7533\u3057\u8fbc\u307f\u304c<br>\u5b8c\u4e86\u3057\u307e\u3057\u305f";
 
   function normalize(s) {
     return (s || "").replace(/\s+/g, " ").trim();
