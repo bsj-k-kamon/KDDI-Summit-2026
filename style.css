@@ -140,6 +140,17 @@ span.mypage-content__event-color {
   border-radius: 8px;
   background:  #0e0d6a5c !important;
 }
+/* --- カードのタイトル文言がボックスからはみ出す場合は省略（SP） --- */
+@media screen and (max-width: 600px) {
+  .ticket-card-title__text {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 2 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+}
+
 /* --- SPもっと見るボタン --- */
 @media screen and (max-width: 850px) {
 button.widget__bottom.v-btn.v-btn--contained.theme--dark.v-size--default.widget__bottom__event {
