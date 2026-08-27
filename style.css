@@ -1183,16 +1183,6 @@ div.web-layout > section > div.next-button > button > span {
 .ticket-card__title__name {
   margin: 0 0 12px !important;
 }
-/* 「予約済み」タブのチケットカード：タイトルが2行で見切れる問題を解消（PCのみ） */
-@media screen and (min-width: 601px) {
-  .ticket-card__title__name {
-    -webkit-line-clamp: unset !important;
-    overflow: visible !important;
-    height: auto !important;
-    display: block !important;
-    margin: 0 0 40px !important;
-  }
-}
 /* カートに入れた後＞画面下のカートボタン押下＞削除ボタン 色変更 */
 button.item-delete-button__content.v-btn.v-btn--contained.theme--light.v-size--default {
   background-color: #0e0d6a !important;
