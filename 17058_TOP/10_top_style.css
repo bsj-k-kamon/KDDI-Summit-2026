@@ -378,6 +378,7 @@ section.event__layout.widget__wrap {
   overflow-y: hidden;
   height: 14px;
   margin-bottom: 8px;
+  margin-left: calc(var(--time-col-width) + var(--timetable-grid-gap));
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.1);
 }

@@ -10,7 +10,11 @@
     var spacer = document.createElement("div");
     spacer.className = "timetable__top-scrollbar-spacer";
     top.appendChild(spacer);
-    el.parentNode.insertBefore(top, el);
+
+    // .timetable__grid はCSS Gridで時刻列/ステージ列の2要素を前提としているため、
+    // その中に直接挿入すると列崩れが起きる。grid-scrollの外側（前）に挿入する。
+    var gridScroll = el.closest(".timetable__grid-scroll") || el.parentNode;
+    gridScroll.parentNode.insertBefore(top, gridScroll);
 
     function syncSpacerWidth() {
       spacer.style.width = el.scrollWidth + "px";
