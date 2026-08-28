@@ -354,15 +354,50 @@ section.event__layout.widget__wrap {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
   min-width: 0;
-  /* 横スクロールバー（スライダー）を非表示にする ※スクロール自体は可能 */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.1);
 }
 
 .timetable__stages-scroll::-webkit-scrollbar {
-  display: none;
-  width: 0;
-  height: 0;
+  height: 8px;
+}
+
+.timetable__stages-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.timetable__stages-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
+
+/* タイムテーブル上部の横スクロールバー（下部のスクロールバーと連動） */
+.timetable__top-scrollbar {
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 14px;
+  margin-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.1);
+}
+
+.timetable__top-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.timetable__top-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.timetable__top-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
+
+.timetable__top-scrollbar-spacer {
+  height: 1px;
 }
 
 .timetable__body {
