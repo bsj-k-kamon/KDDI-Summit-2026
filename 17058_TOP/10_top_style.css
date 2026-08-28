@@ -350,7 +350,7 @@ section.event__layout.widget__wrap {
 }
 
 .timetable__stages-scroll {
-  overflow-x: auto;
+  overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
   min-width: 0;
@@ -374,7 +374,7 @@ section.event__layout.widget__wrap {
 
 /* タイムテーブル上部の横スクロールバー（下部のスクロールバーと連動） */
 .timetable__top-scrollbar {
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
   height: 14px;
   margin-bottom: 8px;
