@@ -1,40 +1,89 @@
 (function () {
   var SELECTOR = ".timetable__stages-scroll";
 
+  function makeBar(modifier) {
+    var bar = document.createElement("div");
+    bar.className = "timetable__scrollbar timetable__scrollbar--" + modifier;
+    var thumb = document.createElement("div");
+    thumb.className = "timetable__scrollbar-thumb";
+    bar.appendChild(thumb);
+    return { bar: bar, thumb: thumb };
+  }
+
   function setup(el) {
-    if (el.__topScrollBound) return;
-    el.__topScrollBound = true;
+    if (el.__customScrollBound) return;
+    el.__customScrollBound = true;
 
-    var top = document.createElement("div");
-    top.className = "timetable__top-scrollbar";
-    var spacer = document.createElement("div");
-    spacer.className = "timetable__top-scrollbar-spacer";
-    top.appendChild(spacer);
-
-    // .timetable__grid はCSS Gridで時刻列/ステージ列の2要素を前提としているため、
-    // その中に直接挿入すると列崩れが起きる。grid-scrollの外側（前）に挿入する。
     var gridScroll = el.closest(".timetable__grid-scroll") || el.parentNode;
-    gridScroll.parentNode.insertBefore(top, gridScroll);
 
-    function syncSpacerWidth() {
-      spacer.style.width = el.scrollWidth + "px";
+    var top = makeBar("top");
+    var bottom = makeBar("bottom");
+    gridScroll.parentNode.insertBefore(top.bar, gridScroll);
+    gridScroll.parentNode.insertBefore(bottom.bar, gridScroll.nextSibling);
+
+    var bars = [top, bottom];
+
+    function updateThumbs() {
+      var scrollable = el.scrollWidth - el.clientWidth;
+      var ratio = el.clientWidth / el.scrollWidth;
+      if (!isFinite(ratio) || ratio <= 0) ratio = 1;
+      var widthPct = Math.min(100, ratio * 100);
+      var leftPct =
+        scrollable > 0
+          ? (el.scrollLeft / scrollable) * (100 - widthPct)
+          : 0;
+      bars.forEach(function (b) {
+        b.thumb.style.width = widthPct + "%";
+        b.thumb.style.left = leftPct + "%";
+        b.bar.style.display = widthPct >= 100 ? "none" : "block";
+      });
     }
-    syncSpacerWidth();
-    window.addEventListener("resize", syncSpacerWidth);
 
-    var syncing = false;
-    top.addEventListener("scroll", function () {
-      if (syncing) return;
-      syncing = true;
-      el.scrollLeft = top.scrollLeft;
-      syncing = false;
-    });
-    el.addEventListener("scroll", function () {
-      if (syncing) return;
-      syncing = true;
-      top.scrollLeft = el.scrollLeft;
-      syncing = false;
-    });
+    function bindDrag(bar, thumb) {
+      var dragging = false;
+      var startX = 0;
+      var startScrollLeft = 0;
+
+      thumb.addEventListener("mousedown", function (e) {
+        dragging = true;
+        startX = e.clientX;
+        startScrollLeft = el.scrollLeft;
+        e.preventDefault();
+      });
+
+      window.addEventListener("mousemove", function (e) {
+        if (!dragging) return;
+        var barWidth = bar.clientWidth;
+        var scrollable = el.scrollWidth - el.clientWidth;
+        var deltaPx = e.clientX - startX;
+        var deltaScroll = (deltaPx / barWidth) * el.scrollWidth;
+        el.scrollLeft = Math.max(
+          0,
+          Math.min(scrollable, startScrollLeft + deltaScroll)
+        );
+      });
+
+      window.addEventListener("mouseup", function () {
+        dragging = false;
+      });
+
+      bar.addEventListener("click", function (e) {
+        if (e.target === thumb) return;
+        var rect = bar.getBoundingClientRect();
+        var clickRatio = (e.clientX - rect.left) / rect.width;
+        var scrollable = el.scrollWidth - el.clientWidth;
+        el.scrollLeft = clickRatio * scrollable;
+      });
+    }
+
+    bindDrag(top.bar, top.thumb);
+    bindDrag(bottom.bar, bottom.thumb);
+
+    el.addEventListener("scroll", updateThumbs);
+    window.addEventListener("resize", updateThumbs);
+    updateThumbs();
+    setTimeout(updateThumbs, 300);
+    setTimeout(updateThumbs, 1000);
   }
 
   function apply() {

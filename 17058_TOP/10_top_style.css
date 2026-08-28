@@ -350,55 +350,55 @@ section.event__layout.widget__wrap {
 }
 
 .timetable__stages-scroll {
-  overflow-x: scroll;
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
   min-width: 0;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.1);
+  /* 見た目のスクロールバーは上下の自作バー（.timetable__scrollbar）で表示するため、
+     ブラウザ標準のスクロールバーは非表示にする（OS/ブラウザ設定に左右されず
+     常に見た目が同じになるようにするため） */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .timetable__stages-scroll::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* タイムテーブル上下の横スクロールバー（自作・常時表示・ドラッグ可能） */
+.timetable__scrollbar {
+  position: relative;
   height: 8px;
-}
-
-.timetable__stages-scroll::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
-}
-
-.timetable__stages-scroll::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 4px;
-}
-
-/* タイムテーブル上部の横スクロールバー（下部のスクロールバーと連動） */
-.timetable__top-scrollbar {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  height: 14px;
-  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.15);
   margin-left: calc(var(--time-col-width) + var(--timetable-grid-gap));
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.1);
+  cursor: pointer;
 }
 
-.timetable__top-scrollbar::-webkit-scrollbar {
-  height: 8px;
+.timetable__scrollbar--top {
+  margin-bottom: 8px;
 }
 
-.timetable__top-scrollbar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+.timetable__scrollbar--bottom {
+  margin-top: 8px;
+}
+
+.timetable__scrollbar-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  min-width: 24px;
   border-radius: 4px;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: grab;
 }
 
-.timetable__top-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 4px;
-}
-
-.timetable__top-scrollbar-spacer {
-  height: 1px;
+.timetable__scrollbar-thumb:hover,
+.timetable__scrollbar-thumb:active {
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .timetable__body {
