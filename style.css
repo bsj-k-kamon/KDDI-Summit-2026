@@ -1415,6 +1415,10 @@ section:has(> .reset-layout__wrap) {
 .layout.booth-list-title__layout-selector {
   display: none;
 }
+/* ページネーションを非表示 */
+.booth-list__pagination {
+  display: none !important;
+}
 /* 検索バー 色変更 */
 .layout.booth-search__button.align-center {
   background-color: #0e0d6a;
