@@ -18,8 +18,13 @@
 
     var top = makeBar("top");
     var bottom = makeBar("bottom");
-    gridScroll.parentNode.insertBefore(top.bar, gridScroll);
-    gridScroll.parentNode.insertBefore(bottom.bar, gridScroll.nextSibling);
+    // gridScroll（#day1-panel / #day2-panel）の外側に挿入すると、
+    // タブ切り替えで非表示になるパネルのバーだけが消えず、
+    // Day1/Day2両方のバーが同時に表示されて2段に見えてしまう。
+    // パネルの内側（先頭・末尾）に挿入し、パネルごとdisplay:noneで
+    // 隠れるようにする。
+    gridScroll.insertBefore(top.bar, gridScroll.firstChild);
+    gridScroll.appendChild(bottom.bar);
 
     var bars = [top, bottom];
 
