@@ -1668,6 +1668,10 @@ body:has(.session-modal:target) {
   }
 
   /* ---- Timetable SP (Figma 1092:7411) ---- */
+   .timetable__header {
+    margin-bottom: 32px;
+    margin-left: 20px;
+  }
   .timetable {
     --hour-height: 510px;
     --stage-header-height: 108px;
