@@ -62,15 +62,13 @@
     margin: 24px 0px;
 }
 
-/* SP版のみ：「〜するためには、」の後で改行し、中央揃えにする（PCは変更なし） */
-.ticket-link-break {
-    display: none;
-}
+/* SP版のみ：文言の幅を狭めることで「〜するためには、」の後で自然に
+   折り返させ、中央揃えにする（PCは変更なし・JS不要） */
 @media screen and (max-width: 600px) {
-    .ticket-link-break {
-        display: block;
-    }
     .ticket_link_wrap p {
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
     }
 }
