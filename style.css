@@ -686,11 +686,20 @@ button.business-appointment-button.v-btn.v-btn--contained.theme--light.v-size--d
   background-color: #0e0d6a5c !important; /* THEME_COLOR_BG */
   color: #0e0d6a !important; /* THEME_COLOR */
 }
+.mypage-contents__wrap .mypage-contents__contents .favorite .my-ticket-layout__empty {
+  margin: 50px auto;
+  text-align: center;
+}
 .mypage-contents__wrap .mypage-contents__contents .favorite .my-ticket-layout__empty::after{
   content: "登録済みのお気に入りはありません";
   font-size: 14px; /* 元の文字サイズに合わせて調整 */
 }
-
+@media screen and (max-width: 650px) {
+  .mypage-contents__wrap .mypage-contents__contents .favorite .my-ticket-layout__empty {
+    padding: 20px;
+    margin: 0px !important;
+  }
+}
 /*  */
 /******** 申込履歴 *********/
 /*  */
@@ -1091,6 +1100,11 @@ img.category-status__few__icon {
 img.category-status__few__icon {
   filter: brightness(0.5);
 }
+/* カードの中のチケットタイトル */
+.ticket-cart-list-item-layout__title.ticket-cart-list-item-layout__text {
+  text-align: left;
+  margin-left: 12px;
+}
 /* 申し込みボタン（SP） 色変更 */
 #app > div > section > div > div.ticket-page-content-wrapper__content-wrapper > div > section.ticket-controller.event__layout > div:nth-child(1) > div > section > div > div:nth-child(1) > section > div.smart-phone-layout > section > div.next-button > button > span.v-btn__content {
   color: #0e0d6a;
@@ -1284,7 +1298,7 @@ button.confirm__button .v-btn__content::after {
   font-size: 0 !important;
 }
 .ticket-cart-list-item-layout__label::after {
-  content: "選択中の　講演";
+  content: "選択中の講演";
   font-size: 14px;
 }
 /* 予約確認画面：1行目（講演タイトル）のラベルを「予約済講演」に、
@@ -1302,6 +1316,11 @@ button.confirm__button .v-btn__content::after {
   content: "枚数";
   font-size: 14px;
 }
+.ticket-page-content-wrapper__content .confirm__wrap .detail__ticket__content,
+.ticket-page-content-wrapper__content .confirm__wrap .profile__detail .profile__detail__content{
+  margin-left: 0px!important;
+}
+
 /* 申し込み完了画面 OKボタン 色変更*/
 button.complete-button__content.v-btn.v-btn--contained.theme--light.v-size--large {
   background-color: #0e0d6a !important;
@@ -1400,6 +1419,9 @@ section.complete-button_wrap {
   }
   section.complete-button_wrap {
     padding-bottom: 8px;
+  }
+  .ticket-page-content-wrapper__content .confirm__wrap .confirm__content {
+    padding: 16px 0px;
   }
 }
 
