@@ -2394,11 +2394,11 @@ body:has(.session-modal:target) {
 .site-footer__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 24px;
-  max-width: 1185px;
-  margin: 0 auto;
-  padding: 22px 40px;
+  max-width: 100%;
+  margin: 0;
+  padding: 22px 40px 22px 0;
   min-width: 0;
 }
 
