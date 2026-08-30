@@ -1,5 +1,26 @@
 (function () {
   var SELECTOR = ".timetable__stages-scroll";
+  // Day1/Day2切り替えは表示中パネルをdisplay:noneで切り替えるだけの
+  // CSSのみの実装（DOM変更を伴わない）ため、非表示中のパネルの
+  // スクロール要素はclientWidth/scrollWidthが0になり、初回はバーの
+  // 表示状態（widthPct/display）が正しく計算できない。
+  // タブ切り替え（ラジオボタンのchange）のタイミングで全バーを
+  // 再計算できるよう、更新関数を集約しておく。
+  var allUpdaters = [];
+
+  function recomputeAll() {
+    allUpdaters.forEach(function (fn) {
+      fn();
+    });
+  }
+
+  document.addEventListener("change", function (e) {
+    if (e.target && e.target.classList && e.target.classList.contains("timetable__radio")) {
+      recomputeAll();
+      requestAnimationFrame(recomputeAll);
+      setTimeout(recomputeAll, 300);
+    }
+  });
 
   function makeBar(modifier) {
     var bar = document.createElement("div");
@@ -86,6 +107,7 @@
 
     el.addEventListener("scroll", updateThumbs);
     window.addEventListener("resize", updateThumbs);
+    allUpdaters.push(updateThumbs);
     updateThumbs();
     setTimeout(updateThumbs, 300);
     setTimeout(updateThumbs, 1000);
