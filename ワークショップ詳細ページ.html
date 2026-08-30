@@ -1,0 +1,77 @@
+<!-- ワークショップ詳細ページ（module/booth/.../...）のCMSカスタムCSS -->
+<style>
+.title {
+    padding-bottom: 0 !important;
+}
+.ticket_link_wrap {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    margin-bottom: 24px;
+    align-items: center;
+    margin-top: 40px;
+}
+.ticket_link_wrap p {
+    padding: 4px;
+    font-family: Noto Sans JP;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0%;
+    color: #FF6464;
+    margin-bottom: 0 !important;
+    display: block;
+    line-height: 150%;
+}
+.ticket_link_wrap a {
+    background-color: #0e0d6a;
+    font-family: Noto Sans JP;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 5%;
+    color: #FFF;
+    text-decoration: none;
+    padding: 14px 10px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+.ticket_link_wrap a:hover {
+    transition: 0.3s;
+    opacity: 0.8;
+}
+.description {
+    margin: 4px !important;
+}
+.html__wrap.fr-view {
+    font-family: Noto Sans JP;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 170%;
+    letter-spacing: 0%;
+}
+
+#app > div > section > section.detail__wrap.event__layout > section.contents__wrap.detail__contents > section > section:nth-child(2) > section > section {
+    text-align: center;
+}
+#app > div > section > section.detail__wrap.event__layout > section.contents__wrap.detail__contents > section > section:nth-child(2) > section > section > img {
+    width: 80%;
+    margin: 24px 0px;
+}
+
+/* SP版のみ：「〜するためには、」の後で改行し、中央揃えにする（PCは変更なし） */
+.ticket-link-break {
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .ticket-link-break {
+        display: block;
+    }
+    .ticket_link_wrap p {
+        text-align: center;
+    }
+}
+</style>
