@@ -1876,6 +1876,11 @@ body:has(.session-modal:target) {
 
   .session--sp-compact {
     padding: 0 36px 12px 20px;
+    justify-content: center;
+  }
+
+  .session--sp-compact .session__footer {
+    margin-top: 12px;
   }
 
   .session--sp-compact .session__title {
