@@ -105,6 +105,54 @@
     bindDrag(top.bar, top.thumb);
     bindDrag(bottom.bar, bottom.thumb);
 
+    // タイムテーブル本体（カード表示エリア）を直接ドラッグして
+    // 横スクロールできるようにする（PC向け）。
+    (function bindContentDrag() {
+      var isDown = false;
+      var isDragging = false;
+      var startX = 0;
+      var startScrollLeft = 0;
+      var DRAG_THRESHOLD = 5;
+
+      el.style.cursor = "grab";
+
+      el.addEventListener("mousedown", function (e) {
+        isDown = true;
+        isDragging = false;
+        startX = e.pageX;
+        startScrollLeft = el.scrollLeft;
+      });
+
+      window.addEventListener("mousemove", function (e) {
+        if (!isDown) return;
+        var delta = e.pageX - startX;
+        if (!isDragging && Math.abs(delta) > DRAG_THRESHOLD) {
+          isDragging = true;
+          el.style.cursor = "grabbing";
+        }
+        if (isDragging) {
+          el.scrollLeft = startScrollLeft - delta;
+        }
+      });
+
+      window.addEventListener("mouseup", function () {
+        if (isDragging) {
+          var suppressClick = function (ev) {
+            ev.stopPropagation();
+            ev.preventDefault();
+          };
+          el.addEventListener("click", suppressClick, { capture: true, once: true });
+        }
+        isDown = false;
+        isDragging = false;
+        el.style.cursor = "grab";
+      });
+
+      el.addEventListener("dragstart", function (e) {
+        e.preventDefault();
+      });
+    })();
+
     el.addEventListener("scroll", updateThumbs);
     window.addEventListener("resize", updateThumbs);
     allUpdaters.push(updateThumbs);
