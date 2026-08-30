@@ -1803,7 +1803,7 @@ body:has(.session-modal:target) {
   }
 
   .session {
-    margin: 4px 28px;
+    margin: 4px 5px;
     padding: 10px 20px 32px;
     border-radius: 8px;
     justify-content: center;
