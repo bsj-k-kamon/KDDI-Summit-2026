@@ -2398,7 +2398,7 @@ body:has(.session-modal:target) {
   gap: 24px;
   max-width: 100%;
   margin: 0;
-  padding: 22px 40px 22px 0;
+  padding: 22px 40px;
   min-width: 0;
 }
 
