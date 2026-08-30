@@ -1673,8 +1673,8 @@ body:has(.session-modal:target) {
     --stage-header-height: 108px;
     --row-unit: calc(var(--hour-height) / 12);
     --col-width: 270px;
-    --time-col-width: 52px;
-    --timetable-grid-gap: 15px;
+    --time-col-width: 43px;
+    --timetable-grid-gap: 5px;
     --timetable-stages-width: calc(var(--col-width) * 3);
     --timetable-grid-width: calc(var(--time-col-width) + var(--timetable-grid-gap) + var(--timetable-stages-width));
     --color-row-band-bottom-height: 50px;
@@ -1769,7 +1769,7 @@ body:has(.session-modal:target) {
   }
 
   .timetable__time-label {
-    font-size: 13px;
+    font-size: 11px;
     letter-spacing: 0.65px;
     right: 0;
   }
