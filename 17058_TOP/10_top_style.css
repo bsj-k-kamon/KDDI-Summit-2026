@@ -1807,11 +1807,14 @@ body:has(.session-modal:target) {
     padding: 10px 20px 32px;
     border-radius: 8px;
     justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .session__header {
     gap: 8px;
     margin-bottom: 4px;
+    justify-content: center;
   }
 
   .session__time {
@@ -1959,6 +1962,14 @@ body:has(.session-modal:target) {
   .session__footer {
     padding-top: 8px;
     margin-top: 12px;
+    align-self: stretch;
+  }
+
+  .session__title,
+  .session__subtitle,
+  .session__speakers,
+  .session__header {
+    align-self: stretch;
   }
 
   .session__plus {
