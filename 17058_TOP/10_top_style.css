@@ -1806,15 +1806,11 @@ body:has(.session-modal:target) {
     margin: 4px 5px;
     padding: 10px 28px 32px;
     border-radius: 8px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
   }
 
   .session__header {
     gap: 8px;
     margin-bottom: 4px;
-    justify-content: center;
   }
 
   .session__time {
@@ -1880,11 +1876,6 @@ body:has(.session-modal:target) {
 
   .session--sp-compact {
     padding: 0 36px 12px 20px;
-    justify-content: center;
-  }
-
-  .session--sp-compact .session__footer {
-    margin-top: 12px;
   }
 
   .session--sp-compact .session__title {
@@ -1961,15 +1952,6 @@ body:has(.session-modal:target) {
 
   .session__footer {
     padding-top: 8px;
-    margin-top: 12px;
-    align-self: stretch;
-  }
-
-  .session__title,
-  .session__subtitle,
-  .session__speakers,
-  .session__header {
-    align-self: stretch;
   }
 
   .session__plus {
