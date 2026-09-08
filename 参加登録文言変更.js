@@ -5,7 +5,7 @@
     '  font-size: 0 !important;',
     '}',
     '.profile__button .v-btn__content::after {',
-    '  content: "参加登録";',
+    '  content: "参加申し込み";',
     '  font-size: 16px;',
     '}'
   ].join("\n");

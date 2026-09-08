@@ -33,14 +33,14 @@
 
     if (hasText) {
       if (textHolder.textContent.trim() !== "同意する") {
-        textHolder.textContent = "同意する";
+        textHolder.textContent = "メール配信に同意する";
       }
       var placeholder = detail.querySelector("." + PLACEHOLDER_CLASS);
       if (placeholder) placeholder.remove();
     } else if (!detail.querySelector("." + PLACEHOLDER_CLASS)) {
       var ph = document.createElement("div");
       ph.className = "profile-contents__detail__value " + PLACEHOLDER_CLASS;
-      ph.textContent = "同意しない";
+      ph.textContent = "メール配信に同意しない";
       detail.appendChild(ph);
     }
   }
