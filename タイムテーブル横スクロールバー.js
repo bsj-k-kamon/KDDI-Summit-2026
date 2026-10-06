@@ -186,3 +186,61 @@
     subtree: true,
   });
 })();
+
+// ご来場アンケートバナー（01_top_link.html内）を、別ウィジェットとして
+// 描画されるマイQR表示エリアの直後へ移動する。移動に失敗した場合は
+// 元の位置（クイックアクションの直下）に表示されたままになる。
+(function () {
+  function place() {
+    var qr = document.querySelector(".mypage-content");
+    if (!qr) return;
+    var anchor = qr.closest(".widget__wrap > *");
+    if (!anchor || !anchor.parentNode) return;
+
+    var banners = document.querySelectorAll(".survey-banner-wrap");
+    var moved = null;
+    for (var i = 0; i < banners.length; i++) {
+      if (banners[i].getAttribute("data-moved") === "1") {
+        if (moved) banners[i].parentNode.removeChild(banners[i]);
+        else moved = banners[i];
+      }
+    }
+    if (!moved) {
+      for (var j = 0; j < banners.length; j++) {
+        if (banners[j].getAttribute("data-moved") !== "1") {
+          moved = banners[j];
+          moved.setAttribute("data-moved", "1");
+          break;
+        }
+      }
+    }
+    if (!moved) return;
+    // Vueの再描画で元の位置に作り直された複製は取り除く
+    for (var k = 0; k < banners.length; k++) {
+      if (banners[k] !== moved && banners[k].parentNode && banners[k].getAttribute("data-moved") !== "1") {
+        banners[k].parentNode.removeChild(banners[k]);
+      }
+    }
+    if (anchor.nextElementSibling !== moved) {
+      anchor.parentNode.insertBefore(moved, anchor.nextSibling);
+    }
+  }
+
+  var scheduled = false;
+  function schedule() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(function () {
+      scheduled = false;
+      place();
+    });
+  }
+
+  place();
+  setTimeout(place, 300);
+  setTimeout(place, 1000);
+  new MutationObserver(schedule).observe(document.documentElement, {
+    childList: true,
+    subtree: true,
+  });
+})();
