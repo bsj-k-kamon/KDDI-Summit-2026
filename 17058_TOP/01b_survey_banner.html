@@ -29,6 +29,15 @@
     width: 100%;
     padding: 0 100px 30px;
     background-color: var(--color-white);
+    /* 直前のマイQR表示エリア（閉じている間は高さ0）が持つ下余白60pxを打ち消し、
+       「オンライン配信はこちら」の近くに表示する */
+    margin-top: -60px;
+    transition: margin-top 0.35s ease;
+}
+
+/* QR表示中は、QRとバナーの間に元の余白を戻す */
+body:has(.show-member-qr-toggle:checked) .survey-banner-wrap {
+    margin-top: 0;
 }
 
 .survey-banner {
