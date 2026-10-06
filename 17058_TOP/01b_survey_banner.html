@@ -1,0 +1,166 @@
+<!-- ▼ ご来場アンケートバナー -->
+<section aria-label="ご来場アンケート" class="survey-banner-wrap">
+    <div class="survey-banner">
+        <div class="survey-banner__main">
+            <div aria-hidden="true" class="survey-banner__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                </svg>
+            </div>
+            <div class="survey-banner__text">
+                <p class="survey-banner__title">ご来場アンケートにご協力ください</p>
+                <p class="survey-banner__sub">所要時間 約2分／回答期限 10.31（土）まで</p>
+            </div>
+        </div>
+        <a class="survey-banner__btn"
+            href="https://kddi-summit.eventos.tokyo/web/portal/1273/event/17058/module/questionnaire/477554/0"><span>回答する</span> <svg class="survey-banner__btn-icon"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+            </svg></a>
+    </div>
+</section>
+<style>
+.survey-banner-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 100px 30px;
+    background-color: var(--color-white);
+}
+
+.survey-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    max-width: 750px;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(to right, #111d4a, #2b54a0);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-ja);
+}
+
+.survey-banner__main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.survey-banner__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.survey-banner__icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.survey-banner__text {
+    text-align: left;
+}
+
+.survey-banner .survey-banner__title {
+    margin: 0 0 6px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0.025em;
+}
+
+.survey-banner .survey-banner__sub {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+}
+
+.survey-banner .survey-banner__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-shrink: 0;
+    padding: 10px 32px;
+    border-radius: 9999px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #1a3169 !important;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: background-color 0.2s;
+}
+
+.survey-banner .survey-banner__btn:hover {
+    background: #f3f4f6;
+}
+
+.survey-banner__btn-icon {
+    width: 16px;
+    height: 16px;
+    color: #1a3169;
+    transition: transform 0.2s;
+}
+
+.survey-banner__btn:hover .survey-banner__btn-icon {
+    transform: translateX(4px);
+}
+
+@media screen and (max-width: 650px) {
+    .survey-banner-wrap {
+        padding: 0 16px 30px;
+    }
+
+    .survey-banner {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .survey-banner__main {
+        width: 100%;
+    }
+
+    .survey-banner__icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .survey-banner__icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .survey-banner .survey-banner__title {
+        margin-bottom: 4px;
+        font-size: 14px;
+    }
+
+    .survey-banner .survey-banner__sub {
+        font-size: 11px;
+    }
+
+    .survey-banner .survey-banner__btn {
+        width: 100%;
+        padding: 12px 32px;
+        font-size: 14px;
+    }
+}
+</style>

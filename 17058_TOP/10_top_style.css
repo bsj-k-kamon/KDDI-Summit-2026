@@ -1503,7 +1503,10 @@ body:has(.session-modal:target) {
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 10px;
+  /* CMSエディタが挿入する &nbsp; がflex項目になり、gapも加算されて位置がずれるため、
+     文字サイズ0・gap0にして、余白は子要素のmarginで取る */
+  gap: 0;
+  font-size: 0;
   width: 210px;
   height: 170px;
   margin: 0;
@@ -1539,6 +1542,7 @@ body:has(.session-modal:target) {
   border-radius: 999px;
   background-color: var(--color-icon-bg);
   flex-shrink: 0;
+  margin-bottom: 10px;
 }
 
 .action-card__icon {
@@ -1568,13 +1572,7 @@ body:has(.session-modal:target) {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* QRを表示するカード（label要素で実装）だけ、他の3枚（a要素）と
-   同じCSSでもアイコン・ボタンの位置が上にずれる（原因不明のブラウザ側
-   の描画差）。実測したズレ量ぶんだけ下にずらして揃える。 */
-.qr-toggle-btn .action-card__icon-wrap {
-  margin-top: 29.2px;
+  margin-bottom: 10px;
 }
 
 .action-card__arrow {
