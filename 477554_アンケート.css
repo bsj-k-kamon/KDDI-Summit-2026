@@ -1,0 +1,13 @@
+<style>
+/* 送信ボタン */
+.questionnaire-form__submit-button.v-btn.v-btn--contained {
+    background-color: #1b2c55 !important;
+    border-color: #1b2c55 !important;
+    caret-color: #1b2c55 !important;
+}
+
+/* 「回答期間：」 */
+.questionnaire-date__text {
+    color: #1b2c55 !important;
+}
+</style>
