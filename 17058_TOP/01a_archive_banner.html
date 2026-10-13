@@ -1,0 +1,154 @@
+<!-- ▼ アーカイブ配信バナー -->
+<section aria-label="アーカイブ配信" class="archive-banner-wrap">
+    <div class="archive-banner">
+        <p class="archive-banner__eyebrow">THANK YOU FOR JOINING US</p>
+        <p class="archive-banner__title">ご参加いただき、ありがとうございました。</p>
+        <p class="archive-banner__sub">
+            <span>当日の講演を期間限定でアーカイブ配信しています。</span>
+            <span class="archive-banner__deadline">公開期限 11.30(月) 23:59</span>
+        </p>
+        <a class="archive-banner__btn"
+            href="https://kddi-summit.eventos.tokyo/web/portal/1273/event/17058/module/booth/461750"><svg
+                class="archive-banner__btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="currentColor" aria-hidden="true">
+                <path d="M7 4.5v15a1 1 0 001.52.85l12-7.5a1 1 0 000-1.7l-12-7.5A1 1 0 007 4.5z"></path>
+            </svg><span>アーカイブを視聴する</span></a>
+    </div>
+</section>
+<style>
+.archive-banner-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 100px 30px;
+    background-color: var(--color-white);
+    /* 直前のマイQR表示エリア（閉じている間は高さ0）が持つ下余白60pxを打ち消し、
+       「オンライン配信はこちら」の近くに表示する */
+    margin-top: -60px;
+    transition: margin-top 0.35s ease;
+}
+
+/* QR表示中は、QRとバナーの間に元の余白を戻す */
+body:has(.show-member-qr-toggle:checked) .archive-banner-wrap {
+    margin-top: 0;
+}
+
+.archive-banner {
+    width: 100%;
+    max-width: 750px;
+    padding: 32px 36px;
+    border-radius: 12px;
+    background:
+        radial-gradient(ellipse at 88% 70%, rgba(120, 90, 200, 0.45), rgba(120, 90, 200, 0) 55%),
+        linear-gradient(to right, #0b1230, #1a2552 60%, #1f2a5c);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-ja);
+    text-align: left;
+}
+
+.archive-banner .archive-banner__eyebrow {
+    margin: 0 0 14px;
+    color: #3ec6d6;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+}
+
+.archive-banner .archive-banner__title {
+    margin: 0 0 14px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+}
+
+.archive-banner .archive-banner__sub {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 0 24px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+}
+
+.archive-banner__deadline {
+    margin-left: 12px;
+    padding-left: 12px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.archive-banner .archive-banner__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 32px;
+    border-radius: 9999px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #111d4a !important;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: background-color 0.2s;
+}
+
+.archive-banner .archive-banner__btn:hover {
+    background: #f3f4f6;
+}
+
+.archive-banner__btn-icon {
+    width: 12px;
+    height: 12px;
+    color: #111d4a;
+    transition: transform 0.2s;
+}
+
+.archive-banner__btn:hover .archive-banner__btn-icon {
+    transform: translateX(3px);
+}
+
+@media screen and (max-width: 650px) {
+    .archive-banner-wrap {
+        padding: 0 16px 30px;
+    }
+
+    .archive-banner {
+        padding: 24px 20px;
+    }
+
+    .archive-banner .archive-banner__eyebrow {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+
+    .archive-banner .archive-banner__title {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .archive-banner .archive-banner__sub {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        font-size: 11px;
+    }
+
+    .archive-banner__deadline {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .archive-banner .archive-banner__btn {
+        display: flex;
+        width: 100%;
+        padding: 12px 24px;
+    }
+}
+</style>
